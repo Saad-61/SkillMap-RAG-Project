@@ -1,8 +1,11 @@
-# Entry point for the FastAPI/Flask application
 from fastapi import FastAPI
+from routes.cv_routes import router as cv_router
 
-app = FastAPI(title="CV Parser API")
+app = FastAPI(title="AI Job Match Backend")
+
+# Include CV routes
+app.include_router(cv_router)
 
 @app.get("/")
-async def root():
-    return {"message": "Welcome to the CV Parser API"}
+def root():
+    return {"message": "Backend is running"}

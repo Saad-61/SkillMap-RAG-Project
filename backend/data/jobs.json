@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Backend Developer",
+    "description": "Looking for a backend developer with experience in FastAPI, PostgreSQL, Docker, and REST APIs."
+  },
+  {
+    "id": 2,
+    "title": "Frontend Developer",
+    "description": "React developer needed with experience in TailwindCSS, UI design, and API integration."
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "description": "Experience in Node.js, React, databases, and deployment required."
+  }
+]
