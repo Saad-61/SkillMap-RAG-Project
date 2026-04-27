@@ -195,6 +195,21 @@ Runs the complete RAG + LLM analysis pipeline.
    python -m uvicorn main:app --reload --host 127.0.0.1 --port 8010
    ```
 
+### Frontend (Vite + React)
+
+1. **Install frontend deps**
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+2. **Run the frontend**
+   ```bash
+   npm run dev
+   ```
+
+The frontend runs on `http://127.0.0.1:5173` and proxies API requests to the backend on `http://127.0.0.1:8010` via `/api/*`.
+
 6. **Test the API**
    ```bash
    curl -X POST -F "file=@resume.pdf" http://127.0.0.1:8010/cv/analyze
