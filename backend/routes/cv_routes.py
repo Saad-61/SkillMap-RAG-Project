@@ -22,7 +22,7 @@ async def upload_cv(file: UploadFile = File(...)):
 
     return {
         "filename": file.filename,
-        "preview": text[:500]
+        "preview": text
     }
 
 @router.post("/match-jobs")

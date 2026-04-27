@@ -3,7 +3,6 @@ import { useMemo, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { CopyButton } from "../components/copy-button";
 import { ScorePill } from "../components/score-pill";
-import { SectionHeader } from "../components/section-header";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
@@ -21,14 +20,6 @@ function priorityWeight(priority: string) {
   if (p === "MEDIUM") return 2;
   if (p === "LOW") return 1;
   return 0;
-}
-
-function confidenceVariant(value: string | undefined) {
-  const v = String(value || "").toLowerCase();
-  if (v === "high") return "green";
-  if (v === "medium") return "amber";
-  if (v === "low") return "red";
-  return "slate";
 }
 
 function sectionEmpty(text: string | undefined) {
@@ -94,7 +85,7 @@ export default function ResultsPage() {
                 <CardTitle>Your CV Report</CardTitle>
                 <CardDescription className="mt-1">
                   {effective.filename}
-                  {createdLabel ? ` • ${createdLabel}` : ""}
+                  {createdLabel ? ` | ${createdLabel}` : ""}
                 </CardDescription>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -194,7 +185,10 @@ export default function ResultsPage() {
               <Card>
                 <CardHeader>
                   <CardTitle>Best matches</CardTitle>
-                  <CardDescription>Top roles based on your CV and job data.</CardDescription>
+                  <CardDescription>
+                    Top roles based on your CV and job data. Match score is a fit signal
+                    inside this app, not a hiring probability.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {overviewJobs.length ? (
@@ -274,24 +268,6 @@ export default function ResultsPage() {
                   ) : (
                     <div className="text-sm text-slate-600">No missing skills returned.</div>
                   )}
-
-                  <Separator />
-
-                  <SectionHeader
-                    title="Confidence"
-                    description="Completeness of each section in the report."
-                  />
-                  <div className="flex flex-wrap gap-2">
-                    {Object.entries(analysis.confidence ?? {}).length ? (
-                      Object.entries(analysis.confidence ?? {}).map(([key, val]) => (
-                        <Badge key={key} variant={confidenceVariant(val)}>
-                          {key.replace(/_/g, " ")}: {String(val)}
-                        </Badge>
-                      ))
-                    ) : (
-                      <div className="text-sm text-slate-600">No confidence metadata.</div>
-                    )}
-                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -334,7 +310,10 @@ export default function ResultsPage() {
           <Card>
             <CardHeader>
               <CardTitle>Job matches</CardTitle>
-              <CardDescription>Scores plus evidence and gaps for each role.</CardDescription>
+              <CardDescription>
+                Scores plus evidence and gaps for each role. Higher score means closer
+                overlap with the role in this tool.
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               {jobsSorted.length ? (
@@ -345,6 +324,7 @@ export default function ResultsPage() {
                       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                         <div className="min-w-0">
                           <div className="text-sm font-semibold text-slate-900">{job.title}</div>
+                          <div className="mt-1 text-xs text-slate-500">Match score</div>
                           {job.matched_skills?.length ? (
                             <div className="mt-2 flex flex-wrap gap-1.5">
                               {job.matched_skills.map((s) => (

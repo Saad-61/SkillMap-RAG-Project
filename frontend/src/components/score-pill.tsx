@@ -4,8 +4,8 @@ import { Progress } from "./ui/progress";
 
 function scoreTone(score: number) {
   const s = clampScore(score);
-  if (s >= 75) return "green";
-  if (s >= 55) return "amber";
+  if (s > 50) return "green";
+  if (s >= 40) return "amber";
   return "red";
 }
 
@@ -28,4 +28,3 @@ export function ScorePill({
     </div>
   );
 }
-
