@@ -11,7 +11,7 @@ const TabsList = React.forwardRef<
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "inline-flex h-10 items-center justify-center rounded-md border border-border bg-white p-1 text-muted-foreground shadow-sm",
+      "inline-flex max-w-full flex-wrap items-center justify-start rounded-md border border-border bg-white p-1 text-muted-foreground shadow-sm",
       className,
     )}
     {...props}
@@ -47,4 +47,3 @@ const TabsContent = React.forwardRef<
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };
-

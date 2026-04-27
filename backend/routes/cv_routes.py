@@ -1,5 +1,7 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from ai.rag_pipeline import RAGPipeline
+from ai.rewrite import generate_fix_rewrite
+from models.schemas import GenerateFixRequest
 from services.cv_parser import extract_text_from_file, extract_links_from_file
 from utils.file_handler import save_file
 from ai.analyzer import analyze_cv
@@ -53,5 +55,35 @@ async def analyze(file: UploadFile = File(...)):
     return {
         "matched_jobs": jobs,
         "links": links,
-        "analysis": analysis
+        "analysis": analysis,
+        "cv_text": text,
+    }
+
+
+@router.post("/generate-fix")
+async def generate_fix(payload: GenerateFixRequest):
+    output_format = (payload.output_format or "").strip().lower()
+    if output_format not in {"plain", "latex"}:
+        raise HTTPException(status_code=400, detail="output_format must be 'plain' or 'latex'")
+
+    result = generate_fix_rewrite(
+        cv_text=payload.cv_text,
+        section=payload.fix.section,
+        fix=payload.fix.fix,
+        why=payload.fix.why,
+        how=payload.fix.how,
+        output_format=output_format,
+    )
+
+    if not isinstance(result, dict):
+        raise HTTPException(status_code=502, detail="Rewrite generation failed")
+
+    if "error" in result:
+        raise HTTPException(status_code=502, detail=str(result["error"]))
+
+    return {
+        "section": str(result.get("section") or payload.fix.section),
+        "format": str(result.get("format") or output_format),
+        "rewritten_text": str(result.get("rewritten_text") or "").strip(),
+        "notes": str(result.get("notes") or "").strip(),
     }

@@ -1,4 +1,9 @@
-import type { AnalyzeResponse, UploadPreviewResponse } from "../types/cv";
+import type {
+  AnalyzeResponse,
+  GenerateFixRewriteRequest,
+  GenerateFixRewriteResponse,
+  UploadPreviewResponse,
+} from "../types/cv";
 
 async function parseErrorMessage(response: Response) {
   try {
@@ -45,3 +50,22 @@ export async function analyzeCv(file: File, signal?: AbortSignal) {
   return (await response.json()) as AnalyzeResponse;
 }
 
+export async function generateFixRewrite(
+  payload: GenerateFixRewriteRequest,
+  signal?: AbortSignal,
+) {
+  const response = await fetch("/api/cv/generate-fix", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+    signal,
+  });
+
+  if (!response.ok) {
+    throw new Error(await parseErrorMessage(response));
+  }
+
+  return (await response.json()) as GenerateFixRewriteResponse;
+}

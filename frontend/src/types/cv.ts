@@ -46,6 +46,14 @@ export type CvFix = {
   how: string;
 };
 
+export type QuickRewriteCandidate = {
+  section: string;
+  fix: string;
+  why: string;
+  how: string;
+  source: "cv_fix" | "top_action";
+};
+
 export type TopAction = {
   action: string;
   section: string;
@@ -74,6 +82,7 @@ export type AnalyzeResponse = {
   matched_jobs: MatchedJob[];
   links: string[];
   analysis: Analysis;
+  cv_text: string;
 };
 
 export type StoredReport = {
@@ -82,3 +91,15 @@ export type StoredReport = {
   report: AnalyzeResponse;
 };
 
+export type GenerateFixRewriteRequest = {
+  cv_text: string;
+  fix: Pick<CvFix, "section" | "fix" | "why" | "how">;
+  output_format: "plain" | "latex";
+};
+
+export type GenerateFixRewriteResponse = {
+  section: string;
+  format: "plain" | "latex" | string;
+  rewritten_text: string;
+  notes?: string;
+};

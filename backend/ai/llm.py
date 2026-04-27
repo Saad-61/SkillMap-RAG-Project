@@ -14,22 +14,21 @@ def _load_env() -> None:
     load_dotenv(backend_dir.parent / ".env", override=False)
 
 
-_model: Optional[genai.GenerativeModel] = None
+_models: dict[str, genai.GenerativeModel] = {}
 
-
-# ----------------------------
-# Model Selection (unchanged)
-# ----------------------------
-def _resolve_model_name() -> str:
+def _candidate_model_names() -> list[str]:
     preferred = os.getenv("GEMINI_MODEL")
 
-    candidates = [
+    configured_candidates = [
         model
         for model in [
             preferred,
-            "gemini-1.5-flash-latest",   #  more stable than 2.5
-            "gemini-1.5-flash",
             "gemini-2.5-flash",
+            "gemini-2.5-pro",
+            "gemini-2.0-flash",
+            "gemini-2.5-flash-lite",
+            "gemini-2.0-flash-001",
+            "gemini-2.0-flash-lite",
         ]
         if model
     ]
@@ -43,39 +42,55 @@ def _resolve_model_name() -> str:
             if name:
                 available_with_generate.add(name)
 
-    for candidate in candidates:
-        if candidate in available_with_generate:
-            return candidate
+    candidates = [
+        candidate for candidate in configured_candidates if candidate in available_with_generate
+    ]
+
+    if candidates:
+        return candidates
 
     if available_with_generate:
-        return sorted(available_with_generate)[0]
+        return sorted(available_with_generate)
 
     raise RuntimeError(
         "No Gemini models with generateContent are available for this API key/account"
     )
 
 
-def _get_model() -> genai.GenerativeModel:
-    global _model
+def _configure_genai() -> None:
+    _load_env()
+    api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
 
-    if _model is None:
-        _load_env()
+    if not api_key:
+        raise RuntimeError(
+            "Missing GEMINI_API_KEY/GOOGLE_API_KEY in .env or environment"
+        )
 
-        api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+    genai.configure(api_key=api_key)
 
-        if not api_key:
-            raise RuntimeError(
-                "Missing GEMINI_API_KEY/GOOGLE_API_KEY in .env or environment"
-            )
 
-        genai.configure(api_key=api_key)
+def _get_model(model_name: str) -> genai.GenerativeModel:
+    if model_name not in _models:
+        print(f"[LLM] Using model: {model_name}")
+        _models[model_name] = genai.GenerativeModel(model_name)
+    return _models[model_name]
 
-        model_name = _resolve_model_name()
-        print(f"[LLM] Using model: {model_name}")  # helpful debug
 
-        _model = genai.GenerativeModel(model_name)
-
-    return _model
+def _is_fallback_worthy_error(exc: Exception) -> bool:
+    message = str(exc).lower()
+    fallback_markers = [
+        "429",
+        "quota",
+        "rate limit",
+        "resource exhausted",
+        "temporarily unavailable",
+        "503",
+        "500",
+        "deadline exceeded",
+        "timed out",
+        "unavailable",
+    ]
+    return any(marker in message for marker in fallback_markers)
 
 
 # ----------------------------
@@ -129,35 +144,50 @@ def _try_parse_json(text: str):
 # ----------------------------
 def generate_response(prompt: str):
     text = ""
+    _configure_genai()
+    candidates = _candidate_model_names()
+    errors: list[str] = []
 
-    try:
-        response = _get_model().generate_content(prompt)
+    for model_name in candidates:
+        try:
+            response = _get_model(model_name).generate_content(prompt)
 
-        # safer extraction
-        text = getattr(response, "text", "") or ""
+            # safer extraction
+            text = getattr(response, "text", "") or ""
 
-        if not text:
-            # fallback if text is empty
+            if not text:
+                # fallback if text is empty
+                try:
+                    text = response.candidates[0].content.parts[0].text
+                except Exception:
+                    pass
+
+            cleaned = _clean_llm_output(text)
+
             try:
-                text = response.candidates[0].content.parts[0].text
+                return _try_parse_json(cleaned)
             except Exception:
                 pass
 
-        cleaned = _clean_llm_output(text)
+            return {
+                "error": "LLM output parsing failed",
+                "raw": text,
+                "model": model_name,
+            }
 
-        try:
-            return _try_parse_json(cleaned)
-        except Exception:
-            pass
+        except Exception as exc:
+            errors.append(f"{model_name}: {str(exc)}")
 
-        # Final fallback
-        return {
-            "error": "LLM output parsing failed",
-            "raw": text
-        }
+            if _is_fallback_worthy_error(exc):
+                print(f"[LLM] Falling back after {model_name} error: {exc}")
+                continue
 
-    except Exception as e:
-        return {
-            "error": f"LLM generation failed: {str(e)}",
-            "raw": text
-        }
+            return {
+                "error": f"LLM generation failed on {model_name}: {str(exc)}",
+                "raw": text,
+            }
+
+    return {
+        "error": "LLM generation failed on all candidate models: " + " | ".join(errors),
+        "raw": text,
+    }
