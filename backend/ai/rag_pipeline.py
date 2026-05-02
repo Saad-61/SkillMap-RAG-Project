@@ -4,7 +4,7 @@ import numpy as np
 
 from ai.embeddings import get_embedding
 from ai.vector_store import VectorStore
-from services.job_fetcher import fetch_jobs
+from services.job_cache import get_cached_jobs
 from utils.skill_extractor import extract_skills
 from utils.link_extractor import extract_links
 
@@ -28,7 +28,7 @@ class RAGPipeline:
     
     # This method checks if the vector store is initialized, and if not, it loads the job descriptions and their embeddings. It then generates an embedding for the input CV text and retrieves the most relevant job descriptions based on similarity from the vector store.
     def load_jobs(self):
-        jobs = fetch_jobs()
+        jobs = get_cached_jobs()
         self.jobs = jobs
 
         texts = [job["description"] for job in jobs]

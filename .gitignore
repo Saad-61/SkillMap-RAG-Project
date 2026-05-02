@@ -28,6 +28,7 @@ frontend/.turbo/
 uploads/
 backend/data/*.pdf
 backend/data/*.docx
+backend/data/*.json
 *.pdf
 *.docx
 

@@ -4683,5 +4683,205 @@
         }
       }
     }
+  },
+  {
+    "id": "2026-05-02T20-40-57.698227__SaadAsifResume.pdf",
+    "cv_name": "SaadAsifResume.pdf",
+    "timestamp": "2026-05-02T20:40:57.698235",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": "2089958",
+          "title": "AI Engineer",
+          "description": "We are seeking a versatile and highly skilled AI Engineer to join our fast-growing Full-Stack AI Solutions company. This role blends the expertise of building cutting-edge AI/ML models with the practical know-how of automation and agentic system integrations. You will design, develop, deploy, and optimize intelligent solutions that leverage the power of generative AI, automation platforms, and agent-based systems to enhance client operations, streamline workflows, and deliver measurable results.\nThis is a unique opportunity to work across a diverse range of technologies\u2014from fine-tuning transformer models to building real-world AI-powered automation stacks. If you\u2019re passionate about pushing the boundaries of AI while creating real value through systems thinking and practical implementation, this role is for you.\nKey Responsibilities\nAI/ML Development:\n\u2022 Design, build, and deploy machine learning and generative AI models for custom use cases.\n\u2022 Fine-tune and optimize large language models (e.g., GPT, BERT) using frameworks like Hugging Face Transformers.\n\u2022 Conduct ongoing research to stay ahead of advancements in AI/ML, including LLMs, generative AI, and transformer-based architectures.\n\u2022 Develop data pipelines for preprocessing, feature engineering, and model training.\n\u2022 Test, validate, and monitor model performance in real-world scenarios; iterate for reliability and accuracy.\n\u2022 Collaborate with cross-functional teams to embed AI into products, platforms, and services.\n\u2022 Mentor junior engineers and contribute to technical leadership.\nAutomation & Agentic Systems:\n\u2022 Design, implement, and maintain automation workflows using tools such as:\n\u2022 LangChain, LangGraph, LangSmith, LangFuse n8n, ElevenLabs, and CMS integrations.\n\u2022 Engineer system-to-system integrations using APIs to enable intelligent process automation.\n\u2022 Apply prompt and context engineering techniques to enhance the performance of conversational AI tools.\n\u2022 Implement prompt management and QA processes for agents and assistants.\n\u2022 Explore and deploy Microsoft Copilot Studio, PowerApps, and PowerAutomate solutions (preferred but not required).\n\u2022 Continuously evaluate emerging AI and automation tools and assess their applicability in client use cases.\n\u2022 Collaborate with clients and internal teams to scope, deliver, and maintain agentic and automation solutions aligned with business goals.\nQualifications\nRequired\n\u2022 2+ years of hands-on experience in AI/ML development, including training and deploying models in production.\n\u2022 Strong programming skills in Python, with proficiency in frameworks such as TensorFlow, PyTorch, Scikit-learn, and Hugging Face Transformers.\n\u2022 Experience working with AI tools like Langchain, OpenAI, or Stable Diffusion.\n\u2022 Practical experience with automation platforms and AI agent builders (as listed above).\n\u2022 Deep understanding of machine learning algorithms, neural networks, and NLP concepts.\n\u2022 Proficiency in using REST APIs for tool and platform integrations.\n\u2022 Familiarity with cloud-based AI/ML platforms.\n\u2022 Strong analytical skills and the ability to translate business problems into technical AI/automation solutions.\nPreferred\n\u2022 Experience working with Agentic AI frameworks, voice automation, and prompt tuning systems.\n\u2022 Exposure to MLOps best practices, including model versioning, CI/CD, and monitoring.\n\u2022 Knowledge of reinforcement learning, GANs, or edge AI deployments.\n\u2022 Familiarity with distributed computing frameworks such as Spark or Ray.\n\u2022 Background in AI agency workflows and client-facing solution delivery.\nWork Environment & Benefits\n\u2022 Competitive salary and performance-based incentives.\n\u2022 Flexible work environment: Remote-first.\n\u2022 Collaborative, innovation-driven culture with a commitment to personal and professional growth.\n\u2022 Opportunity to work at the forefront of AI innovation across industries and verticals.",
+          "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-engineer-2089958",
+          "company_name": "Dry Ground AI",
+          "score": 61.51,
+          "overlap": 4,
+          "matched_skills": [
+            "pytorch",
+            "python",
+            "machine learning",
+            "cloud"
+          ],
+          "evidence": "Matched: pytorch, python, machine learning",
+          "priority": 4
+        },
+        {
+          "id": "2088710",
+          "title": "Online Data Analyst United States",
+          "description": "Are you a detail-oriented individual with a passion for research and a good understanding of national and local geography? This freelance opportunity allows you to work at your own pace and from the comfort of your own home.\nA Day in the Life of an Online Data Analyst:\n\u2022 In this role, you will be working on a project aimed at enhancing the content and quality of digital maps that are used by millions of people worldwide\n\u2022 Completing research and evaluation tasks in a web-based environment such as verifying and comparing data, and determining the relevance and accuracy of information.\nJoin us today and be part of a dynamic and innovative team that is making a difference in the world!\nTELUS Digital AI Community\nOur global AI Community is a vibrant network of 1 million+ contributors from diverse backgrounds who help our customers collect, enhance, train, translate, and localize content to build better AI models. Become part of our growing community and make an impact supporting the machine learning models of some of the world\u2019s largest brands. \nQualification path\nNo previous professional experience is required to apply to this role, however, working on this project will require you to pass the basic requirements and go through a standard assessment process. This is a part-time long-term project and your work will be subject to our standard quality assurance checks during the term of this agreement.\u00a0\nBasic Requirements\n\u2022 Full Professional Proficiency in English language\n\u2022 Being a resident in United States for the last 2 consecutive years and having familiarity with current and historical business, media, sport, news, social media, and cultural affairs in United States\n\u2022 Ability to follow guidelines and conduct online research using search engines, online maps, and website information\n\u2022 Flexibility to work across a diverse set of task types, including maps, news, audio tasks, and relevance\n\u2022 Daily access to a broadband internet connection, computer, and relevant software\nAssessment\nIn order to be hired into the program, you\u2019ll take an open book qualification exam that will determine your suitability for the position and complete ID verification. Our team will provide you with guidelines and learning materials before your qualification exam. You will be required to complete the exam in a specific timeframe but at your convenience.\nEqual Opportunity\nAll qualified applicants will receive consideration for a contractual relationship without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status. At TELUS Digital AI, we are proud to offer equal opportunities and are committed to creating a diverse and inclusive community. All aspects of selection are based on applicants\u2019 qualifications, merits, competence, and performance without regard to any characteristic related to diversity.",
+          "url": "https://remotive.com/remote-jobs/all-others/online-data-analyst-united-states-2088710",
+          "company_name": "TELUS Digital",
+          "score": 37.72,
+          "overlap": 1,
+          "matched_skills": [
+            "machine learning"
+          ],
+          "evidence": "Matched: machine learning",
+          "priority": 1
+        },
+        {
+          "id": "2088704",
+          "title": "Online Data Analyst (United States/Spanish speakers)",
+          "description": "Are you a detail-oriented individual with a passion for research and a good understanding of national and local geography? This freelance opportunity allows you to work at your own pace and from the comfort of your own home.\nA Day in the Life of an Online Data Analyst:\n\u2022 In this role, you will be working on a project aimed at enhancing the content and quality of digital maps that are used by millions of people worldwide\n\u2022 Completing research and evaluation tasks in a web-based environment such as verifying and comparing data, and determining the relevance and accuracy of information.\nJoin us today and be part of a dynamic and innovative team that is making a difference in the world!\nTELUS Digital AI Community\nOur global AI Community is a vibrant network of 1 million+ contributors from diverse backgrounds who help our customers collect, enhance, train, translate, and localize content to build better AI models. Become part of our growing community and make an impact supporting the machine learning models of some of the world\u2019s largest brands.\nQualification path\nNo previous professional experience is required to apply to this role, however, working on this project will require you to pass the basic requirements and go through a standard assessment process. This is a part-time long-term project and your work will be subject to our standard quality assurance checks during the term of this agreement.\u00a0\nBasic Requirements\n\u2022 Full Professional Proficiency in Spanish language\n\u2022 Being a resident in United States for the last 2 consecutive years and having familiarity with current and historical business, media, sport, news, social media, and cultural affairs in United States\n\u2022 Ability to follow guidelines and conduct online research using search engines, online maps, and website information\n\u2022 Flexibility to work across a diverse set of task types, including maps, news, audio tasks, and relevance\n\u2022 Daily access to a broadband internet connection, computer, and relevant software\nAssessment\nIn order to be hired into the program, you\u2019ll take an open book qualification exam that will determine your suitability for the position and complete ID verification. Our team will provide you with guidelines and learning materials before your qualification exam. You will be required to complete the exam in a specific timeframe but at your convenience.\nEqual Opportunity\nAll qualified applicants will receive consideration for a contractual relationship without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status. At TELUS Digital AI, we are proud to offer equal opportunities and are committed to creating a diverse and inclusive community. All aspects of selection are based on applicants\u2019 qualifications, merits, competence, and performance without regard to any characteristic related to diversity.",
+          "url": "https://remotive.com/remote-jobs/all-others/online-data-analyst-united-states-spanish-speakers-2088704",
+          "company_name": "TELUS Digital",
+          "score": 37.72,
+          "overlap": 1,
+          "matched_skills": [
+            "machine learning"
+          ],
+          "evidence": "Matched: machine learning",
+          "priority": 1
+        }
+      ],
+      "resume_score": 94,
+      "links": [
+        "mailto:saadasif78656@gmail.com",
+        "https://www.linkedin.com/in/saad-asif-636b87352/",
+        "https://github.com/Saad-61",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/463edcb59bc99fcf3c70370c0ddaab405ba3bd14",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/23cc7d4d88ac4807f7df6419af9a932b1b4de4f5",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/7dc403e0f2920a98c18145f75f7693cf8c7ea642"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "AI Engineer",
+            "score": 61.51,
+            "reason": "Saad's profile demonstrates strong capabilities in machine learning and deep learning, particularly with PyTorch, as evidenced by his VisionBench-CelebA project. He has built end-to-end AI pipelines for face analysis and photo organization, showcasing practical application of these skills.",
+            "evidence": "Matched skills: pytorch, python, machine learning. Project: VisionBench-CelebA.",
+            "gap": "The candidate's CV does not explicitly show experience with \"leadership\", \"monitoring\", \"nlp\", \"openai\", \"qa\", \"research\", \"rest\", or \"tensorflow\"."
+          },
+          {
+            "title": "Online Data Analyst United States",
+            "score": 37.72,
+            "reason": "Saad possesses a solid foundation in machine learning, which is a key requirement for a Data Analyst role, demonstrated through his various AI-powered projects. His work on ScoutVCT also highlights his ability to analyze and manage data for performance trends.",
+            "evidence": "Matched skill: machine learning. Project: BookYourShoot, ScoutVCT.",
+            "gap": "The candidate's CV does not explicitly show experience with \"go\", \"quality assurance\", or \"research\" in a professional or analytical context."
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "research",
+            "priority": "HIGH",
+            "why": "Essential for an AI Engineer or Data Analyst to stay updated on algorithms, evaluate models, and contribute to innovative solutions.",
+            "project_type": "existing",
+            "project": "VisionBench-CelebA",
+            "implementation": "Extend the project by researching and implementing state-of-the-art facial attribute classification models from recent papers, comparing performance metrics against current ResNet50.",
+            "project_idea": "",
+            "evidence": ""
+          },
+          {
+            "skill": "nlp",
+            "priority": "HIGH",
+            "why": "Critical for the AI Engineer role to develop and understand language-based AI systems, enabling interaction with data through natural language.",
+            "project_type": "existing",
+            "project": "ScoutVCT",
+            "implementation": "Enhance the 'natural-language interface' in ScoutVCT by implementing more sophisticated NLP techniques (e.g., named entity recognition, sentiment analysis) to extract deeper insights from game chat logs.",
+            "project_idea": "",
+            "evidence": ""
+          },
+          {
+            "skill": "tensorflow",
+            "priority": "MEDIUM",
+            "why": "Broadening deep learning framework expertise beyond PyTorch is valuable for an AI Engineer, increasing versatility and adaptability to different project requirements.",
+            "project_type": "new",
+            "project": "TensorFlow Image Classifier",
+            "implementation": "Build a simple image classification project using TensorFlow/Keras to demonstrate proficiency with a different deep learning ecosystem.",
+            "project_idea": "",
+            "evidence": ""
+          },
+          {
+            "skill": "monitoring",
+            "priority": "MEDIUM",
+            "why": "Important for an AI Engineer to ensure the reliability and performance of deployed AI models, detecting issues and maintaining system health.",
+            "project_type": "existing",
+            "project": "BookYourShoot",
+            "implementation": "Implement basic model monitoring for the 'AI pipeline for automatic photo organization' in BookYourShoot, tracking prediction drift or inference latency.",
+            "project_idea": "",
+            "evidence": ""
+          },
+          {
+            "skill": "rest",
+            "priority": "MEDIUM",
+            "why": "Fundamental for building and integrating AI services, ensuring robust communication between different components of an AI system as an AI Engineer.",
+            "project_type": "existing",
+            "project": "BookYourShoot",
+            "implementation": "Document and test the RESTful APIs of BookYourShoot using Postman or an automated testing framework to highlight robust API design and implementation.",
+            "project_idea": "",
+            "evidence": ""
+          }
+        ],
+        "project_improvements": [
+          {
+            "project": "BookYourShoot",
+            "current_issue": "The AI pipeline for photo organization lacks measurable impact or user feedback mechanisms.",
+            "improvement": "Implement a user feedback loop for the AI's photo organization, allowing users to correct classifications and provide input.",
+            "impact": "Quantify the improvement in clustering accuracy or reduction in user correction time by 15% within the first month of deployment."
+          },
+          {
+            "project": "VisionBench-CelebA",
+            "current_issue": "The project is strong academically but lacks a demonstration of real-world deployment or accessibility.",
+            "improvement": "Deploy the facial attribute classification model as a lightweight web service with a public API endpoint.",
+            "impact": "Showcase the model's inference speed and accuracy on new images via a publicly accessible API, demonstrating readiness for real-world integration."
+          },
+          {
+            "project": "ScoutVCT",
+            "current_issue": "The dashboard currently provides analytics but could offer more proactive insights.",
+            "improvement": "Add a predictive analytics component to forecast player performance or match outcomes based on historical data.",
+            "impact": "Provide users with actionable insights, such as 'Player X's K/D ratio is projected to increase by 5% next month based on recent trends,' making the dashboard more valuable."
+          }
+        ],
+        "cv_fixes": [
+          {
+            "section": "Professional Summary",
+            "fix": "Quantify achievements and results within the summary.",
+            "why": "To make the summary more impactful and demonstrate concrete contributions rather than just listing skills.",
+            "how": "Add metrics or specific outcomes for developed solutions, e.g., 'achieved Y% accuracy in facial attribute classification' or 'improved matching speed by X%.'"
+          },
+          {
+            "section": "Technical Skills",
+            "fix": "Group related AI/ML skills into a dedicated section.",
+            "why": "To improve readability and clearly highlight specialization in Artificial Intelligence and Machine Learning.",
+            "how": "Combine 'OpenCV, PyTorch ,scikit-learn' from Frameworks and 'Google Gemini API' from AI & Tools under a new 'AI/ML Frameworks & Tools' category."
+          },
+          {
+            "section": "Education",
+            "fix": "Add relevant coursework or thesis topic.",
+            "why": "To provide more context on academic specialization beyond just the degree name, especially for a final-year student.",
+            "how": "List 2-3 advanced courses directly related to Machine Learning, Computer Vision, or AI, or mention your thesis topic if it aligns with target roles."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Implement basic monitoring for an AI project.",
+            "section": "Personal Projects (BookYourShoot)",
+            "why": "To gain practical experience in operationalizing AI models and understanding their performance in a deployed environment, a key skill for an AI Engineer.",
+            "how": "Integrate a simple logging or dashboard system into the BookYourShoot AI pipeline to track inference latency, error rates, or model drift, and provide a screenshot of the monitoring dashboard on GitHub."
+          },
+          {
+            "action": "Write a short technical blog post.",
+            "section": "Professional Summary / Personal Projects (VisionBench-CelebA)",
+            "why": "To showcase deep technical understanding and communication skills, demonstrating expertise in computer vision and deep learning techniques to potential employers.",
+            "how": "Publish a blog post on LinkedIn or GitHub Pages detailing the methodology, challenges, and results of the VisionBench-CelebA pipeline, including code snippets and visualizations."
+          },
+          {
+            "action": "Explore and build a small project using TensorFlow.",
+            "section": "Technical Skills / Personal Projects",
+            "why": "To broaden deep learning framework proficiency beyond PyTorch, increasing versatility and appeal to a wider range of AI roles.",
+            "how": "Create a basic image classification or object detection model using TensorFlow/Keras, hosting the code on GitHub with a clear README and a demo showcasing its functionality."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "high",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
   }
 ]
