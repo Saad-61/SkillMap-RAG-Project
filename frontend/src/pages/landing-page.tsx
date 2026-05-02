@@ -58,7 +58,7 @@ export default function LandingPage() {
     <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
       <div className="space-y-8">
         <div className="relative overflow-hidden rounded-[24px] border border-slate-200/80 bg-white/85 p-6 shadow-soft sm:p-8">
-          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-r from-sky-100 via-emerald-50 to-amber-50 opacity-90" />
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-r from-purple-100 via-violet-50 to-fuchsia-50 opacity-80" />
           <div className="relative space-y-5">
             <Badge variant="indigo" className="w-fit">
               CV Analyzer
@@ -74,7 +74,7 @@ export default function LandingPage() {
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-2xl border border-white/80 bg-white/90 p-4">
-                <Target className="h-5 w-5 text-emerald-600" aria-hidden="true" />
+                <Target className="h-5 w-5 text-purple-600" aria-hidden="true" />
                 <div className="mt-3 text-sm font-semibold text-slate-900">
                   Job-fit snapshot
                 </div>
@@ -83,7 +83,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="rounded-2xl border border-white/80 bg-white/90 p-4">
-                <Sparkles className="h-5 w-5 text-amber-500" aria-hidden="true" />
+                <Sparkles className="h-5 w-5 text-violet-500" aria-hidden="true" />
                 <div className="mt-3 text-sm font-semibold text-slate-900">
                   Clear next actions
                 </div>
@@ -92,7 +92,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="rounded-2xl border border-white/80 bg-white/90 p-4">
-                <ShieldCheck className="h-5 w-5 text-sky-600" aria-hidden="true" />
+                <ShieldCheck className="h-5 w-5 text-purple-400" aria-hidden="true" />
                 <div className="mt-3 text-sm font-semibold text-slate-900">
                   Readable output
                 </div>

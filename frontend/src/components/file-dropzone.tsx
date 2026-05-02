@@ -47,9 +47,9 @@ export function FileDropzone({
       <label
         htmlFor={inputId}
         className={cn(
-          "group relative flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-slate-300 bg-white px-5 py-6 text-center shadow-soft transition-colors hover:bg-slate-50",
-          dragActive && "border-indigo-400 bg-indigo-50/40",
-          disabled && "cursor-not-allowed opacity-60 hover:bg-white",
+          "group relative flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-purple-200 bg-white px-5 py-8 text-center transition-colors hover:border-purple-400 hover:bg-purple-50/40",
+          dragActive && "border-purple-500 bg-purple-50/60",
+          disabled && "cursor-not-allowed opacity-60 hover:bg-white hover:border-purple-200",
         )}
         onClick={(e) => {
           if (disabled) e.preventDefault();
@@ -76,7 +76,7 @@ export function FileDropzone({
           handleFile(e.dataTransfer.files?.[0] ?? null);
         }}
       >
-        <div className="grid h-10 w-10 place-items-center rounded-full bg-indigo-600 text-white shadow-sm">
+        <div className="grid h-12 w-12 place-items-center rounded-full bg-purple-700 text-white shadow-md shadow-purple-200">
           <Upload className="h-4 w-4" aria-hidden="true" />
         </div>
         <div className="text-sm font-medium text-slate-900">
@@ -85,7 +85,7 @@ export function FileDropzone({
         <div className="text-xs text-slate-500">
           PDF or DOCX • up to 10MB
         </div>
-        <div className="mt-2 text-xs text-indigo-700 underline-offset-4 group-hover:underline">
+        <div className="mt-2 text-xs font-medium text-purple-700 underline-offset-4 group-hover:underline">
           Or browse files
         </div>
         <input

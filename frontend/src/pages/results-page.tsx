@@ -1,4 +1,4 @@
-import { ExternalLink, RotateCcw } from "lucide-react";
+import { ExternalLink, RotateCcw, Zap, Briefcase, Target, Wrench, ChevronRight } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { QuickRewriteCard } from "../components/quick-rewrite-card";
@@ -47,11 +47,9 @@ function sectionEmpty(text: string | undefined) {
 function buildQuickRewriteCandidates(report: AnalyzeResponse): QuickRewriteCandidate[] {
   const analysis = report.analysis || {};
   const candidates: QuickRewriteCandidate[] = [];
-
   for (const fix of analysis.cv_fixes ?? []) {
     const section = String(fix.section || "").trim();
     if (!section) continue;
-
     candidates.push({
       section,
       fix: String(fix.fix || "").trim(),
@@ -60,10 +58,174 @@ function buildQuickRewriteCandidates(report: AnalyzeResponse): QuickRewriteCandi
       source: "cv_fix",
     });
   }
-
   return candidates;
 }
 
+// ── Job Card ──────────────────────────────────────────────────────────────────
+function JobCard({ job, showScore }: { job: MatchedJob; showScore: boolean }) {
+  const score = job.score ?? 0;
+  const pct = Math.min(Math.round(score), 100);
+  const barColor =
+    pct >= 60 ? "bg-green-500" : pct >= 40 ? "bg-amber-400" : "bg-rose-400";
+  const textColor =
+    pct >= 60 ? "text-green-600" : pct >= 40 ? "text-amber-500" : "text-rose-500";
+
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md transition-shadow">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <div className="font-semibold text-slate-900">{job.title}</div>
+          {job.company_name && (
+            <div className="mt-0.5 text-xs text-slate-500">{job.company_name}</div>
+          )}
+        </div>
+        {showScore && (
+          <span className={`shrink-0 text-xl font-bold ${textColor}`}>{pct}%</span>
+        )}
+      </div>
+
+      {showScore && (
+        <div className="mt-2 h-2 w-full rounded-full bg-slate-100">
+          <div
+            className={`h-2 rounded-full transition-all ${barColor}`}
+            style={{ width: `${pct}%` }}
+          />
+        </div>
+      )}
+
+      {job.matched_skills?.length ? (
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {job.matched_skills.slice(0, 6).map((s) => (
+            <span
+              key={s}
+              className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600"
+            >
+              {s}
+            </span>
+          ))}
+        </div>
+      ) : null}
+
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        {job.url ? (
+          <a
+            href={job.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-1.5 rounded-full border border-purple-100 bg-purple-50 px-3 py-1 text-xs font-medium text-purple-700 hover:bg-purple-100 transition-colors"
+          >
+            Apply <ExternalLink className="h-3 w-3" />
+          </a>
+        ) : null}
+      </div>
+
+      {job.description ? (
+        <>
+          <Separator className="my-3" />
+          <details className="group">
+            <summary className="cursor-pointer text-xs font-medium text-purple-700 group-open:underline">
+              View description
+            </summary>
+            <p className="mt-2 whitespace-pre-wrap break-words text-xs leading-relaxed text-slate-600">
+              {stripHtml(job.description).slice(0, 600)}…
+            </p>
+          </details>
+        </>
+      ) : null}
+    </div>
+  );
+}
+
+// ── Skill Card ────────────────────────────────────────────────────────────────
+function SkillCard({ skill, idx }: { skill: MissingSkill; idx: number }) {
+  const isNew =
+    String(skill.project_type || "").toLowerCase() === "new";
+  const priority = String(skill.priority || "").toUpperCase();
+
+  return (
+    <div
+      className={`rounded-xl border bg-white p-4 shadow-sm ${
+        isNew ? "border-l-4 border-l-violet-500" : "border-l-4 border-l-amber-500"
+      } border-slate-200`}
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <div className="font-semibold text-slate-900">{skill.skill}</div>
+          <div className="mt-1 flex flex-wrap gap-1.5">
+            <span
+              className={`rounded-md px-2 py-0.5 text-xs font-semibold ${
+                priority === "HIGH"
+                  ? "bg-red-50 text-red-600"
+                  : priority === "MEDIUM"
+                  ? "bg-amber-50 text-amber-600"
+                  : "bg-slate-100 text-slate-500"
+              }`}
+            >
+              {priority}
+            </span>
+            <span
+              className={`rounded-md px-2 py-0.5 text-xs font-semibold ${
+                isNew
+                  ? "bg-violet-50 text-violet-700"
+                  : "bg-amber-50 text-amber-700"
+              }`}
+            >
+              {isNew ? "New project" : "Add to existing"}
+            </span>
+          </div>
+        </div>
+        {skill.project ? (
+          <span className="shrink-0 rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700">
+            {skill.project}
+          </span>
+        ) : null}
+      </div>
+
+      {skill.why || skill.project_idea ? (
+        <div className="mt-3 space-y-1 text-xs text-slate-600">
+          {skill.why && (
+            <div><span className="font-semibold text-slate-800">Why:</span> {skill.why}</div>
+          )}
+          {skill.project_idea && (
+            <div><span className="font-semibold text-slate-800">How:</span> {skill.project_idea}</div>
+          )}
+          {skill.implementation && (
+            <div><span className="font-semibold text-slate-800">Where:</span> {skill.implementation}</div>
+          )}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+// ── Action Item ───────────────────────────────────────────────────────────────
+function ActionItem({ action, idx }: { action: TopAction; idx: number }) {
+  return (
+    <div className="flex gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-700 text-sm font-bold text-white">
+        {idx + 1}
+      </div>
+      <div className="min-w-0 flex-1">
+        <div className="font-semibold text-slate-900">{action.action}</div>
+        {!sectionEmpty(action.section) && (
+          <div className="mt-0.5 text-xs text-slate-500">{action.section}</div>
+        )}
+        {action.why || action.how ? (
+          <div className="mt-2 space-y-1 text-xs text-slate-600">
+            {action.why && (
+              <div><span className="font-semibold text-slate-800">Why:</span> {action.why}</div>
+            )}
+            {action.how && (
+              <div><span className="font-semibold text-slate-800">How:</span> {action.how}</div>
+            )}
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
+// ── Main Page ─────────────────────────────────────────────────────────────────
 export default function ResultsPage() {
   const navigate = useNavigate();
   const { report, filename, createdAt, setReport, startOver } = useCv();
@@ -90,39 +252,24 @@ export default function ResultsPage() {
   const quickRewriteCandidates = buildQuickRewriteCandidates(effective.report);
   const topActions = analysis.top_actions ?? [];
 
-  const matchByTitle = useMemo(() => {
-    const map = new Map<string, (typeof jobMatches)[number]>();
-    for (const m of jobMatches) {
-      if (!m?.title) continue;
-      map.set(m.title.trim().toLowerCase(), m);
-    }
-    return map;
-  }, [jobMatches]);
-
-  const evaluatedCount = effective.report.all_jobs?.length ?? jobsSorted.length ?? 0;
-
   const jobsSorted = useMemo<MatchedJob[]>(() => {
     const jobs = (effective.report.matched_jobs ?? []).slice();
     jobs.sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
     return jobs;
   }, [effective.report.matched_jobs]);
 
-  const allJobs = useMemo<MatchedJob[]>(() => {
-    return (effective.report.all_jobs ?? []).slice();
-  }, [effective.report.all_jobs]);
+  const allJobs = useMemo<MatchedJob[]>(
+    () => (effective.report.all_jobs ?? []).slice(),
+    [effective.report.all_jobs]
+  );
 
-  const jobsToShow = useMemo<MatchedJob[]>(() => {
-    return jobsView === "all" ? allJobs : jobsSorted;
-  }, [jobsView, allJobs, jobsSorted]);
-
-  const overviewActions: TopAction[] = topActions.slice(0, 3);
-  const overviewJobs = jobsSorted.slice(0, 3);
-  const overviewSkills: MissingSkill[] = missingSkills.slice(0, 2);
-  const overviewRewrites = quickRewriteCandidates.slice(0, 2);
+  const jobsToShow = jobsView === "all" ? allJobs : jobsSorted;
+  const evaluatedCount = allJobs.length || jobsSorted.length;
 
   const createdLabel = formatDateTime(effective.createdAt);
   const rawJson = JSON.stringify(effective.report, null, 2);
   const cvText = effective.report.cv_text || "";
+  const resumeScore = effective.report.resume_score ?? null;
 
   const onStartOver = () => {
     startOver();
@@ -130,7 +277,8 @@ export default function ResultsPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
+      {/* ── Header card ── */}
       <Collapsible open={rawOpen} onOpenChange={setRawOpen}>
         <Card>
           <CardHeader>
@@ -139,18 +287,27 @@ export default function ResultsPage() {
                 <CardTitle>Your CV Report</CardTitle>
                 <CardDescription className="mt-1">
                   {effective.filename}
-                  {createdLabel ? ` | ${createdLabel}` : ""}
+                  {createdLabel ? ` · ${createdLabel}` : ""}
                 </CardDescription>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                {resumeScore !== null && (
+                  <div className="flex flex-col items-start rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold text-slate-700">Resume Score</span>
+                      <ScorePill score={resumeScore} />
+                    </div>
+                    <div className="mt-1 text-[10px] text-slate-500 leading-tight max-w-[200px]">
+                      Based on skill count, project mentions &amp; links detected in your CV
+                    </div>
+                  </div>
+                )}
                 <Button type="button" variant="outline" onClick={onStartOver}>
                   <RotateCcw className="h-4 w-4" />
                   Start over
                 </Button>
                 <CollapsibleTrigger asChild>
-                  <Button type="button" variant="outline">
-                    Raw JSON
-                  </Button>
+                  <Button type="button" variant="outline">Raw JSON</Button>
                 </CollapsibleTrigger>
               </div>
             </div>
@@ -160,10 +317,7 @@ export default function ResultsPage() {
               <div className="rounded-lg border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">
                 {analysis.error}
               </div>
-            ) : (
-              null
-            )}
-
+            ) : null}
             <CollapsibleContent className="mt-4">
               <div className="rounded-lg border border-slate-200 bg-white p-4">
                 <div className="flex items-center justify-between gap-3">
@@ -179,486 +333,278 @@ export default function ResultsPage() {
         </Card>
       </Collapsible>
 
+      {/* ── Hero: Top Actions Banner ── */}
+      {topActions.length > 0 && (
+        <div className="rounded-xl border border-purple-200 bg-gradient-to-r from-purple-50 to-violet-50 p-5 shadow-sm">
+          <div className="flex items-center gap-2 mb-3">
+            <Zap className="h-5 w-5 text-purple-600" />
+            <span className="font-bold text-purple-900 text-base">Top Actions — Do This Next</span>
+          </div>
+          <div className="space-y-2">
+            {topActions.slice(0, 3).map((a, idx) => (
+              <div key={`hero-${idx}`} className="flex items-start gap-3">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-purple-700 text-xs font-bold text-white">
+                  {idx + 1}
+                </span>
+                <div>
+                  <span className="font-semibold text-slate-800">{a.action}</span>
+                  {!sectionEmpty(a.section) && (
+                    <span className="ml-2 text-xs text-slate-500">· {a.section}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          {topActions.length > 3 && (
+            <button
+              onClick={() => setActiveTab("overview")}
+              className="mt-3 flex items-center gap-1 text-xs font-medium text-purple-600 hover:underline"
+            >
+              See all {topActions.length} actions <ChevronRight className="h-3 w-3" />
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* ── Links from CV (compact) ── */}
+      {(effective.report.links?.length ?? 0) > 0 && (
+        <div className="rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+          <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+            Links detected in CV
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {effective.report.links!.map((link) => (
+              <a
+                key={link}
+                href={link}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-700 hover:bg-slate-100 transition-colors"
+              >
+                {safeUrlLabel(link)} <ExternalLink className="h-3 w-3" />
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── Tabs ── */}
       <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="w-full justify-start">
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="actions">Actions ({topActions.length})</TabsTrigger>
-          <TabsTrigger value="jobs">Jobs ({jobsSorted.length}/{evaluatedCount})</TabsTrigger>
-          <TabsTrigger value="skills">Missing Skills ({missingSkills.length})</TabsTrigger>
-          <TabsTrigger value="improve">Improve CV ({quickRewriteCandidates.length})</TabsTrigger>
-          <TabsTrigger value="improvements">Project Improvements ({projectImprovements.length})</TabsTrigger>
-          <TabsTrigger value="links">Links ({effective.report.links?.length ?? 0})</TabsTrigger>
+        <TabsList className="w-full justify-start gap-1">
+          <TabsTrigger value="overview" className="flex items-center gap-1.5">
+            <Target className="h-3.5 w-3.5" /> Overview
+          </TabsTrigger>
+          <TabsTrigger value="jobs" className="flex items-center gap-1.5">
+            <Briefcase className="h-3.5 w-3.5" /> Jobs
+            <span className="ml-1 rounded-full bg-purple-100 px-1.5 py-0.5 text-xs font-semibold text-purple-700">
+              {jobsSorted.length}
+            </span>
+          </TabsTrigger>
+          <TabsTrigger value="skills" className="flex items-center gap-1.5">
+            <Target className="h-3.5 w-3.5" /> Skills Gap
+            <span className="ml-1 rounded-full bg-orange-100 px-1.5 py-0.5 text-xs font-semibold text-orange-700">
+              {missingSkills.length}
+            </span>
+          </TabsTrigger>
+          <TabsTrigger value="improvements" className="flex items-center gap-1.5">
+            <Wrench className="h-3.5 w-3.5" /> Improvements
+            <span className="ml-1 rounded-full bg-indigo-100 px-1.5 py-0.5 text-xs font-semibold text-indigo-700">
+              {quickRewriteCandidates.length + projectImprovements.length}
+            </span>
+          </TabsTrigger>
         </TabsList>
 
+        {/* ── Overview Tab ── */}
         <TabsContent value="overview">
-          <div className="grid gap-6 lg:grid-cols-2">
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                      <CardTitle>Quick rewrites</CardTitle>
-                      <CardDescription>
-                        Instant CV-only changes you can generate and paste directly into your resume.
-                      </CardDescription>
-                    </div>
-                    <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("improve")}>
-                      Open quick fixes
-                    </Button>
+          <div className="grid gap-5 lg:grid-cols-2">
+            {/* Left: Actions */}
+            <Card>
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Actions</CardTitle>
+                    <CardDescription>Concrete next steps beyond your CV.</CardDescription>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {overviewRewrites.length ? (
-                    <>
-                      {overviewRewrites.map((candidate, index) => (
-                        <div
-                          key={`${candidate.section}-${candidate.source}-${index}`}
-                          className="rounded-lg border border-slate-200 bg-white p-4"
-                        >
-                          <div className="flex items-start justify-between gap-3">
-                            <div className="min-w-0">
-                              <div className="text-sm font-semibold text-slate-900">
-                                {candidate.section}
-                              </div>
-                              <p className="mt-2 text-sm text-slate-700">{candidate.fix}</p>
-                            </div>
-                            <Badge variant="indigo" className="shrink-0">
-                              Rewrite-ready
-                            </Badge>
-                          </div>
-                        </div>
-                      ))}
-                    </>
-                  ) : (
-                    <div className="text-sm text-slate-600">No instant rewrites returned.</div>
-                  )}
-                </CardContent>
-              </Card>
+                  <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("overview")}>
+                    All
+                  </Button>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {topActions.length ? (
+                  topActions.slice(0, 3).map((a, idx) => (
+                    <ActionItem key={`ov-act-${idx}`} action={a} idx={idx} />
+                  ))
+                ) : (
+                  <div className="text-sm text-slate-500">No actions returned.</div>
+                )}
+              </CardContent>
+            </Card>
 
-              <Card>
-                <CardHeader>
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                      <CardTitle>Top actions</CardTitle>
-                      <CardDescription>
-                        The highest-value next steps that require more than a quick resume edit.
-                      </CardDescription>
-                    </div>
-                    <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("actions")}>
-                      Open actions
-                    </Button>
+            {/* Right: Best Job Matches */}
+            <Card>
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Best Matches</CardTitle>
+                    <CardDescription>Top roles by match score.</CardDescription>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {overviewActions.length ? (
-                    overviewActions.map((a, idx) => (
-                      <div key={`${a.action}-${idx}`} className="rounded-lg border border-slate-200 bg-white p-4">
-                        <div className="flex items-start justify-between gap-3">
-                          <div className="min-w-0">
-                            <div className="text-sm font-semibold text-slate-900">
-                              {idx + 1}. {a.action}
-                            </div>
-                            {!sectionEmpty(a.section) ? (
-                              <div className="mt-1 text-xs text-slate-500">{a.section}</div>
-                            ) : null}
-                          </div>
-                          <Badge variant="indigo" className="shrink-0">
-                            This week
-                          </Badge>
-                        </div>
-                        {!sectionEmpty(a.why) ? (
-                          <p className="mt-3 text-sm text-slate-700">{a.why}</p>
-                        ) : null}
-                        {!sectionEmpty(a.how) ? (
-                          <p className="mt-2 text-sm text-slate-600">
-                            <span className="font-semibold text-slate-900">How:</span>{" "}
-                            {a.how}
-                          </p>
-                        ) : null}
+                  <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("jobs")}>
+                    See all
+                  </Button>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {jobsSorted.length ? (
+                  jobsSorted.slice(0, 3).map((job) => (
+                    <JobCard key={job.id} job={job} showScore />
+                  ))
+                ) : (
+                  <div className="text-sm text-slate-500">No matches returned.</div>
+                )}
+              </CardContent>
+            </Card>
+
+            {/* Bottom left: Top missing skills */}
+            <Card>
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Top Skills Gap</CardTitle>
+                    <CardDescription>Highest-impact gaps to close next.</CardDescription>
+                  </div>
+                  <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("skills")}>
+                    See all
+                  </Button>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {missingSkills.length ? (
+                  missingSkills.slice(0, 2).map((s, idx) => (
+                    <SkillCard key={`ov-sk-${idx}`} skill={s} idx={idx} />
+                  ))
+                ) : (
+                  <div className="text-sm text-slate-500">No missing skills returned.</div>
+                )}
+              </CardContent>
+            </Card>
+
+            {/* Bottom right: Quick rewrites */}
+            <Card>
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Quick Rewrites</CardTitle>
+                    <CardDescription>Instant CV-only fixes ready to paste.</CardDescription>
+                  </div>
+                  <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("improvements")}>
+                    Open
+                  </Button>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {quickRewriteCandidates.length ? (
+                  quickRewriteCandidates.slice(0, 2).map((c, idx) => (
+                    <div
+                      key={`ov-rw-${idx}`}
+                      className="rounded-lg border border-slate-200 bg-slate-50 p-3"
+                    >
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="text-sm font-semibold text-slate-900">{c.section}</div>
+                        <Badge variant="indigo" className="shrink-0">Rewrite-ready</Badge>
                       </div>
-                    ))
-                  ) : (
-                    <div className="text-sm text-slate-600">
-                      No slower workflow actions returned after promoting CV-only edits to quick rewrites.
+                      <p className="mt-1.5 text-sm text-slate-600">{c.fix}</p>
                     </div>
-                  )}
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                      <CardTitle>Best matches</CardTitle>
-                      <CardDescription>
-                        Top roles based on your CV and job data. Match score is a fit signal
-                        inside this app, not a hiring probability.
-                      </CardDescription>
-                    </div>
-                    <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("jobs")}>
-                      Open jobs
-                    </Button>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {overviewJobs.length ? (
-                    overviewJobs.map((job) => {
-                      const jm = matchByTitle.get(job.title.trim().toLowerCase());
-                      return (
-                        <div key={job.id} className="rounded-lg border border-slate-200 bg-white p-4">
-                          <div className="flex items-start justify-between gap-3">
-                            <div className="min-w-0">
-                              <div className="text-sm font-semibold text-slate-900">{job.title}</div>
-                              {job.matched_skills?.length ? (
-                                <div className="mt-2 flex flex-wrap gap-1.5">
-                                  {job.matched_skills.slice(0, 6).map((s) => (
-                                    <Badge key={s} variant="slate">
-                                      {s}
-                                    </Badge>
-                                  ))}
-                                </div>
-                              ) : null}
-                            </div>
-                            <div className="shrink-0">
-                              <ScorePill score={job.score ?? 0} />
-                            </div>
-                          </div>
-                          {jm?.reason ? (
-                            <p className="mt-3 text-sm text-slate-700">{jm.reason}</p>
-                          ) : null}
-                          {jm?.gap ? (
-                            <p className="mt-2 text-sm text-slate-600">
-                              <span className="font-semibold text-slate-900">Gap:</span>{" "}
-                              {jm.gap}
-                            </p>
-                          ) : null}
-                        </div>
-                      );
-                    })
-                  ) : (
-                    <div className="text-sm text-slate-600">No matches returned.</div>
-                  )}
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                      <CardTitle>Top missing skills</CardTitle>
-                      <CardDescription>Highest-impact gaps to close next.</CardDescription>
-                    </div>
-                    <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("skills")}>
-                      Open skills
-                    </Button>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {overviewSkills.length ? (
-                    overviewSkills.map((s, idx) => (
-                      <div key={`${s.skill}-${idx}`} className="rounded-lg border border-slate-200 bg-white p-4">
-                        <div className="flex items-start justify-between gap-3">
-                          <div className="text-sm font-semibold text-slate-900">{s.skill}</div>
-                          <Badge
-                            variant={
-                              String(s.priority).toUpperCase() === "HIGH"
-                                ? "red"
-                                : String(s.priority).toUpperCase() === "MEDIUM"
-                                  ? "amber"
-                                  : "slate"
-                            }
-                          >
-                            {String(s.priority).toUpperCase()}
-                          </Badge>
-                        </div>
-                        {s.project ? (
-                          <div className="mt-2 text-sm text-slate-700">
-                            <span className="font-semibold text-slate-900">Suggested:</span>{" "}
-                            {s.project}
-                          </div>
-                        ) : null}
-                        {s.project_idea ? (
-                          <div className="mt-2 text-sm text-slate-600">{s.project_idea}</div>
-                        ) : null}
-                      </div>
-                    ))
-                  ) : (
-                    <div className="text-sm text-slate-600">No missing skills returned.</div>
-                  )}
-                </CardContent>
-              </Card>
-            </div>
+                  ))
+                ) : (
+                  <div className="text-sm text-slate-500">No rewrites returned.</div>
+                )}
+              </CardContent>
+            </Card>
           </div>
         </TabsContent>
 
-        <TabsContent value="actions">
-          <Card>
-            <CardHeader>
-              <CardTitle>Top actions</CardTitle>
-              <CardDescription>
-                Clear deliverables you can complete this week, excluding instant CV-only edits.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {topActions.length ? (
-                topActions.map((a, idx) => (
-                  <div key={`${a.action}-${idx}`} className="rounded-lg border border-slate-200 bg-white p-4">
-                    <div className="text-sm font-semibold text-slate-900">
-                      {idx + 1}. {a.action}
-                    </div>
-                    {a.section ? (
-                      <div className="mt-1 text-xs text-slate-500">{a.section}</div>
-                    ) : null}
-                    {a.why ? <p className="mt-3 text-sm text-slate-700">{a.why}</p> : null}
-                    {a.how ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">How:</span>{" "}
-                        {a.how}
-                      </p>
-                    ) : null}
-                  </div>
-                ))
-              ) : (
-                <div className="text-sm text-slate-600">No non-CV workflow actions returned.</div>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
-
+        {/* ── Jobs Tab ── */}
         <TabsContent value="jobs">
           <Card>
             <CardHeader>
-              <CardTitle>Jobs</CardTitle>
+              <CardTitle>Job Matches</CardTitle>
               <CardDescription>
-                Compare matched jobs against the full pool the pipeline evaluated.
+                {jobsSorted.length} matched · {evaluatedCount} total evaluated
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="flex flex-wrap gap-2">
+              <div className="flex gap-2">
                 <Button
-                  type="button"
-                  size="sm"
+                  type="button" size="sm"
                   variant={jobsView === "matched" ? "default" : "outline"}
                   onClick={() => setJobsView("matched")}
                 >
-                  Matched jobs ({jobsSorted.length})
+                  Matched ({jobsSorted.length})
                 </Button>
                 <Button
-                  type="button"
-                  size="sm"
+                  type="button" size="sm"
                   variant={jobsView === "all" ? "default" : "outline"}
                   onClick={() => setJobsView("all")}
                 >
-                  All jobs ({allJobs.length})
+                  All ({allJobs.length})
                 </Button>
               </div>
-
-              {jobsToShow.length ? (
-                jobsToShow.map((job) => {
-                  const jm = matchByTitle.get(job.title.trim().toLowerCase());
-                  return (
-                    <div key={job.id} className="rounded-lg border border-slate-200 bg-white p-4">
-                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                        <div className="min-w-0">
-                          <div className="text-sm font-semibold text-slate-900">{job.title}</div>
-                          <div className="mt-1 text-xs text-slate-500">
-                            {jobsView === "matched" ? "Match score" : "Evaluated job pool"}
-                          </div>
-                          {job.matched_skills?.length ? (
-                            <div className="mt-2 flex flex-wrap gap-1.5">
-                              {job.matched_skills.map((s) => (
-                                <Badge key={s} variant="slate">
-                                  {s}
-                                </Badge>
-                              ))}
-                            </div>
-                          ) : null}
-                        </div>
-                        {jobsView === "matched" ? (
-                          <div className="shrink-0">
-                            <ScorePill score={job.score ?? 0} />
-                          </div>
-                        ) : null}
-                      </div>
-
-                      {jm?.reason ? (
-                        <p className="mt-4 text-sm text-slate-700">{jm.reason}</p>
-                      ) : null}
-                      {jm?.evidence ? (
-                        <p className="mt-2 text-sm text-slate-600">
-                          <span className="font-semibold text-slate-900">Evidence:</span>{" "}
-                          {jm.evidence}
-                        </p>
-                      ) : null}
-                      {jm?.gap ? (
-                        <p className="mt-2 text-sm text-slate-600">
-                          <span className="font-semibold text-slate-900">Gap:</span>{" "}
-                          {jm.gap}
-                        </p>
-                      ) : null}
-
-                      <div className="mt-4 flex flex-wrap items-center gap-2">
-                        {job.url ? (
-                          <a
-                            href={job.url}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 hover:bg-indigo-100"
-                          >
-                            Open job page
-                            <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-                          </a>
-                        ) : null}
-                        {job.company_name ? (
-                          <div className="text-xs text-slate-500">{job.company_name}</div>
-                        ) : null}
-                      </div>
-
-                      {job.description ? (
-                        <>
-                          <Separator className="my-4" />
-                          <details className="group">
-                            <summary className="cursor-pointer text-sm font-medium text-indigo-700 underline-offset-4 group-open:underline">
-                              Job description
-                            </summary>
-                            <p className="mt-3 whitespace-pre-wrap break-words text-sm leading-relaxed text-slate-700">
-                              {stripHtml(job.description)}
-                            </p>
-                          </details>
-                        </>
-                      ) : null}
-                    </div>
-                  );
-                })
-              ) : (
-                <div className="text-sm text-slate-600">No jobs returned.</div>
-              )}
+              <div className="grid gap-3 sm:grid-cols-2">
+                {jobsToShow.length ? (
+                  jobsToShow.map((job) => (
+                    <JobCard key={job.id} job={job} showScore={jobsView === "matched"} />
+                  ))
+                ) : (
+                  <div className="col-span-2 text-sm text-slate-500">No jobs returned.</div>
+                )}
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
 
+        {/* ── Skills Gap Tab ── */}
         <TabsContent value="skills">
           <Card>
             <CardHeader>
-              <CardTitle>Missing skills</CardTitle>
-              <CardDescription>High-impact gaps with practical projects.</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {missingSkills.length ? (
-                missingSkills.map((s, idx) => (
-                  <div key={`${s.skill}-${idx}`} className="rounded-lg border border-slate-200 bg-white p-4">
-                    <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                      <div className="min-w-0">
-                        <div className="text-sm font-semibold text-slate-900">{s.skill}</div>
-                        <div className="mt-1 flex flex-wrap gap-2">
-                          <Badge
-                            variant={
-                              String(s.priority).toUpperCase() === "HIGH"
-                                ? "red"
-                                : String(s.priority).toUpperCase() === "MEDIUM"
-                                  ? "amber"
-                                  : "slate"
-                            }
-                          >
-                            {String(s.priority).toUpperCase()}
-                          </Badge>
-                          <Badge variant="outline">
-                            {String(s.project_type || "existing").toLowerCase() === "new"
-                              ? "New project"
-                              : "Existing project"}
-                          </Badge>
-                        </div>
-                      </div>
-                      {s.project ? <Badge variant="indigo">{s.project}</Badge> : null}
-                    </div>
-
-                    {s.why ? <p className="mt-3 text-sm text-slate-700">{s.why}</p> : null}
-                    {s.project_idea ? (
-                      <p className="mt-2 text-sm text-slate-600">{s.project_idea}</p>
-                    ) : null}
-                    {s.implementation ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">Implementation:</span>{" "}
-                        {s.implementation}
-                      </p>
-                    ) : null}
-                    {s.evidence ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">Evidence:</span>{" "}
-                        {s.evidence}
-                      </p>
-                    ) : null}
-                  </div>
-                ))
-              ) : (
-                <div className="text-sm text-slate-600">No missing skills returned.</div>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="improvements">
-          <Card>
-            <CardHeader>
-              <CardTitle>Project improvements</CardTitle>
-              <CardDescription>Concrete upgrades for existing projects.</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {projectImprovements.length ? (
-                projectImprovements.map((p, idx) => (
-                  <div key={`${p.project}-${idx}`} className="rounded-lg border border-slate-200 bg-white p-4">
-                    <div className="text-sm font-semibold text-slate-900">{p.project}</div>
-                    {p.current_issue ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">Current issue:</span>{" "}
-                        {p.current_issue}
-                      </p>
-                    ) : null}
-                    {p.improvement ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">Improvement:</span>{" "}
-                        {p.improvement}
-                      </p>
-                    ) : null}
-                    {p.impact ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">Impact:</span>{" "}
-                        {p.impact}
-                      </p>
-                    ) : null}
-                  </div>
-                ))
-              ) : (
-                <div className="text-sm text-slate-600">No project improvements returned.</div>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="improve">
-          <Card>
-            <CardHeader>
-              <CardTitle>Improve CV</CardTitle>
+              <CardTitle>Skills Gap</CardTitle>
               <CardDescription>
-                Quick rewrites and CV fixes are merged here so one tab handles both guidance and paste-ready replacements.
+                <span className="mr-4 inline-flex items-center gap-1.5">
+                  <span className="inline-block h-3 w-3 rounded-sm bg-amber-500" />
+                  Add to existing project
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="inline-block h-3 w-3 rounded-sm bg-violet-500" />
+                  Build new project
+                </span>
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              {quickRewriteCandidates.length ? (
-                <div className="space-y-4 rounded-xl border border-indigo-100 bg-indigo-50/60 p-4">
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                      <div className="text-sm font-semibold text-slate-900">Quick rewrites available</div>
-                      <p className="mt-1 text-sm text-slate-600">
-                        These can be turned into copy-ready text or LaTeX snippets instantly.
-                      </p>
-                    </div>
-                  </div>
-                  {!cvText ? (
+            <CardContent className="space-y-3">
+              {missingSkills.length ? (
+                missingSkills.map((s, idx) => (
+                  <SkillCard key={`sk-${idx}`} skill={s} idx={idx} />
+                ))
+              ) : (
+                <div className="text-sm text-slate-500">No missing skills returned.</div>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* ── Improvements Tab (rewrites + project improvements) ── */}
+        <TabsContent value="improvements">
+          <div className="space-y-5">
+            {/* CV Quick Rewrites */}
+            <Card>
+              <CardHeader>
+                <CardTitle>CV Quick Rewrites</CardTitle>
+                <CardDescription>Generate and paste directly into your resume.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {quickRewriteCandidates.length ? (
+                  !cvText ? (
                     <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-                      This report was created before CV text was stored with the analysis. Run the analysis again to generate rewrites.
+                      This report was created before CV text was stored. Re-analyze to generate rewrites.
                     </div>
                   ) : (
                     quickRewriteCandidates.map((candidate, index) => (
@@ -668,59 +614,54 @@ export default function ResultsPage() {
                         cvText={cvText}
                       />
                     ))
-                  )}
-                </div>
-              ) : (
-                <div className="text-sm text-slate-600">No CV improvements returned.</div>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
+                  )
+                ) : (
+                  <div className="text-sm text-slate-500">No CV improvements returned.</div>
+                )}
+              </CardContent>
+            </Card>
 
-        <TabsContent value="links">
-          <Card>
-            <CardHeader>
-              <CardTitle>Links</CardTitle>
-              <CardDescription>Detected from your CV.</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              {effective.report.links?.length ? (
-                (() => {
-                  const mailto = effective.report.links.filter((l) => l.startsWith("mailto:"));
-                  const rest = effective.report.links.filter((l) => !l.startsWith("mailto:"));
-                  const ordered = [...mailto, ...rest];
-                  return ordered.map((link) => (
-                    <a
-                      key={link}
-                      href={link}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 hover:bg-slate-50"
+            {/* Project Improvements */}
+            {projectImprovements.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Project Improvements</CardTitle>
+                  <CardDescription>Concrete upgrades for existing projects.</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {projectImprovements.map((p, idx) => (
+                    <div
+                      key={`pi-${idx}`}
+                      className="rounded-xl border-l-4 border-l-green-500 border border-slate-200 bg-white p-4 shadow-sm"
                     >
-                      <span className="truncate">{safeUrlLabel(link)}</span>
-                      <ExternalLink className="h-4 w-4 text-slate-400" aria-hidden="true" />
-                    </a>
-                  ));
-                })()
-              ) : (
-                <div className="text-sm text-slate-600">No links returned.</div>
-              )}
-            </CardContent>
-          </Card>
+                      <div className="font-semibold text-slate-900">{p.project}</div>
+                      <div className="mt-2 space-y-1 text-xs text-slate-600">
+                        {p.current_issue && (
+                          <div><span className="font-semibold text-slate-800">Issue:</span> {p.current_issue}</div>
+                        )}
+                        {p.improvement && (
+                          <div><span className="font-semibold text-slate-800">Fix:</span> {p.improvement}</div>
+                        )}
+                        {p.impact && (
+                          <div><span className="font-semibold text-slate-800">Impact:</span> {p.impact}</div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            )}
+          </div>
         </TabsContent>
-
       </Tabs>
 
       {!report && stored ? (
         <div className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-600">
           Loaded report from this session.
           <Button
-            type="button"
-            variant="link"
+            type="button" variant="link"
             className="ml-2 h-auto p-0 text-indigo-700"
-            onClick={() => {
-              setReport(stored.report, stored.filename, stored.createdAt);
-            }}
+            onClick={() => setReport(stored.report, stored.filename, stored.createdAt)}
           >
             Keep in app state
           </Button>

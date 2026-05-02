@@ -1,54 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Clean SaaS (Slate + Indigo), light-only */
-  --background: 0 0% 100%;
-  --foreground: 222.2 47.4% 11.2%;
+  /* ── Eminence Purple Design System ── */
+  --background: 270 30% 97%;       /* lavender-tinted page bg */
+  --foreground: 270 25% 12%;
 
   --card: 0 0% 100%;
-  --card-foreground: 222.2 47.4% 11.2%;
+  --card-foreground: 270 25% 12%;
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 44%;
+  --muted: 270 20% 93%;
+  --muted-foreground: 270 10% 48%;
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 224.3 76.3% 48%;
+  --border: 270 18% 88%;
+  --input: 270 18% 88%;
+  --ring: 276 60% 42%;             /* Eminence purple focus ring */
 
-  --primary: 226 70% 55%;
-  --primary-foreground: 210 40% 98%;
+  /* Primary = Eminence #6B3FA0 → hsl(276, 43%, 44%) */
+  --primary: 276 43% 44%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 270 20% 93%;
+  --secondary-foreground: 270 25% 20%;
 
-  --accent: 226 70% 97%;
-  --accent-foreground: 226 70% 30%;
+  /* Accent = lighter purple tint */
+  --accent: 276 50% 96%;
+  --accent-foreground: 276 43% 35%;
 
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
 body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   @apply bg-background text-foreground antialiased;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
-    Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-/* Subtle background wash (avoid "AI gradient" look) */
+/* ── Page wash: warm lavender gradient background ── */
 .app-wash {
   background:
-    radial-gradient(1200px 800px at 50% 0%, rgba(79, 70, 229, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(248, 250, 252, 1), rgba(255, 255, 255, 1));
+    radial-gradient(1100px 700px at 60% -10%, hsl(276 60% 92% / 0.6), transparent 65%),
+    radial-gradient(800px 600px at 0% 80%, hsl(260 50% 94% / 0.5), transparent 60%),
+    hsl(270 30% 97%);
+}
+
+/* ── Smooth focus rings ── */
+*:focus-visible {
+  outline: 2px solid hsl(276 43% 44%);
+  outline-offset: 2px;
 }
 
 ::selection {
-  background: rgba(79, 70, 229, 0.18);
+  background: hsl(276 60% 44% / 0.18);
 }
 
+/* ── Subtle card hover lift ── */
+.card-hover {
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 8px 30px -6px hsl(276 43% 44% / 0.15);
+  transform: translateY(-1px);
+}
+
+/* ── Animated progress bar fill ── */
+@keyframes progress-fill {
+  from { transform: translateX(-100%); }
+}

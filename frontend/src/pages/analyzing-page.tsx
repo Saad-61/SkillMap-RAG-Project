@@ -83,7 +83,7 @@ export default function AnalyzingPage() {
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-4">
-            <Loader2 className="h-5 w-5 animate-spin text-indigo-600" aria-hidden="true" />
+            <Loader2 className="h-5 w-5 animate-spin text-purple-700" aria-hidden="true" />
             <div className="flex-1">
               <div className="text-sm font-semibold text-slate-900">{status}</div>
               <div className="mt-1 text-xs text-slate-500">
@@ -118,7 +118,7 @@ export default function AnalyzingPage() {
               <Separator />
               <div className="rounded-2xl border border-slate-200 bg-white p-4">
                 <div className="flex items-center gap-3">
-                  <Loader2 className="h-5 w-5 animate-spin text-indigo-600" aria-hidden="true" />
+                  <Loader2 className="h-5 w-5 animate-spin text-purple-700" aria-hidden="true" />
                   <div className="min-w-0">
                     <div className="text-sm font-semibold text-slate-900">Preparing your results</div>
                     <div className="mt-1 text-xs text-slate-500">
