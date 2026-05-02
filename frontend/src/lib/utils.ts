@@ -38,3 +38,20 @@ export function safeUrlLabel(url: string) {
   }
 }
 
+export function stripHtml(value: string) {
+  if (!value) return "";
+
+  const withBreaks = value.replace(
+    /<(\/?)(p|div|br|li|ul|ol|h[1-6]|section|article|header|footer|tr|td|th)[^>]*>/gi,
+    "\n",
+  );
+
+  const parser = new DOMParser();
+  const parsed = parser.parseFromString(withBreaks, "text/html");
+
+  return (parsed.body.textContent || "")
+    .replace(/\n{3,}/g, "\n\n")
+    .replace(/[ \t]+/g, " ")
+    .trim();
+}
+

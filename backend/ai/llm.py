@@ -2,10 +2,10 @@ import os
 import json
 import re
 from pathlib import Path
-from typing import Optional
 
 import google.generativeai as genai
 from dotenv import load_dotenv
+import requests
 
 
 def _load_env() -> None:
@@ -15,6 +15,57 @@ def _load_env() -> None:
 
 
 _models: dict[str, genai.GenerativeModel] = {}
+
+
+def _log_llm_event(request_source: str, message: str) -> None:
+    print(f"[LLM][{request_source}] {message}")
+
+
+def _groq_api_key() -> str:
+    _load_env()
+    return os.getenv("GROQ_API_KEY", "").strip()
+
+
+def _groq_candidate_model_names() -> list[str]:
+    preferred = os.getenv("GROQ_MODEL")
+    candidates = [
+        preferred,
+        "llama-3.3-70b-versatile",
+        "llama-3.1-70b-versatile",
+        "llama-3.1-8b-instant",
+        "mixtral-8x7b-32768",
+    ]
+    return [model for model in candidates if model]
+
+
+def _generate_with_groq(prompt: str, model_name: str) -> str:
+    api_key = _groq_api_key()
+    if not api_key:
+        raise RuntimeError("Missing GROQ_API_KEY in .env or environment")
+
+    response = requests.post(
+        "https://api.groq.com/openai/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": model_name,
+            "messages": [
+                {"role": "system", "content": "Return strict JSON only. Do not wrap the answer in markdown fences."},
+                {"role": "user", "content": prompt},
+            ],
+            "temperature": 0.2,
+        },
+        timeout=90,
+    )
+    response.raise_for_status()
+    payload = response.json()
+
+    try:
+        return str(payload["choices"][0]["message"]["content"] or "")
+    except Exception as exc:
+        raise RuntimeError(f"Groq response parsing failed: {exc}") from exc
 
 def _candidate_model_names() -> list[str]:
     preferred = os.getenv("GEMINI_MODEL")
@@ -55,6 +106,19 @@ def _candidate_model_names() -> list[str]:
     raise RuntimeError(
         "No Gemini models with generateContent are available for this API key/account"
     )
+
+
+def _provider_order() -> list[str]:
+    configured = os.getenv("LLM_PROVIDER_ORDER", "gemini,groq")
+    order = [provider.strip().lower() for provider in configured.split(",") if provider.strip()]
+    if not order:
+        return ["gemini", "groq"]
+
+    deduped: list[str] = []
+    for provider in order:
+        if provider not in deduped:
+            deduped.append(provider)
+    return deduped
 
 
 def _configure_genai() -> None:
@@ -142,50 +206,99 @@ def _try_parse_json(text: str):
 # ----------------------------
 # MAIN FUNCTION
 # ----------------------------
-def generate_response(prompt: str):
+def generate_response(prompt: str, request_source: str = "unknown"):
     text = ""
-    _configure_genai()
-    candidates = _candidate_model_names()
     errors: list[str] = []
 
-    for model_name in candidates:
-        try:
-            response = _get_model(model_name).generate_content(prompt)
-
-            # safer extraction
-            text = getattr(response, "text", "") or ""
-
-            if not text:
-                # fallback if text is empty
-                try:
-                    text = response.candidates[0].content.parts[0].text
-                except Exception:
-                    pass
-
-            cleaned = _clean_llm_output(text)
-
+    for provider in _provider_order():
+        if provider == "gemini":
             try:
-                return _try_parse_json(cleaned)
-            except Exception:
-                pass
-
-            return {
-                "error": "LLM output parsing failed",
-                "raw": text,
-                "model": model_name,
-            }
-
-        except Exception as exc:
-            errors.append(f"{model_name}: {str(exc)}")
-
-            if _is_fallback_worthy_error(exc):
-                print(f"[LLM] Falling back after {model_name} error: {exc}")
+                _configure_genai()
+                candidates = _candidate_model_names()
+            except Exception as exc:
+                errors.append(f"gemini: {str(exc)}")
+                _log_llm_event(request_source, f"Skipping gemini provider: {exc}")
                 continue
 
-            return {
-                "error": f"LLM generation failed on {model_name}: {str(exc)}",
-                "raw": text,
-            }
+            for model_name in candidates:
+                try:
+                    _log_llm_event(request_source, f"Trying gemini model {model_name}")
+                    response = _get_model(model_name).generate_content(prompt)
+
+                    text = getattr(response, "text", "") or ""
+
+                    if not text:
+                        try:
+                            text = response.candidates[0].content.parts[0].text
+                        except Exception:
+                            pass
+
+                    cleaned = _clean_llm_output(text)
+
+                    try:
+                        parsed = _try_parse_json(cleaned)
+                        _log_llm_event(request_source, f"Using gemini model {model_name}")
+                        return parsed
+                    except Exception:
+                        pass
+
+                    _log_llm_event(request_source, f"Using gemini model {model_name} but JSON parse failed")
+                    return {
+                        "error": "LLM output parsing failed",
+                        "raw": text,
+                        "model": model_name,
+                        "provider": "gemini",
+                    }
+                except Exception as exc:
+                    errors.append(f"gemini:{model_name}: {str(exc)}")
+                    if _is_fallback_worthy_error(exc):
+                        _log_llm_event(request_source, f"Falling back after gemini {model_name} error: {exc}")
+                        continue
+
+                    return {
+                        "error": f"LLM generation failed on gemini {model_name}: {str(exc)}",
+                        "raw": text,
+                        "provider": "gemini",
+                    }
+
+        elif provider == "groq":
+            groq_key = _groq_api_key()
+            if not groq_key:
+                errors.append("groq: Missing GROQ_API_KEY")
+                _log_llm_event(request_source, "Skipping groq provider: missing GROQ_API_KEY")
+                continue
+
+            for model_name in _groq_candidate_model_names():
+                try:
+                    _log_llm_event(request_source, f"Trying groq model {model_name}")
+                    text = _generate_with_groq(prompt, model_name)
+                    cleaned = _clean_llm_output(text)
+
+                    try:
+                        parsed = _try_parse_json(cleaned)
+                        _log_llm_event(request_source, f"Using groq model {model_name}")
+                        return parsed
+                    except Exception:
+                        pass
+
+                    _log_llm_event(request_source, f"Using groq model {model_name} but JSON parse failed")
+                    return {
+                        "error": "LLM output parsing failed",
+                        "raw": text,
+                        "model": model_name,
+                        "provider": "groq",
+                    }
+                except Exception as exc:
+                    errors.append(f"groq:{model_name}: {str(exc)}")
+                    if _is_fallback_worthy_error(exc):
+                        _log_llm_event(request_source, f"Falling back after groq {model_name} error: {exc}")
+                        continue
+
+                    return {
+                        "error": f"LLM generation failed on groq {model_name}: {str(exc)}",
+                        "raw": text,
+                        "provider": "groq",
+                    }
 
     return {
         "error": "LLM generation failed on all candidate models: " + " | ".join(errors),

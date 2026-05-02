@@ -54,7 +54,17 @@ RETURN STRICT JSON:
 }}
 """
 
-    result = generate_response(prompt)
-    if not isinstance(result, dict):
-        return {"error": "Rewrite generation returned an invalid response."}
-    return result
+    try:
+        result = generate_response(prompt, request_source="rewrite")
+        if not isinstance(result, dict):
+            return {"error": "Rewrite generation returned an invalid response."}
+        return result
+    except Exception as e:
+        print(f"[Rewrite] Exception during rewrite generation: {e}")
+        return {
+            "error": f"Rewrite generation failed: {str(e)}",
+            "section": section,
+            "format": output_format,
+            "rewritten_text": "",
+            "notes": ""
+        }

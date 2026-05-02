@@ -5,11 +5,17 @@ import { analyzeCv } from "../api/cv";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Separator } from "../components/ui/separator";
-import { Skeleton } from "../components/ui/skeleton";
 import { saveStoredReport } from "../lib/storage";
 import { useCv } from "../state/cv-context";
 
-const STATUS = ["Extracting...", "Matching jobs...", "Generating recommendations..."] as const;
+const STATUS = [
+  "Uploading and validating your CV...",
+  "Extracting text from your file...",
+  "Matching your profile to jobs...",
+  "Scoring fit and ranking results...",
+  "Drafting recommendations and CV fixes...",
+  "Preparing the report view...",
+] as const;
 
 export default function AnalyzingPage() {
   const navigate = useNavigate();
@@ -110,22 +116,14 @@ export default function AnalyzingPage() {
           ) : (
             <>
               <Separator />
-              <div className="space-y-4">
-                <div className="text-sm font-semibold text-slate-900">
-                  Preparing your results
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-lg border border-slate-200 bg-white p-4">
-                    <Skeleton className="h-4 w-1/2" />
-                    <Skeleton className="mt-3 h-3 w-full" />
-                    <Skeleton className="mt-2 h-3 w-5/6" />
-                    <Skeleton className="mt-2 h-3 w-4/6" />
-                  </div>
-                  <div className="rounded-lg border border-slate-200 bg-white p-4">
-                    <Skeleton className="h-4 w-2/3" />
-                    <Skeleton className="mt-3 h-3 w-full" />
-                    <Skeleton className="mt-2 h-3 w-5/6" />
-                    <Skeleton className="mt-2 h-3 w-4/6" />
+              <div className="rounded-2xl border border-slate-200 bg-white p-4">
+                <div className="flex items-center gap-3">
+                  <Loader2 className="h-5 w-5 animate-spin text-indigo-600" aria-hidden="true" />
+                  <div className="min-w-0">
+                    <div className="text-sm font-semibold text-slate-900">Preparing your results</div>
+                    <div className="mt-1 text-xs text-slate-500">
+                      We’re keeping things moving in the background.
+                    </div>
                   </div>
                 </div>
               </div>

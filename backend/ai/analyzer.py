@@ -177,4 +177,19 @@ OUTPUT FORMAT (STRICT JSON ONLY):
         .replace("__LINKS__", "\n".join(links) if links else "None")
     )
 
-    return postprocess_analysis(generate_response(prompt))
+    try:
+        response = generate_response(prompt, request_source="analysis")
+        return postprocess_analysis(response)
+    except Exception as e:
+        # If LLM generation fails for any reason, return error response
+        error_response = {
+            "error": f"Analysis failed: {str(e)}",
+            "raw": "",
+            "job_matches": [],
+            "missing_skills": [],
+            "project_improvements": [],
+            "cv_fixes": [],
+            "top_actions": []
+        }
+        print(f"[Analyzer] Exception during CV analysis: {e}")
+        return error_response

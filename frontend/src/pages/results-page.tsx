@@ -20,7 +20,7 @@ import {
 } from "../components/ui/collapsible";
 import { Separator } from "../components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
-import { formatDateTime, safeUrlLabel } from "../lib/utils";
+import { formatDateTime, safeUrlLabel, stripHtml } from "../lib/utils";
 import { loadStoredReport } from "../lib/storage";
 import { useCv } from "../state/cv-context";
 import type {
@@ -44,26 +44,9 @@ function sectionEmpty(text: string | undefined) {
   return !text || !text.trim();
 }
 
-function isCvSectionTarget(section: string) {
-  const normalized = section.trim().toLowerCase();
-  if (!normalized) return false;
-
-  return [
-    "summary",
-    "objective",
-    "skills",
-    "experience",
-    "education",
-    "profile",
-    "about",
-    "header",
-  ].some((keyword) => normalized.includes(keyword));
-}
-
 function buildQuickRewriteCandidates(report: AnalyzeResponse): QuickRewriteCandidate[] {
   const analysis = report.analysis || {};
   const candidates: QuickRewriteCandidate[] = [];
-  const seenSections = new Set<string>();
 
   for (const fix of analysis.cv_fixes ?? []) {
     const section = String(fix.section || "").trim();
@@ -76,22 +59,6 @@ function buildQuickRewriteCandidates(report: AnalyzeResponse): QuickRewriteCandi
       how: String(fix.how || "").trim(),
       source: "cv_fix",
     });
-    seenSections.add(section.toLowerCase());
-  }
-
-  for (const action of analysis.top_actions ?? []) {
-    const section = String(action.section || "").trim();
-    if (!section || !isCvSectionTarget(section)) continue;
-    if (seenSections.has(section.toLowerCase())) continue;
-
-    candidates.push({
-      section,
-      fix: String(action.action || "").trim(),
-      why: String(action.why || "").trim(),
-      how: String(action.how || "").trim(),
-      source: "top_action",
-    });
-    seenSections.add(section.toLowerCase());
   }
 
   return candidates;
@@ -102,6 +69,7 @@ export default function ResultsPage() {
   const { report, filename, createdAt, setReport, startOver } = useCv();
   const [rawOpen, setRawOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
+  const [jobsView, setJobsView] = useState<"matched" | "all">("matched");
 
   const stored = useMemo<StoredReport | null>(() => loadStoredReport(), []);
   const effective: { report: AnalyzeResponse; filename: string; createdAt: string } | null =
@@ -119,11 +87,8 @@ export default function ResultsPage() {
     .slice()
     .sort((a, b) => priorityWeight(b.priority) - priorityWeight(a.priority));
   const projectImprovements = analysis.project_improvements ?? [];
-  const cvFixes = analysis.cv_fixes ?? [];
   const quickRewriteCandidates = buildQuickRewriteCandidates(effective.report);
-  const topActions = (analysis.top_actions ?? []).filter(
-    (action) => !isCvSectionTarget(String(action.section || "")),
-  );
+  const topActions = analysis.top_actions ?? [];
 
   const matchByTitle = useMemo(() => {
     const map = new Map<string, (typeof jobMatches)[number]>();
@@ -134,11 +99,21 @@ export default function ResultsPage() {
     return map;
   }, [jobMatches]);
 
+  const evaluatedCount = effective.report.all_jobs?.length ?? jobsSorted.length ?? 0;
+
   const jobsSorted = useMemo<MatchedJob[]>(() => {
     const jobs = (effective.report.matched_jobs ?? []).slice();
     jobs.sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
     return jobs;
   }, [effective.report.matched_jobs]);
+
+  const allJobs = useMemo<MatchedJob[]>(() => {
+    return (effective.report.all_jobs ?? []).slice();
+  }, [effective.report.all_jobs]);
+
+  const jobsToShow = useMemo<MatchedJob[]>(() => {
+    return jobsView === "all" ? allJobs : jobsSorted;
+  }, [jobsView, allJobs, jobsSorted]);
 
   const overviewActions: TopAction[] = topActions.slice(0, 3);
   const overviewJobs = jobsSorted.slice(0, 3);
@@ -186,12 +161,7 @@ export default function ResultsPage() {
                 {analysis.error}
               </div>
             ) : (
-              <div className="flex flex-wrap items-center gap-2 text-sm">
-                <Badge variant="slate">{effective.report.matched_jobs?.length ?? 0} matches</Badge>
-                <Badge variant="slate">{missingSkills.length} missing skills</Badge>
-                <Badge variant="slate">{quickRewriteCandidates.length} quick rewrites</Badge>
-                <Badge variant="slate">{topActions.length} top actions</Badge>
-              </div>
+              null
             )}
 
             <CollapsibleContent className="mt-4">
@@ -212,12 +182,11 @@ export default function ResultsPage() {
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="w-full justify-start">
           <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="rewrites">Quick Rewrites ({quickRewriteCandidates.length})</TabsTrigger>
           <TabsTrigger value="actions">Actions ({topActions.length})</TabsTrigger>
-          <TabsTrigger value="matches">Matches ({jobsSorted.length})</TabsTrigger>
+          <TabsTrigger value="jobs">Jobs ({jobsSorted.length}/{evaluatedCount})</TabsTrigger>
           <TabsTrigger value="skills">Missing Skills ({missingSkills.length})</TabsTrigger>
+          <TabsTrigger value="improve">Improve CV ({quickRewriteCandidates.length})</TabsTrigger>
           <TabsTrigger value="improvements">Project Improvements ({projectImprovements.length})</TabsTrigger>
-          <TabsTrigger value="fixes">CV Fixes ({cvFixes.length})</TabsTrigger>
           <TabsTrigger value="links">Links ({effective.report.links?.length ?? 0})</TabsTrigger>
         </TabsList>
 
@@ -255,10 +224,10 @@ export default function ResultsPage() {
                       <Button
                         type="button"
                         variant="outline"
-                        onClick={() => setActiveTab("rewrites")}
+                        onClick={() => setActiveTab("improve")}
                       >
                         <WandSparkles className="h-4 w-4" />
-                        Open quick rewrites
+                        Open improve tab
                       </Button>
                     </>
                   ) : (
@@ -404,34 +373,6 @@ export default function ResultsPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="rewrites">
-          <Card>
-            <CardHeader>
-              <CardTitle>Quick rewrites</CardTitle>
-              <CardDescription>
-                Generate copy-ready replacements for CV sections. Use plain text or switch to a LaTeX-friendly version.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {!cvText ? (
-                <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-                  This report was created before CV text was stored with the analysis. Run the analysis again to generate rewrites.
-                </div>
-              ) : quickRewriteCandidates.length ? (
-                quickRewriteCandidates.map((candidate, index) => (
-                  <QuickRewriteCard
-                    key={`${candidate.section}-${candidate.source}-${index}`}
-                    candidate={candidate}
-                    cvText={cvText}
-                  />
-                ))
-              ) : (
-                <div className="text-sm text-slate-600">No quick rewrites available for this report.</div>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
-
         <TabsContent value="actions">
           <Card>
             <CardHeader>
@@ -466,25 +407,45 @@ export default function ResultsPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="matches">
+        <TabsContent value="jobs">
           <Card>
             <CardHeader>
-              <CardTitle>Job matches</CardTitle>
+              <CardTitle>Jobs</CardTitle>
               <CardDescription>
-                Scores plus evidence and gaps for each role. Higher score means closer
-                overlap with the role in this tool.
+                Compare matched jobs against the full pool the pipeline evaluated.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {jobsSorted.length ? (
-                jobsSorted.map((job) => {
+              <div className="flex flex-wrap gap-2">
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={jobsView === "matched" ? "default" : "outline"}
+                  onClick={() => setJobsView("matched")}
+                >
+                  Matched jobs ({jobsSorted.length})
+                </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={jobsView === "all" ? "default" : "outline"}
+                  onClick={() => setJobsView("all")}
+                >
+                  All jobs ({allJobs.length})
+                </Button>
+              </div>
+
+              {jobsToShow.length ? (
+                jobsToShow.map((job) => {
                   const jm = matchByTitle.get(job.title.trim().toLowerCase());
                   return (
                     <div key={job.id} className="rounded-lg border border-slate-200 bg-white p-4">
                       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                         <div className="min-w-0">
                           <div className="text-sm font-semibold text-slate-900">{job.title}</div>
-                          <div className="mt-1 text-xs text-slate-500">Match score</div>
+                          <div className="mt-1 text-xs text-slate-500">
+                            {jobsView === "matched" ? "Match score" : "Evaluated job pool"}
+                          </div>
                           {job.matched_skills?.length ? (
                             <div className="mt-2 flex flex-wrap gap-1.5">
                               {job.matched_skills.map((s) => (
@@ -495,7 +456,7 @@ export default function ResultsPage() {
                             </div>
                           ) : null}
                         </div>
-                        <ScorePill score={job.score ?? 0} />
+                        {jobsView === "matched" ? <ScorePill score={job.score ?? 0} /> : null}
                       </div>
 
                       {jm?.reason ? (
@@ -514,6 +475,23 @@ export default function ResultsPage() {
                         </p>
                       ) : null}
 
+                      <div className="mt-4 flex flex-wrap items-center gap-2">
+                        {job.url ? (
+                          <a
+                            href={job.url}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 hover:bg-indigo-100"
+                          >
+                            Open job page
+                            <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                          </a>
+                        ) : null}
+                        {job.company_name ? (
+                          <div className="text-xs text-slate-500">{job.company_name}</div>
+                        ) : null}
+                      </div>
+
                       {job.description ? (
                         <>
                           <Separator className="my-4" />
@@ -522,7 +500,7 @@ export default function ResultsPage() {
                               Job description
                             </summary>
                             <p className="mt-3 whitespace-pre-wrap break-words text-sm leading-relaxed text-slate-700">
-                              {job.description}
+                              {stripHtml(job.description)}
                             </p>
                           </details>
                         </>
@@ -531,7 +509,7 @@ export default function ResultsPage() {
                   );
                 })
               ) : (
-                <div className="text-sm text-slate-600">No matches returned.</div>
+                <div className="text-sm text-slate-600">No jobs returned.</div>
               )}
             </CardContent>
           </Card>
@@ -635,15 +613,15 @@ export default function ResultsPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="fixes">
+        <TabsContent value="improve">
           <Card>
             <CardHeader>
-              <CardTitle>CV fixes</CardTitle>
+              <CardTitle>Improve CV</CardTitle>
               <CardDescription>
-                Strategic guidance for resume sections. Use Quick Rewrites to generate paste-ready replacements.
+                Quick rewrites and CV fixes are merged here so one tab handles both guidance and paste-ready replacements.
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-6">
               {quickRewriteCandidates.length ? (
                 <div className="space-y-4 rounded-xl border border-indigo-100 bg-indigo-50/60 p-4">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
@@ -653,67 +631,26 @@ export default function ResultsPage() {
                         Quick rewrites available
                       </div>
                       <p className="mt-1 text-sm text-slate-600">
-                        These CV fixes can be turned into copy-ready text or LaTeX snippets instantly.
+                        These can be turned into copy-ready text or LaTeX snippets instantly.
                       </p>
                     </div>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={() => setActiveTab("rewrites")}
-                    >
-                      Open quick rewrites
-                    </Button>
                   </div>
                   {!cvText ? (
                     <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
                       This report was created before CV text was stored with the analysis. Run the analysis again to generate rewrites.
                     </div>
                   ) : (
-                    quickRewriteCandidates.slice(0, 2).map((candidate, index) => (
-                      <div
-                        key={`${candidate.section}-${candidate.source}-fixes-${index}`}
-                        className="rounded-lg border border-slate-200 bg-white p-4"
-                      >
-                        <div className="flex items-start justify-between gap-3">
-                          <div className="min-w-0">
-                            <div className="text-sm font-semibold text-slate-900">
-                              {candidate.section}
-                            </div>
-                            <p className="mt-2 text-sm text-slate-700">{candidate.fix}</p>
-                          </div>
-                          <Badge variant="indigo" className="shrink-0">
-                            Rewrite-ready
-                          </Badge>
-                        </div>
-                      </div>
+                    quickRewriteCandidates.map((candidate, index) => (
+                      <QuickRewriteCard
+                        key={`${candidate.section}-${candidate.source}-${index}`}
+                        candidate={candidate}
+                        cvText={cvText}
+                      />
                     ))
                   )}
                 </div>
-              ) : null}
-
-              {cvFixes.length ? (
-                cvFixes.map((f, idx) => (
-                  <div key={`${f.section}-${idx}`} className="rounded-lg border border-slate-200 bg-white p-4">
-                    <div className="text-sm font-semibold text-slate-900">{f.section}</div>
-                    {f.fix ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">Fix:</span> {f.fix}
-                      </p>
-                    ) : null}
-                    {f.why ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">Why:</span> {f.why}
-                      </p>
-                    ) : null}
-                    {f.how ? (
-                      <p className="mt-2 text-sm text-slate-600">
-                        <span className="font-semibold text-slate-900">How:</span> {f.how}
-                      </p>
-                    ) : null}
-                  </div>
-                ))
               ) : (
-                <div className="text-sm text-slate-600">No CV fixes returned.</div>
+                <div className="text-sm text-slate-600">No CV improvements returned.</div>
               )}
             </CardContent>
           </Card>
@@ -750,6 +687,7 @@ export default function ResultsPage() {
             </CardContent>
           </Card>
         </TabsContent>
+
       </Tabs>
 
       {!report && stored ? (

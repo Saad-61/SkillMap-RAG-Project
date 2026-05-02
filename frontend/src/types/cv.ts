@@ -7,6 +7,8 @@ export type MatchedJob = {
   id: number;
   title: string;
   description: string;
+  url?: string;
+  company_name?: string;
   score?: number;
   overlap?: number;
   matched_skills?: string[];
@@ -80,6 +82,7 @@ export type Analysis = {
 
 export type AnalyzeResponse = {
   matched_jobs: MatchedJob[];
+  all_jobs?: MatchedJob[];
   links: string[];
   analysis: Analysis;
   cv_text: string;
