@@ -104,8 +104,10 @@ def postprocess_analysis(analysis):
         action["why"] = _normalize_text(action.get("why"))
         action["how"] = _normalize_text(action.get("how"))
 
-    # Remove exact duplicates and keep top 3 actions for concise output.
-    analysis["cv_fixes"] = _dedupe_by_key(analysis["cv_fixes"], "fix")
+    # Remove exact duplicates and enforce hard output limits (Fix D).
+    analysis["missing_skills"] = _dedupe_by_key(analysis["missing_skills"], "skill")[:5]
+    analysis["project_improvements"] = _dedupe_by_key(analysis["project_improvements"], "improvement")[:3]
+    analysis["cv_fixes"] = _dedupe_by_key(analysis["cv_fixes"], "fix")[:3]
     analysis["top_actions"] = _dedupe_by_key(analysis["top_actions"], "action")[:3]
 
     analysis["confidence"] = {

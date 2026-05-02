@@ -26,6 +26,8 @@ frontend/.turbo/
 
 # Project specific
 uploads/
+backend/data/*.pdf
+backend/data/*.docx
 *.pdf
 *.docx
 

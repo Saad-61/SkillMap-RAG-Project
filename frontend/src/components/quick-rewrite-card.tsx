@@ -15,6 +15,41 @@ type RewriteState = {
   latex?: GenerateFixRewriteResponse;
 };
 
+function extractSectionBlock(cvText: string, section: string, maxLines = 20) {
+  const lines = cvText.split(/\r?\n/);
+  const target = section.trim().toLowerCase();
+  let startIndex = -1;
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const current = lines[index].trim().toLowerCase();
+    if (!current) continue;
+    if (current === target || current.startsWith(`${target} `) || current.startsWith(`${target}:`)) {
+      startIndex = index;
+      break;
+    }
+  }
+
+  if (startIndex === -1) {
+    return cvText.trim().slice(0, 800);
+  }
+
+  const block: string[] = [];
+  for (let index = startIndex; index < lines.length; index += 1) {
+    const line = lines[index];
+    const trimmed = line.trim();
+    if (block.length > 0 && trimmed && trimmed === trimmed.toUpperCase() && trimmed.length <= 80) {
+      break;
+    }
+    if (block.length > 0 && trimmed.endsWith(":") && trimmed.length <= 40) {
+      break;
+    }
+    block.push(line);
+    if (block.length >= maxLines) break;
+  }
+
+  return block.join("\n").trim();
+}
+
 export function QuickRewriteCard({
   candidate,
   cvText,
@@ -36,6 +71,10 @@ export function QuickRewriteCard({
   }, []);
 
   const current = useMemo(() => results[activeFormat], [activeFormat, results]);
+  const sourceSection = useMemo(
+    () => extractSectionBlock(cvText, candidate.section),
+    [candidate.section, cvText],
+  );
 
   const requestFormat = async (format: "plain" | "latex") => {
     if (results[format]?.rewritten_text) {
@@ -112,6 +151,17 @@ export function QuickRewriteCard({
           <p className="text-sm text-slate-600">
             <span className="font-semibold text-slate-900">Guidance:</span> {candidate.how}
           </p>
+        ) : null}
+
+        {sourceSection ? (
+          <div className="rounded-lg border border-slate-200 bg-white p-4">
+            <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Source section
+            </div>
+            <pre className="mt-2 max-h-48 overflow-auto whitespace-pre-wrap break-words text-sm leading-relaxed text-slate-700">
+              {sourceSection}
+            </pre>
+          </div>
         ) : null}
 
         {open ? (

@@ -3128,5 +3128,1560 @@
         }
       }
     }
+  },
+  {
+    "id": "2026-05-02T16-19-05.528272__SaadCV.pdf",
+    "cv_name": "SaadCV.pdf",
+    "timestamp": "2026-05-02T16:19:05.528297",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2089958,
+          "title": "AI Engineer",
+          "description": "We are seeking a versatile and highly skilled AI Engineer to join our fast-growing Full-Stack AI Solutions company. This role blends the expertise of building cutting-edge AI/ML models with the practical know-how of automation and agentic system integrations. You will design, develop, deploy, and optimize intelligent solutions that leverage the power of generative AI, automation platforms, and agent-based systems to enhance client operations, streamline workflows, and deliver measurable results.\nThis is a unique opportunity to work across a diverse range of technologies\u2014from fine-tuning transformer models to building real-world AI-powered automation stacks. If you\u2019re passionate about pushing the boundaries of AI while creating real value through systems thinking and practical implementation, this role is for you.\nKey Responsibilities\nAI/ML Development:\n\u2022 Design, build, and deploy machine learning and generative AI models for custom use cases.\n\u2022 Fine-tune and optimize large language models (e.g., GPT, BERT) using frameworks like Hugging Face Transformers.\n\u2022 Conduct ongoing research to stay ahead of advancements in AI/ML, including LLMs, generative AI, and transformer-based architectures.\n\u2022 Develop data pipelines for preprocessing, feature engineering, and model training.\n\u2022 Test, validate, and monitor model performance in real-world scenarios; iterate for reliability and accuracy.\n\u2022 Collaborate with cross-functional teams to embed AI into products, platforms, and services.\n\u2022 Mentor junior engineers and contribute to technical leadership.\nAutomation & Agentic Systems:\n\u2022 Design, implement, and maintain automation workflows using tools such as:\n\u2022 LangChain, LangGraph, LangSmith, LangFuse n8n, ElevenLabs, and CMS integrations.\n\u2022 Engineer system-to-system integrations using APIs to enable intelligent process automation.\n\u2022 Apply prompt and context engineering techniques to enhance the performance of conversational AI tools.\n\u2022 Implement prompt management and QA processes for agents and assistants.\n\u2022 Explore and deploy Microsoft Copilot Studio, PowerApps, and PowerAutomate solutions (preferred but not required).\n\u2022 Continuously evaluate emerging AI and automation tools and assess their applicability in client use cases.\n\u2022 Collaborate with clients and internal teams to scope, deliver, and maintain agentic and automation solutions aligned with business goals.\nQualifications\nRequired\n\u2022 2+ years of hands-on experience in AI/ML development, including training and deploying models in production.\n\u2022 Strong programming skills in Python, with proficiency in frameworks such as TensorFlow, PyTorch, Scikit-learn, and Hugging Face Transformers.\n\u2022 Experience working with AI tools like Langchain, OpenAI, or Stable Diffusion.\n\u2022 Practical experience with automation platforms and AI agent builders (as listed above).\n\u2022 Deep understanding of machine learning algorithms, neural networks, and NLP concepts.\n\u2022 Proficiency in using REST APIs for tool and platform integrations.\n\u2022 Familiarity with cloud-based AI/ML platforms.\n\u2022 Strong analytical skills and the ability to translate business problems into technical AI/automation solutions.\nPreferred\n\u2022 Experience working with Agentic AI frameworks, voice automation, and prompt tuning systems.\n\u2022 Exposure to MLOps best practices, including model versioning, CI/CD, and monitoring.\n\u2022 Knowledge of reinforcement learning, GANs, or edge AI deployments.\n\u2022 Familiarity with distributed computing frameworks such as Spark or Ray.\n\u2022 Background in AI agency workflows and client-facing solution delivery.\nWork Environment & Benefits\n\u2022 Competitive salary and performance-based incentives.\n\u2022 Flexible work environment: Remote-first.\n\u2022 Collaborative, innovation-driven culture with a commitment to personal and professional growth.\n\u2022 Opportunity to work at the forefront of AI innovation across industries and verticals.",
+          "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-engineer-2089958",
+          "company_name": "Dry Ground AI",
+          "score": 61.51,
+          "overlap": 4,
+          "matched_skills": [
+            "cloud",
+            "pytorch",
+            "machine learning",
+            "python"
+          ],
+          "evidence": "Matched: cloud, pytorch, machine learning",
+          "priority": 4
+        },
+        {
+          "id": 2088710,
+          "title": "Online Data Analyst United States",
+          "description": "Are you a detail-oriented individual with a passion for research and a good understanding of national and local geography? This freelance opportunity allows you to work at your own pace and from the comfort of your own home.\nA Day in the Life of an Online Data Analyst:\n\u2022 In this role, you will be working on a project aimed at enhancing the content and quality of digital maps that are used by millions of people worldwide\n\u2022 Completing research and evaluation tasks in a web-based environment such as verifying and comparing data, and determining the relevance and accuracy of information.\nJoin us today and be part of a dynamic and innovative team that is making a difference in the world!\nTELUS Digital AI Community\nOur global AI Community is a vibrant network of 1 million+ contributors from diverse backgrounds who help our customers collect, enhance, train, translate, and localize content to build better AI models. Become part of our growing community and make an impact supporting the machine learning models of some of the world\u2019s largest brands. \nQualification path\nNo previous professional experience is required to apply to this role, however, working on this project will require you to pass the basic requirements and go through a standard assessment process. This is a part-time long-term project and your work will be subject to our standard quality assurance checks during the term of this agreement.\u00a0\nBasic Requirements\n\u2022 Full Professional Proficiency in English language\n\u2022 Being a resident in United States for the last 2 consecutive years and having familiarity with current and historical business, media, sport, news, social media, and cultural affairs in United States\n\u2022 Ability to follow guidelines and conduct online research using search engines, online maps, and website information\n\u2022 Flexibility to work across a diverse set of task types, including maps, news, audio tasks, and relevance\n\u2022 Daily access to a broadband internet connection, computer, and relevant software\nAssessment\nIn order to be hired into the program, you\u2019ll take an open book qualification exam that will determine your suitability for the position and complete ID verification. Our team will provide you with guidelines and learning materials before your qualification exam. You will be required to complete the exam in a specific timeframe but at your convenience.\nEqual Opportunity\nAll qualified applicants will receive consideration for a contractual relationship without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status. At TELUS Digital AI, we are proud to offer equal opportunities and are committed to creating a diverse and inclusive community. All aspects of selection are based on applicants\u2019 qualifications, merits, competence, and performance without regard to any characteristic related to diversity.",
+          "url": "https://remotive.com/remote-jobs/all-others/online-data-analyst-united-states-2088710",
+          "company_name": "TELUS Digital",
+          "score": 37.72,
+          "overlap": 1,
+          "matched_skills": [
+            "machine learning"
+          ],
+          "evidence": "Matched: machine learning",
+          "priority": 1
+        },
+        {
+          "id": 2088704,
+          "title": "Online Data Analyst (United States/Spanish speakers)",
+          "description": "Are you a detail-oriented individual with a passion for research and a good understanding of national and local geography? This freelance opportunity allows you to work at your own pace and from the comfort of your own home.\nA Day in the Life of an Online Data Analyst:\n\u2022 In this role, you will be working on a project aimed at enhancing the content and quality of digital maps that are used by millions of people worldwide\n\u2022 Completing research and evaluation tasks in a web-based environment such as verifying and comparing data, and determining the relevance and accuracy of information.\nJoin us today and be part of a dynamic and innovative team that is making a difference in the world!\nTELUS Digital AI Community\nOur global AI Community is a vibrant network of 1 million+ contributors from diverse backgrounds who help our customers collect, enhance, train, translate, and localize content to build better AI models. Become part of our growing community and make an impact supporting the machine learning models of some of the world\u2019s largest brands.\nQualification path\nNo previous professional experience is required to apply to this role, however, working on this project will require you to pass the basic requirements and go through a standard assessment process. This is a part-time long-term project and your work will be subject to our standard quality assurance checks during the term of this agreement.\u00a0\nBasic Requirements\n\u2022 Full Professional Proficiency in Spanish language\n\u2022 Being a resident in United States for the last 2 consecutive years and having familiarity with current and historical business, media, sport, news, social media, and cultural affairs in United States\n\u2022 Ability to follow guidelines and conduct online research using search engines, online maps, and website information\n\u2022 Flexibility to work across a diverse set of task types, including maps, news, audio tasks, and relevance\n\u2022 Daily access to a broadband internet connection, computer, and relevant software\nAssessment\nIn order to be hired into the program, you\u2019ll take an open book qualification exam that will determine your suitability for the position and complete ID verification. Our team will provide you with guidelines and learning materials before your qualification exam. You will be required to complete the exam in a specific timeframe but at your convenience.\nEqual Opportunity\nAll qualified applicants will receive consideration for a contractual relationship without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status. At TELUS Digital AI, we are proud to offer equal opportunities and are committed to creating a diverse and inclusive community. All aspects of selection are based on applicants\u2019 qualifications, merits, competence, and performance without regard to any characteristic related to diversity.",
+          "url": "https://remotive.com/remote-jobs/all-others/online-data-analyst-united-states-spanish-speakers-2088704",
+          "company_name": "TELUS Digital",
+          "score": 37.72,
+          "overlap": 1,
+          "matched_skills": [
+            "machine learning"
+          ],
+          "evidence": "Matched: machine learning",
+          "priority": 1
+        }
+      ],
+      "resume_score": 94,
+      "links": [
+        "mailto:saadasif78656@gmail.com",
+        "https://www.linkedin.com/in/saad-asif-636b87352/",
+        "https://github.com/Saad-61",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/463edcb59bc99fcf3c70370c0ddaab405ba3bd14",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/23cc7d4d88ac4807f7df6419af9a932b1b4de4f5",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/7dc403e0f2920a98c18145f75f7693cf8c7ea642"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "AI Engineer",
+            "score": 61.51,
+            "reason": "The candidate's core skills in deep learning frameworks and cloud computing align well with the technical demands of an AI Engineer role.",
+            "evidence": "Matched skills include 'cloud', 'pytorch', 'machine learning', and 'python'.",
+            "gap": "Key missing skills are 'leadership', 'monitoring', 'nlp', 'openai', 'qa', 'research', 'rest', and 'tensorflow'."
+          },
+          {
+            "title": "Online Data Analyst United States",
+            "score": 37.72,
+            "reason": "The candidate possesses a foundational understanding of machine learning, which is valuable for data analysis tasks involving predictive modeling.",
+            "evidence": "Matched skill includes 'machine learning'.",
+            "gap": "Key missing skills are 'go', 'quality assurance', and 'research'."
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "research",
+            "priority": "HIGH",
+            "why": "Crucial for both AI engineering and data analysis to understand, evaluate, and implement new algorithms and methodologies effectively.",
+            "project_type": "new",
+            "project_idea": "ML Model Comparison & Evaluation",
+            "implementation": "Build a project comparing different deep learning architectures (e.g., CNNs vs Transformers) for an image classification task, documenting findings and performance metrics on GitHub.",
+            "project": "",
+            "evidence": ""
+          },
+          {
+            "skill": "nlp",
+            "priority": "HIGH",
+            "why": "Essential for many AI Engineer roles, enabling the development of language-based models and applications often sought in industry.",
+            "project_type": "new",
+            "project_idea": "Sentiment Analysis Tool",
+            "implementation": "Develop a Python-based sentiment analysis tool using PyTorch to classify text reviews, deploying it with FastAPI for an interactive web interface.",
+            "project": "",
+            "evidence": ""
+          },
+          {
+            "skill": "tensorflow",
+            "priority": "MEDIUM",
+            "why": "A popular deep learning framework alongside PyTorch, demonstrating versatility and broader industry applicability for an AI Engineer.",
+            "project_type": "new",
+            "project_idea": "Image Recognition with TensorFlow",
+            "implementation": "Recreate an existing image classification project, but implement it entirely using TensorFlow and Keras to showcase proficiency in both major frameworks.",
+            "project": "",
+            "evidence": ""
+          },
+          {
+            "skill": "rest",
+            "priority": "MEDIUM",
+            "why": "Fundamental for integrating AI/ML models into larger systems and applications, often required for deploying solutions as an AI Engineer.",
+            "project_type": "new",
+            "project_idea": "ML Model API Endpoint",
+            "implementation": "Expose a trained machine learning model as a REST API endpoint using FastAPI or Express.js, allowing external applications to send data and receive predictions.",
+            "project": "",
+            "evidence": ""
+          },
+          {
+            "skill": "qa",
+            "priority": "LOW",
+            "why": "Important for ensuring the robustness, reliability, and performance of deployed models and data pipelines, relevant for both roles.",
+            "project_type": "new",
+            "project_idea": "ML Model Testing Pipeline",
+            "implementation": "Develop a small project that includes unit tests and integration tests for an ML model's data preprocessing and inference steps, demonstrating quality assurance practices.",
+            "project": "",
+            "evidence": ""
+          }
+        ],
+        "project_improvements": [],
+        "cv_fixes": [
+          {
+            "section": "Projects/Experience",
+            "fix": "Create a dedicated 'Projects' section to showcase practical application of skills.",
+            "why": "The current CV lacks explicit projects, which is critical for demonstrating hands-on experience in machine learning and deep learning roles.",
+            "how": "For each project, list the title, a brief description, technologies used, and quantifiable outcomes or impact. Link to GitHub for code examples."
+          },
+          {
+            "section": "Skills",
+            "fix": "Organize and contextualize the extensive list of skills into logical categories.",
+            "why": "A flat list of skills can be overwhelming; categorization makes it easier for recruiters to quickly grasp your core competencies.",
+            "how": "Group skills under headings like 'Programming Languages', 'Machine Learning/AI Frameworks', 'Databases', 'Cloud Platforms', 'Web Technologies'."
+          },
+          {
+            "section": "Professional Summary/Objective",
+            "fix": "Add a concise professional summary or objective at the top of the CV.",
+            "why": "A summary quickly conveys your career aspirations and highlights your most relevant skills and experience, grabbing the recruiter's attention.",
+            "how": "Write 2-3 sentences summarizing your expertise in ML/AI, your key technologies (e.g., Python, PyTorch, Cloud), and your career goals related to AI engineering."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Start building an ML project for your portfolio.",
+            "section": "Projects",
+            "why": "Practical projects are the best way to demonstrate your skills and fill the current gap in your CV, especially for AI/ML roles.",
+            "how": "Outline a small Computer Vision or NLP project using Python and PyTorch/FastAPI, focusing on a clear problem statement and measurable outcome. Aim for a working prototype on GitHub by week's end."
+          },
+          {
+            "action": "Draft a professional summary for your CV.",
+            "section": "Top of CV",
+            "why": "A compelling summary will immediately communicate your value proposition to hiring managers and tailor your application to AI roles.",
+            "how": "Write a 3-4 sentence summary highlighting your core strengths in machine learning, deep learning, and cloud, emphasizing your passion for AI engineering. Integrate this draft into your CV this week."
+          },
+          {
+            "action": "Begin learning one high-priority missing skill.",
+            "section": "Skill Development",
+            "why": "Proactively addressing missing skills like 'research' or 'nlp' makes you a more competitive candidate for AI Engineer roles.",
+            "how": "Dedicate a few hours this week to explore research methodologies in ML or start a beginner-friendly NLP tutorial. Document your progress or key takeaways."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "low",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
+  },
+  {
+    "id": "2026-05-02T16-51-11.991290__Saad_Resume.pdf",
+    "cv_name": "Saad_Resume.pdf",
+    "timestamp": "2026-05-02T16:51:11.991308",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2089958,
+          "title": "AI Engineer",
+          "description": "We are seeking a versatile and highly skilled AI Engineer to join our fast-growing Full-Stack AI Solutions company. This role blends the expertise of building cutting-edge AI/ML models with the practical know-how of automation and agentic system integrations. You will design, develop, deploy, and optimize intelligent solutions that leverage the power of generative AI, automation platforms, and agent-based systems to enhance client operations, streamline workflows, and deliver measurable results.\nThis is a unique opportunity to work across a diverse range of technologies\u2014from fine-tuning transformer models to building real-world AI-powered automation stacks. If you\u2019re passionate about pushing the boundaries of AI while creating real value through systems thinking and practical implementation, this role is for you.\nKey Responsibilities\nAI/ML Development:\n\u2022 Design, build, and deploy machine learning and generative AI models for custom use cases.\n\u2022 Fine-tune and optimize large language models (e.g., GPT, BERT) using frameworks like Hugging Face Transformers.\n\u2022 Conduct ongoing research to stay ahead of advancements in AI/ML, including LLMs, generative AI, and transformer-based architectures.\n\u2022 Develop data pipelines for preprocessing, feature engineering, and model training.\n\u2022 Test, validate, and monitor model performance in real-world scenarios; iterate for reliability and accuracy.\n\u2022 Collaborate with cross-functional teams to embed AI into products, platforms, and services.\n\u2022 Mentor junior engineers and contribute to technical leadership.\nAutomation & Agentic Systems:\n\u2022 Design, implement, and maintain automation workflows using tools such as:\n\u2022 LangChain, LangGraph, LangSmith, LangFuse n8n, ElevenLabs, and CMS integrations.\n\u2022 Engineer system-to-system integrations using APIs to enable intelligent process automation.\n\u2022 Apply prompt and context engineering techniques to enhance the performance of conversational AI tools.\n\u2022 Implement prompt management and QA processes for agents and assistants.\n\u2022 Explore and deploy Microsoft Copilot Studio, PowerApps, and PowerAutomate solutions (preferred but not required).\n\u2022 Continuously evaluate emerging AI and automation tools and assess their applicability in client use cases.\n\u2022 Collaborate with clients and internal teams to scope, deliver, and maintain agentic and automation solutions aligned with business goals.\nQualifications\nRequired\n\u2022 2+ years of hands-on experience in AI/ML development, including training and deploying models in production.\n\u2022 Strong programming skills in Python, with proficiency in frameworks such as TensorFlow, PyTorch, Scikit-learn, and Hugging Face Transformers.\n\u2022 Experience working with AI tools like Langchain, OpenAI, or Stable Diffusion.\n\u2022 Practical experience with automation platforms and AI agent builders (as listed above).\n\u2022 Deep understanding of machine learning algorithms, neural networks, and NLP concepts.\n\u2022 Proficiency in using REST APIs for tool and platform integrations.\n\u2022 Familiarity with cloud-based AI/ML platforms.\n\u2022 Strong analytical skills and the ability to translate business problems into technical AI/automation solutions.\nPreferred\n\u2022 Experience working with Agentic AI frameworks, voice automation, and prompt tuning systems.\n\u2022 Exposure to MLOps best practices, including model versioning, CI/CD, and monitoring.\n\u2022 Knowledge of reinforcement learning, GANs, or edge AI deployments.\n\u2022 Familiarity with distributed computing frameworks such as Spark or Ray.\n\u2022 Background in AI agency workflows and client-facing solution delivery.\nWork Environment & Benefits\n\u2022 Competitive salary and performance-based incentives.\n\u2022 Flexible work environment: Remote-first.\n\u2022 Collaborative, innovation-driven culture with a commitment to personal and professional growth.\n\u2022 Opportunity to work at the forefront of AI innovation across industries and verticals.",
+          "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-engineer-2089958",
+          "company_name": "Dry Ground AI",
+          "score": 44.19,
+          "overlap": 2,
+          "matched_skills": [
+            "cloud",
+            "python"
+          ],
+          "evidence": "Matched: cloud, python",
+          "priority": 2
+        }
+      ],
+      "resume_score": 97,
+      "links": [
+        "mailto:saadasif78656@gmail.com",
+        "https://www.linkedin.com/in/saad-asif-636b87352/",
+        "https://github.com/Saad-61",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/463edcb59bc99fcf3c70370c0ddaab405ba3bd14",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/23cc7d4d88ac4807f7df6419af9a932b1b4de4f5",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/7dc403e0f2920a98c18145f75f7693cf8c7ea642"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "AI Engineer",
+            "score": 44.19,
+            "reason": "The candidate's proficiency in Python and familiarity with cloud technologies provide a foundational skill set for AI engineering roles.",
+            "evidence": "Matched skills include \"cloud\", \"python\".",
+            "gap": "Key missing skills are \"leadership\", \"machine learning\", \"monitoring\", \"nlp\", \"openai\", \"pytorch\", \"qa\", \"research\"."
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "machine learning",
+            "priority": "HIGH",
+            "why": "Essential for developing and implementing AI models, which is a core function of an AI Engineer.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "Implement a basic image classification model.",
+            "implementation": "Build a convolutional neural network (CNN) in Python using scikit-learn or a basic PyTorch/TensorFlow setup on a public dataset like MNIST.",
+            "evidence": ""
+          },
+          {
+            "skill": "nlp",
+            "priority": "HIGH",
+            "why": "Crucial for roles involving text data processing, understanding, and generation in many AI systems.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "Develop a sentiment analysis tool.",
+            "implementation": "Create a Python script using NLTK or spaCy to classify text sentiment from a small dataset of reviews, deploying it with FastAPI.",
+            "evidence": ""
+          },
+          {
+            "skill": "pytorch",
+            "priority": "HIGH",
+            "why": "A leading deep learning framework, fundamental for building and training complex neural networks in AI.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "Replicate a simple deep learning model tutorial.",
+            "implementation": "Follow a PyTorch tutorial to build and train a neural network for a regression or classification task using a publicly available dataset.",
+            "evidence": ""
+          },
+          {
+            "skill": "openai",
+            "priority": "MEDIUM",
+            "why": "Important for integrating and leveraging advanced language models and generative AI capabilities in modern applications.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "Build a simple chatbot using an OpenAI API.",
+            "implementation": "Develop a Python application that queries the OpenAI API to generate responses based on user input for a specific domain, potentially using FastAPI.",
+            "evidence": ""
+          },
+          {
+            "skill": "research",
+            "priority": "MEDIUM",
+            "why": "Develops the ability to explore new algorithms and stay updated with the rapidly evolving AI field and its methodologies.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "Summarize a recent AI research paper.",
+            "implementation": "Select a recent paper from arXiv, read it, and publish a blog post or GitHub README summarizing its methods and findings.",
+            "evidence": ""
+          }
+        ],
+        "project_improvements": [],
+        "cv_fixes": [
+          {
+            "section": "Projects",
+            "fix": "Create a dedicated 'Projects' section.",
+            "why": "To demonstrate practical application of skills like Python and Cloud, essential for an AI Engineer role.",
+            "how": "Detail 2-3 significant projects, outlining technologies used, challenges faced, and outcomes."
+          },
+          {
+            "section": "Skills",
+            "fix": "Provide specific usage context for listed programming languages and frameworks.",
+            "why": "Simply listing skills doesn't convey proficiency or how they've been applied in real-world scenarios.",
+            "how": "For skills like 'Python', 'React', or 'MongoDB', briefly describe the types of applications or systems you built with them."
+          },
+          {
+            "section": "Summary/Objective",
+            "fix": "Add a concise professional summary or objective statement.",
+            "why": "To immediately communicate career goals and highlight key qualifications relevant to AI Engineering roles.",
+            "how": "Write 2-3 sentences emphasizing your interest in AI, your Python/cloud skills, and your problem-solving abilities."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Start a hands-on Machine Learning project.",
+            "section": "Missing Skills",
+            "why": "To practically address a key missing skill for AI Engineer roles and create tangible project experience.",
+            "how": "Build a simple image classifier or text predictor using Python with scikit-learn or PyTorch on a public dataset, and push the code to GitHub. Deliverable: A functional GitHub repository with the ML project code."
+          },
+          {
+            "action": "Integrate specific usage examples for existing skills in your CV.",
+            "section": "Skills",
+            "why": "To demonstrate practical application and proficiency of your current technical stack, making your CV more impactful.",
+            "how": "For 3-5 key skills (e.g., 'Python', 'cloud', 'FastAPI'), add a one-line description of how you've applied them, e.g., 'Python: Developed backend APIs with FastAPI.' Deliverable: An updated draft of your CV with enhanced skill descriptions."
+          },
+          {
+            "action": "Explore and document foundational concepts in Natural Language Processing (NLP).",
+            "section": "Missing Skills",
+            "why": "To build foundational knowledge in a critical AI sub-field relevant to the AI Engineer role.",
+            "how": "Complete a tutorial on text preprocessing and tokenization using NLTK or spaCy in Python, documenting the steps and key takeaways in a markdown file. Deliverable: A markdown file (e.g., 'nlp_notes.md') on GitHub detailing NLP concepts and code snippets."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "low",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
+  },
+  {
+    "id": "2026-05-02T16-51-56.492093__fake_resume.pdf",
+    "cv_name": "fake_resume.pdf",
+    "timestamp": "2026-05-02T16:51:56.492101",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2088711,
+          "title": "Senior Full-stack React Developer",
+          "description": "Are you a talented Senior Developer looking for a remote job that lets you show your skills and get decent compensation? Look no further than Lemon.io \u2014 the marketplace that connects you with hand-picked startups in the US and Europe.\nWhat we offer:\n\u2022 The rate depends on your seniority level, skills and experience. We've already paid out over $11M to our engineers.\n\u2022 No more hunting for clients or negotiating rates \u2014 let us handle the business side of things so you can focus on what you do best.\n\u2022 We'll manually find the best project for you according to your skills and preferences.\n\u2022 Choose a schedule that works best for you. It\u2019s possible to communicate async or minimally overlap within team working hours.\n\u2022 We respect your seniority so you can expect no micromanagement or screen trackers.\n\u2022 Communicate directly with the clients. Most of them have technical backgrounds. Sounds good, yeah?\n\u2022 We will support you from the time you submit the application throughout all cooperation stages.\n\u2022 Most of our projects involve working in a fast-paced startup environment. We hope you like it as much as we do.\n\u2022 Through our community, we will connect you with the best developers from more than 71 countries.\nWe have several open positions for Full-Stack React.js Developers - please see the details below. We also have some backend positions; the full list is included below as well.\nRequirements for the Senior React & Python Position:\n\u2022 4+ years of software development experience\nCommercial experience:\n\u2022 React.js 3+ years and Python 3+ years OR React.js 2+ years and Python 5+ years OR React.js 5+ years and Python 2+ years\n\u2022 Experience with AWS, GCP, or Azure is required\nRequirements for the Senior Python Position:\n\u2022 5+ years of software development experience\n\u2022 5+ years of commercial experience with Python\n\u2022 3+ years of commercial experience with Flask\nRequirements for the Senior Golang & React Position:\n\u2022 4+ years of software development experience\n\u2022 React.js 3+ years and Golang 3+ years OR React.js 2+ years and Golang 5+ years OR React.js 5+ years and Golang 2+ years\nRequirements for the Senior Golang Position:\n\u2022 5+ years of software development experience\n\u2022 5+ years of commercial experience with Golang\nOther requirements:\n\u2022 Strong technical skills: as a Senior Developer, you are expected to be able to create projects from scratch and have a deep understanding of application architecture.\n\u2022 Clear and effective communication in English \u2014 advanced ability to discuss business tasks, justify decisions, and communicate issues. Good self-presentation is also essential for upcoming client calls.\n\u2022 Strong self-organizational skills \u2014 ability to work full-time remotely with no supervision.\n\u2022 Reliability \u2014 we want to trust you and expect that you won\u2019t let us and the client down.\n\u2022 Adaptability and Flexibility \u2014 the ability to onboard the project promptly after accepting it and start delivering results quickly.\nSounds good for you? Apply now and join the Lemon.io community!\nNOT YOUR TECH STACK?\nWe have multiple projects available for Senior Developers. If you have 4+ years of commercial software development experience and are proficient in any of the following areas:\u00a0React & Node, React & Ruby, PHP & Angular, PHP & Vue, Vue & Node.js, React & .NET, Android & iOS, Angular & .NET, Angular & Node.js, Vue & .NET, Python & Vue, MLOps, React & Java, Data Science, Blockchain (Web3/Solidity/Solana), Symfony & React, Symfony & Vue, Symfony & Angular, Symfony & JavaScript & Next.js & TypeScript, Data Analysis, React & PHP, Data Engineering, AI Engineering, Data Annotation, DevOps, Svelte & Python, Svelte & Node, Svelte & TypeScript, Rust, Shopify & JavaScript, Vue & Nuxt, Python & Node, Angular & TypeScript, Ruby & Ruby on Rails, React Native & Ruby, React Native & Python, PHP & Laravel, .NET & C#, Java & Spring, Unreal Engine & C++, Python & LLM, Unity, Machine Learning Engineering\u00a0\u2014 we\u2019d be happy to connect and match you with a suitable project.\nIf your experience matches our requirements, be ready for the next steps:\n\u2022 VideoAsk \u2014 watch a short video about our startup, up to 10 minutes\n\u2022 Complete your profile on our website\n\u2022 Screening call\n\u2022 Technical interview\n\u2022 Feedback\n\u2022 Magic Box (we are looking for the best project for you).\nWe do not provide visa assistance, and our cooperation model does not include the benefits typically offered with direct hire.\nP.S. We work with developers from 71+ countries in different regions: Europe, LATAM, the U.S (if you are an owner of W-9 ben form), Canada, Asia (Japan, Singapore, South Korea, Philippines, Indonesia), Oceania (Australia, New Zealand, Papua New Guinea), and the the UK. However, we have some exceptions.\nAt the moment, we don\u2019t have a legal basis to accept applicants from the following countries:\n\u2022 European: Hungary, Iceland, Liechtenstein, Kosovo, Belarus, Russia, and Serbia.\n\u2022 Latin America: Cuba and Nicaragua\n\u2022 Most Asian countries and Africa.\nWe expand and shorten the list of exemptions regularly.\nDo you represent a company with engineers who match the description and want to collaborate with us through staff augmentation? Then register here.",
+          "url": "https://remotive.com/remote-jobs/software-development/senior-full-stack-react-developer-2088711",
+          "company_name": "Lemon.io",
+          "score": 50.32,
+          "overlap": 3,
+          "matched_skills": [
+            "c",
+            "python",
+            "javascript"
+          ],
+          "evidence": "Matched: c, python, javascript",
+          "priority": 3
+        }
+      ],
+      "resume_score": 39,
+      "links": [],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "Senior Full-stack React Developer",
+            "score": 50.32,
+            "reason": "The candidate possesses core programming languages like Python and JavaScript, which are fundamental for both backend and frontend development in a full-stack capacity.",
+            "evidence": "Matched skills include 'c', 'python', 'javascript'.",
+            "gap": "Key missing skills include specific frontend frameworks like 'angular', cloud platforms such as 'aws' and 'azure', and senior-level competencies like 'architecture' and 'communication'."
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "architecture",
+            "priority": "HIGH",
+            "why": "Understanding system architecture is critical for senior roles, demonstrating the ability to design scalable and robust solutions beyond coding individual features.",
+            "project_type": "new",
+            "project": "Microservices Design for an E-commerce Platform",
+            "implementation": "Design a high-level architecture for an e-commerce system using microservices, detailing component interactions and data flow in a diagram and brief document.",
+            "evidence": "",
+            "project_idea": ""
+          },
+          {
+            "skill": "aws",
+            "priority": "HIGH",
+            "why": "Cloud platform experience, particularly with AWS, is essential for deploying, managing, and scaling modern web applications in production environments.",
+            "project_type": "new",
+            "project": "Serverless API Deployment on AWS Lambda",
+            "implementation": "Build a simple REST API using Python or JavaScript and deploy it as a serverless function on AWS Lambda, accessible via API Gateway.",
+            "evidence": "",
+            "project_idea": ""
+          },
+          {
+            "skill": "angular",
+            "priority": "MEDIUM",
+            "why": "While React is implied, proficiency in another major frontend framework like Angular broadens a full-stack developer's versatility and marketability.",
+            "project_type": "new",
+            "project": "Basic CRUD Application with Angular",
+            "implementation": "Develop a simple create, read, update, delete (CRUD) application (e.g., a task manager) using Angular, demonstrating component structure and data binding.",
+            "evidence": "",
+            "project_idea": ""
+          },
+          {
+            "skill": "communication",
+            "priority": "MEDIUM",
+            "why": "Effective communication is vital for senior developers to explain technical concepts, collaborate with teams, and lead project discussions.",
+            "project_type": "new",
+            "project": "Technical Blog Post Series",
+            "implementation": "Write 2-3 short blog posts explaining complex technical topics (e.g., 'Understanding REST APIs' or 'Python Virtual Environments') on a platform like Medium or personal blog.",
+            "evidence": "",
+            "project_idea": ""
+          },
+          {
+            "skill": "adaptability",
+            "priority": "LOW",
+            "why": "Adaptability shows a candidate's readiness to learn new technologies, adjust to changing project requirements, and thrive in dynamic environments.",
+            "project_type": "new",
+            "project": "Integrate Unfamiliar Library Feature",
+            "implementation": "Take a simple existing code snippet or small project and integrate a new feature using a library or tool not previously used (e.g., a data visualization library).",
+            "evidence": "",
+            "project_idea": ""
+          }
+        ],
+        "project_improvements": [],
+        "cv_fixes": [
+          {
+            "section": "Experience/Projects",
+            "fix": "Add a dedicated 'Projects' section to showcase practical applications of your skills.",
+            "why": "No projects are currently mentioned, making it difficult for recruiters to assess practical experience and impact.",
+            "how": "For each project, detail the problem addressed, technologies used, and the measurable outcome or impact achieved."
+          },
+          {
+            "section": "Contact Information/Links",
+            "fix": "Include links to your GitHub profile and LinkedIn profile.",
+            "why": "These links provide verifiable evidence of coding skills, project contributions, and professional networking, which are currently missing.",
+            "how": "Add 'GitHub: [YourProfile]' and 'LinkedIn: [YourProfile]' directly under your contact information at the top of your CV."
+          },
+          {
+            "section": "Skills",
+            "fix": "Organize your listed skills into clear categories.",
+            "why": "A categorized skill list (e.g., Languages, Databases, Frontend, Backend) improves readability and helps recruiters quickly identify relevant competencies.",
+            "how": "Create distinct headings like 'Programming Languages', 'Databases', 'Web Technologies' with bulleted lists under each."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Build and deploy a simple full-stack application to a cloud service.",
+            "section": "Projects / Technical Skills",
+            "why": "This action directly addresses the missing 'architecture' and 'aws' skills by demonstrating practical deployment and system design experience.",
+            "how": "Complete the 'Serverless API Deployment on AWS Lambda' project this week, ensuring the API is functional and documented for your portfolio."
+          },
+          {
+            "action": "Create or update your professional online presence.",
+            "section": "Contact Information / Online Profiles",
+            "why": "Enhances your discoverability and provides crucial external validation of your technical skills and professional background.",
+            "how": "Set up a GitHub profile with at least one project showcasing your 'python' or 'javascript' skills, and finalize your LinkedIn profile with your current experience by end of week."
+          },
+          {
+            "action": "Start documenting a technical topic you understand well.",
+            "section": "Soft Skills / Communication",
+            "why": "Initiates development of your 'communication' skills, crucial for senior roles, and positions you as a knowledgeable professional.",
+            "how": "Write a concise technical explanation (e.g., 'How to use npm for JavaScript projects') and publish it as a post on LinkedIn or a personal blog by Friday."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "low",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
+  },
+  {
+    "id": "2026-05-02T17-22-11.918949__test_cv.txt",
+    "cv_name": "test_cv.txt",
+    "timestamp": "2026-05-02T17:22:11.918957",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2090002,
+          "title": "Senior DevOps Engineer",
+          "description": "Are you a talented Senior DevOps looking for a remote job that lets you show your skills and get decent compensation? Look no further than Lemon.io \u2014 the marketplace that connects you with hand-picked startups in the US and Europe.\nWhat we offer:\n\u2022 The rate depends on your seniority level, skills and experience. We've already paid out over $11M to our engineers.\n\u2022 No more hunting for clients or negotiating rates \u2014 let us handle the business side of things so you can focus on what you do best.\n\u2022 We'll manually find the best project for you according to your skills and preferences.\n\u2022 Choose a schedule that works best for you. It\u2019s possible to communicate async or minimally overlap within team working hours.\n\u2022 We respect your seniority so you can expect no micromanagement or screen trackers.\n\u2022 Communicate directly with the clients. Most of them have technical backgrounds. Sounds good, yeah?\n\u2022 We will support you from the time you submit the application throughout all cooperation stages.\n\u2022 Most of our projects involve working in a fast-paced startup environment. We hope you like it as much as we do.\n\u2022 Through our community, we will connect you with the best developers from more than 71 countries.\nWe have several openings for Senior DevOps Engineers, with two types of requirements.\nRequirements \u2013 DevOps with Azure DevOps:\n\u2022 4+ years of experience as a DevOps Engineer\n\u2022 At least 3 years of experience with Azure DevOps\n\u2022 Experience in at least 2 commercial projects using Microsoft Azure or Kubernetes is required\nRequirements \u2013 DevOps with AWS/GCP/SQL:\n\u2022 \n4+ years of experience as a DevOps Engineer\n\u2022 \nAt least 3 years of experience with AWS, GCP, or SQL\n\u2022 \nAt least 3 years of commercial experience with Python\n\u2022 \nExperience in at least 2 commercial projects using Terraform or Kubernetes is required\n\u2022 \nStrong technical skills: as a Senior DevOps, you are expected to be able to create projects from scratch and have a deep understanding of application architecture.\n\u2022 \nClear and effective communication in English \u2014 advanced ability to discuss business tasks, justify decisions, and communicate issues. Good self-presentation is also essential for upcoming client calls.\n\u2022 \nStrong self-organizational skills \u2014 ability to work full-time remotely with no supervision.\n\u2022 \nReliability \u2014 we want to trust you and expect that you won\u2019t let us and the client down.\n\u2022 \nAdaptability and Flexibility \u2014 the ability to onboard the project promptly after accepting it and start delivering results quickly.\nSounds good for you? Apply now and join the Lemon.io community!\nNOT YOUR TECH STACK?\nWe have multiple projects available for Senior Developers. If you have 4+ years of commercial software development experience and are proficient in any of the following areas\u00a0and roles: AI Agent Architect, AI Automation Architect,\u00a0React & Ruby, PHP & Angular, PHP & Vue, Vue & Node.js, React & .NET, Android & iOS, Angular & .NET, Angular & Node.js, Vue & .NET, Python & Vue, MLOps, React & Java, Data Science, Blockchain (Web3/Solidity/Solana), Symfony & React, Symfony & Vue, Symfony & Angular, Symfony & JavaScript & Next.js & TypeScript, Data Analysis, React & PHP, Data Engineering, AI Engineering, Data Annotation, React & Node, React & Golang, React & Python, Golang, Python & Flask, Svelte & Python, Svelte & Node, Svelte & TypeScript, Rust, Shopify & JavaScript, Vue & Nuxt, Python & Node, Angular & TypeScript, Ruby & Ruby on Rails, React Native & Ruby, React Native & Python, PHP & Laravel, .NET & C#, Java & Spring, Unreal Engine & C++, Python & LLM, Unity, Machine Learning Engineering \u2014 we\u2019d be happy to connect and match you with a suitable project.\nIf your experience matches our requirements, be ready for the next steps:\n\u2022 VideoAsk \u2014 watch a short video about our startup, up to 10 minutes\n\u2022 Complete your profile on our website\n\u2022 Intro call\n\u2022 Technical interview\n\u2022 Feedback\n\u2022 Magic Box (we are looking for the best project for you).\nWe do not provide visa assistance, and our cooperation model does not include the benefits typically offered with direct hire.\nP.S. We work with developers from 71+ countries in different regions: Europe, LATAM, the U.S (if you are an owner of W-9 ben form), Canada, Asia (Japan, Singapore, South Korea, Philippines, Indonesia), Oceania (Australia, New Zealand, Papua New Guinea), and the the UK. However, we have some exceptions.\nAt the moment, we don\u2019t have a legal basis to accept applicants from the following countries:\n\u2022 European: Hungary, Iceland, Liechtenstein, Kosovo, Belarus, Russia, and Serbia.\n\u2022 Latin America: Cuba and Nicaragua\n\u2022 Most Asian countries and Africa.\nWe expand and shorten the list of exemptions regularly.\nWe do not provide visa assistance, and our cooperation model does not include the benefits typically offered with direct hire.",
+          "url": "https://remotive.com/remote-jobs/devops/senior-devops-engineer-2090002",
+          "company_name": "Lemon.io",
+          "score": 50.95,
+          "overlap": 3,
+          "matched_skills": [
+            "react",
+            "python",
+            "sql"
+          ],
+          "evidence": "Matched: react, python, sql",
+          "priority": 3
+        },
+        {
+          "id": 2088711,
+          "title": "Senior Full-stack React Developer",
+          "description": "Are you a talented Senior Developer looking for a remote job that lets you show your skills and get decent compensation? Look no further than Lemon.io \u2014 the marketplace that connects you with hand-picked startups in the US and Europe.\nWhat we offer:\n\u2022 The rate depends on your seniority level, skills and experience. We've already paid out over $11M to our engineers.\n\u2022 No more hunting for clients or negotiating rates \u2014 let us handle the business side of things so you can focus on what you do best.\n\u2022 We'll manually find the best project for you according to your skills and preferences.\n\u2022 Choose a schedule that works best for you. It\u2019s possible to communicate async or minimally overlap within team working hours.\n\u2022 We respect your seniority so you can expect no micromanagement or screen trackers.\n\u2022 Communicate directly with the clients. Most of them have technical backgrounds. Sounds good, yeah?\n\u2022 We will support you from the time you submit the application throughout all cooperation stages.\n\u2022 Most of our projects involve working in a fast-paced startup environment. We hope you like it as much as we do.\n\u2022 Through our community, we will connect you with the best developers from more than 71 countries.\nWe have several open positions for Full-Stack React.js Developers - please see the details below. We also have some backend positions; the full list is included below as well.\nRequirements for the Senior React & Python Position:\n\u2022 4+ years of software development experience\nCommercial experience:\n\u2022 React.js 3+ years and Python 3+ years OR React.js 2+ years and Python 5+ years OR React.js 5+ years and Python 2+ years\n\u2022 Experience with AWS, GCP, or Azure is required\nRequirements for the Senior Python Position:\n\u2022 5+ years of software development experience\n\u2022 5+ years of commercial experience with Python\n\u2022 3+ years of commercial experience with Flask\nRequirements for the Senior Golang & React Position:\n\u2022 4+ years of software development experience\n\u2022 React.js 3+ years and Golang 3+ years OR React.js 2+ years and Golang 5+ years OR React.js 5+ years and Golang 2+ years\nRequirements for the Senior Golang Position:\n\u2022 5+ years of software development experience\n\u2022 5+ years of commercial experience with Golang\nOther requirements:\n\u2022 Strong technical skills: as a Senior Developer, you are expected to be able to create projects from scratch and have a deep understanding of application architecture.\n\u2022 Clear and effective communication in English \u2014 advanced ability to discuss business tasks, justify decisions, and communicate issues. Good self-presentation is also essential for upcoming client calls.\n\u2022 Strong self-organizational skills \u2014 ability to work full-time remotely with no supervision.\n\u2022 Reliability \u2014 we want to trust you and expect that you won\u2019t let us and the client down.\n\u2022 Adaptability and Flexibility \u2014 the ability to onboard the project promptly after accepting it and start delivering results quickly.\nSounds good for you? Apply now and join the Lemon.io community!\nNOT YOUR TECH STACK?\nWe have multiple projects available for Senior Developers. If you have 4+ years of commercial software development experience and are proficient in any of the following areas:\u00a0React & Node, React & Ruby, PHP & Angular, PHP & Vue, Vue & Node.js, React & .NET, Android & iOS, Angular & .NET, Angular & Node.js, Vue & .NET, Python & Vue, MLOps, React & Java, Data Science, Blockchain (Web3/Solidity/Solana), Symfony & React, Symfony & Vue, Symfony & Angular, Symfony & JavaScript & Next.js & TypeScript, Data Analysis, React & PHP, Data Engineering, AI Engineering, Data Annotation, DevOps, Svelte & Python, Svelte & Node, Svelte & TypeScript, Rust, Shopify & JavaScript, Vue & Nuxt, Python & Node, Angular & TypeScript, Ruby & Ruby on Rails, React Native & Ruby, React Native & Python, PHP & Laravel, .NET & C#, Java & Spring, Unreal Engine & C++, Python & LLM, Unity, Machine Learning Engineering\u00a0\u2014 we\u2019d be happy to connect and match you with a suitable project.\nIf your experience matches our requirements, be ready for the next steps:\n\u2022 VideoAsk \u2014 watch a short video about our startup, up to 10 minutes\n\u2022 Complete your profile on our website\n\u2022 Screening call\n\u2022 Technical interview\n\u2022 Feedback\n\u2022 Magic Box (we are looking for the best project for you).\nWe do not provide visa assistance, and our cooperation model does not include the benefits typically offered with direct hire.\nP.S. We work with developers from 71+ countries in different regions: Europe, LATAM, the U.S (if you are an owner of W-9 ben form), Canada, Asia (Japan, Singapore, South Korea, Philippines, Indonesia), Oceania (Australia, New Zealand, Papua New Guinea), and the the UK. However, we have some exceptions.\nAt the moment, we don\u2019t have a legal basis to accept applicants from the following countries:\n\u2022 European: Hungary, Iceland, Liechtenstein, Kosovo, Belarus, Russia, and Serbia.\n\u2022 Latin America: Cuba and Nicaragua\n\u2022 Most Asian countries and Africa.\nWe expand and shorten the list of exemptions regularly.\nDo you represent a company with engineers who match the description and want to collaborate with us through staff augmentation? Then register here.",
+          "url": "https://remotive.com/remote-jobs/software-development/senior-full-stack-react-developer-2088711",
+          "company_name": "Lemon.io",
+          "score": 42.8,
+          "overlap": 2,
+          "matched_skills": [
+            "react",
+            "python"
+          ],
+          "evidence": "Matched: react, python",
+          "priority": 2
+        }
+      ],
+      "resume_score": 53,
+      "links": [
+        "https://example.com",
+        "https://www.linkedin.com/in/johndoe",
+        "https://linkedin.com/in/johndoe"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "Senior DevOps Engineer",
+            "score": 50.95,
+            "reason": "John's experience with Python for backend development and SQL for database management provides a strong foundation for a DevOps role involving scripting and data infrastructure.",
+            "evidence": "react, python, sql",
+            "gap": "adaptability, angular, architecture, aws, azure, c, communication, data analysis"
+          },
+          {
+            "title": "Senior Full-stack React Developer",
+            "score": 42.8,
+            "reason": "John's direct experience with React for front-end development and Python for backend logic makes him a good candidate for a full-stack developer position.",
+            "evidence": "react, python",
+            "gap": "adaptability, angular, architecture, aws, azure, c, communication, data analysis"
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "aws",
+            "priority": "HIGH",
+            "why": "Cloud proficiency is crucial for a Senior DevOps Engineer role, covering infrastructure management, deployment, and monitoring.",
+            "project_type": "new",
+            "project": "Cloud Deployment Pipeline",
+            "project_idea": "Deploy a simple web application using AWS services.",
+            "implementation": "Build a CI/CD pipeline using AWS (e.g., CodePipeline, ECS) to deploy a containerized FastAPI application.",
+            "evidence": ""
+          },
+          {
+            "skill": "architecture",
+            "priority": "HIGH",
+            "why": "Senior roles demand the ability to design and maintain scalable, robust, and well-structured systems.",
+            "project_type": "existing",
+            "project": "resume matching and job search tools",
+            "project_idea": "",
+            "implementation": "Document the current architecture of the 'resume matching tool', outlining its components, data flow, and scalability.",
+            "evidence": ""
+          },
+          {
+            "skill": "data analysis",
+            "priority": "MEDIUM",
+            "why": "Understanding data metrics improves decision-making for both DevOps (performance) and full-stack development (user behavior).",
+            "project_type": "existing",
+            "project": "resume matching and job search tools",
+            "project_idea": "",
+            "implementation": "Add a feature to the 'job search tools' to visualize search query trends or matching success rates using SQL.",
+            "evidence": ""
+          },
+          {
+            "skill": "communication",
+            "priority": "MEDIUM",
+            "why": "Effective communication is vital for collaborating with teams, explaining technical concepts, and documenting processes in senior roles.",
+            "project_type": "existing",
+            "project": "resume matching and job search tools",
+            "project_idea": "",
+            "implementation": "Create a clear technical README and user guide for the 'job search tools' project, detailing setup and usage.",
+            "evidence": ""
+          },
+          {
+            "skill": "azure",
+            "priority": "LOW",
+            "why": "Demonstrating multi-cloud knowledge broadens opportunities and shows adaptability, especially for DevOps positions.",
+            "project_type": "new",
+            "project": "Azure Web App Deployment",
+            "project_idea": "Deploy a basic Python web app to Azure App Service.",
+            "implementation": "Use GitHub Actions to deploy a simple FastAPI 'hello world' application to Azure App Service.",
+            "evidence": ""
+          }
+        ],
+        "project_improvements": [
+          {
+            "project": "resume matching and job search tools",
+            "current_issue": "The project's deployment strategy and scalability are not explicitly highlighted.",
+            "improvement": "Implement Dockerization for the application's backend and/or frontend components.",
+            "impact": "Showcases ability to create portable, consistent environments, crucial for modern deployment and scaling strategies."
+          },
+          {
+            "project": "resume matching and job search tools",
+            "current_issue": "The project description doesn't quantify the impact or performance of the tools.",
+            "improvement": "Add specific metrics to the project's description, such as matching accuracy or search speed.",
+            "impact": "Provides concrete evidence of the tool's effectiveness and John's ability to deliver high-performing solutions."
+          },
+          {
+            "project": "resume matching and job search tools",
+            "current_issue": "The architectural design and component interactions are not detailed.",
+            "improvement": "Briefly describe the system's architecture (e.g., backend service, database, frontend application).",
+            "impact": "Demonstrates architectural thinking and understanding of how different system components integrate and function."
+          }
+        ],
+        "cv_fixes": [
+          {
+            "section": "Experience / Project Description",
+            "fix": "Quantify achievements for 'Built resume matching and job search tools'.",
+            "why": "Specific numbers demonstrate impact and scope, making accomplishments more compelling to employers.",
+            "how": "Add metrics like 'improved matching accuracy by X%' or 'processed Y resumes per minute' to the project description."
+          },
+          {
+            "section": "Skills Section",
+            "fix": "Explicitly list FastAPI as a core skill.",
+            "why": "FastAPI is a key technology mentioned in your experience; explicitly listing it improves keyword matching for relevant roles.",
+            "how": "Add 'FastAPI' to the primary list of technical skills at the top of your CV or in a dedicated 'Technologies' section."
+          },
+          {
+            "section": "Experience / Project Description",
+            "fix": "Add details about the development process or tools used beyond the core technologies.",
+            "why": "Highlighting CI/CD, testing, or deployment practices (even if basic) demonstrates modern software engineering maturity.",
+            "how": "For 'resume matching and job search tools', briefly mention if you used Git for version control, or any testing frameworks."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Build a simple CI/CD pipeline for a project.",
+            "section": "Projects / Portfolio",
+            "why": "To showcase practical cloud deployment and automation skills, which are highly valued in DevOps roles.",
+            "how": "Set up a GitHub Actions workflow to deploy a basic 'Hello World' FastAPI application to a free-tier AWS EC2 instance or render.com."
+          },
+          {
+            "action": "Create an architectural diagram or document for an existing project.",
+            "section": "Projects / Portfolio",
+            "why": "To demonstrate architectural understanding and enhance project description clarity, crucial for senior positions.",
+            "how": "Develop a concise `ARCHITECTURE.md` file or simple diagram for your 'resume matching tool' project, explaining its components and data flow."
+          },
+          {
+            "action": "Implement a performance metric or dashboard in an existing project.",
+            "section": "Projects / Portfolio",
+            "why": "To quantify project impact and highlight data-driven development, appealing to both DevOps and full-stack roles.",
+            "how": "Add a feature to your 'job search tools' that tracks and displays the average time taken for a search query, or the number of successful matches per day."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "high",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
+  },
+  {
+    "id": "2026-05-02T17-25-00.984362__test_cv.txt",
+    "cv_name": "test_cv.txt",
+    "timestamp": "2026-05-02T17:25:00.984374",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2090002,
+          "title": "Senior DevOps Engineer",
+          "description": "Are you a talented Senior DevOps looking for a remote job that lets you show your skills and get decent compensation? Look no further than Lemon.io \u2014 the marketplace that connects you with hand-picked startups in the US and Europe.\nWhat we offer:\n\u2022 The rate depends on your seniority level, skills and experience. We've already paid out over $11M to our engineers.\n\u2022 No more hunting for clients or negotiating rates \u2014 let us handle the business side of things so you can focus on what you do best.\n\u2022 We'll manually find the best project for you according to your skills and preferences.\n\u2022 Choose a schedule that works best for you. It\u2019s possible to communicate async or minimally overlap within team working hours.\n\u2022 We respect your seniority so you can expect no micromanagement or screen trackers.\n\u2022 Communicate directly with the clients. Most of them have technical backgrounds. Sounds good, yeah?\n\u2022 We will support you from the time you submit the application throughout all cooperation stages.\n\u2022 Most of our projects involve working in a fast-paced startup environment. We hope you like it as much as we do.\n\u2022 Through our community, we will connect you with the best developers from more than 71 countries.\nWe have several openings for Senior DevOps Engineers, with two types of requirements.\nRequirements \u2013 DevOps with Azure DevOps:\n\u2022 4+ years of experience as a DevOps Engineer\n\u2022 At least 3 years of experience with Azure DevOps\n\u2022 Experience in at least 2 commercial projects using Microsoft Azure or Kubernetes is required\nRequirements \u2013 DevOps with AWS/GCP/SQL:\n\u2022 \n4+ years of experience as a DevOps Engineer\n\u2022 \nAt least 3 years of experience with AWS, GCP, or SQL\n\u2022 \nAt least 3 years of commercial experience with Python\n\u2022 \nExperience in at least 2 commercial projects using Terraform or Kubernetes is required\n\u2022 \nStrong technical skills: as a Senior DevOps, you are expected to be able to create projects from scratch and have a deep understanding of application architecture.\n\u2022 \nClear and effective communication in English \u2014 advanced ability to discuss business tasks, justify decisions, and communicate issues. Good self-presentation is also essential for upcoming client calls.\n\u2022 \nStrong self-organizational skills \u2014 ability to work full-time remotely with no supervision.\n\u2022 \nReliability \u2014 we want to trust you and expect that you won\u2019t let us and the client down.\n\u2022 \nAdaptability and Flexibility \u2014 the ability to onboard the project promptly after accepting it and start delivering results quickly.\nSounds good for you? Apply now and join the Lemon.io community!\nNOT YOUR TECH STACK?\nWe have multiple projects available for Senior Developers. If you have 4+ years of commercial software development experience and are proficient in any of the following areas\u00a0and roles: AI Agent Architect, AI Automation Architect,\u00a0React & Ruby, PHP & Angular, PHP & Vue, Vue & Node.js, React & .NET, Android & iOS, Angular & .NET, Angular & Node.js, Vue & .NET, Python & Vue, MLOps, React & Java, Data Science, Blockchain (Web3/Solidity/Solana), Symfony & React, Symfony & Vue, Symfony & Angular, Symfony & JavaScript & Next.js & TypeScript, Data Analysis, React & PHP, Data Engineering, AI Engineering, Data Annotation, React & Node, React & Golang, React & Python, Golang, Python & Flask, Svelte & Python, Svelte & Node, Svelte & TypeScript, Rust, Shopify & JavaScript, Vue & Nuxt, Python & Node, Angular & TypeScript, Ruby & Ruby on Rails, React Native & Ruby, React Native & Python, PHP & Laravel, .NET & C#, Java & Spring, Unreal Engine & C++, Python & LLM, Unity, Machine Learning Engineering \u2014 we\u2019d be happy to connect and match you with a suitable project.\nIf your experience matches our requirements, be ready for the next steps:\n\u2022 VideoAsk \u2014 watch a short video about our startup, up to 10 minutes\n\u2022 Complete your profile on our website\n\u2022 Intro call\n\u2022 Technical interview\n\u2022 Feedback\n\u2022 Magic Box (we are looking for the best project for you).\nWe do not provide visa assistance, and our cooperation model does not include the benefits typically offered with direct hire.\nP.S. We work with developers from 71+ countries in different regions: Europe, LATAM, the U.S (if you are an owner of W-9 ben form), Canada, Asia (Japan, Singapore, South Korea, Philippines, Indonesia), Oceania (Australia, New Zealand, Papua New Guinea), and the the UK. However, we have some exceptions.\nAt the moment, we don\u2019t have a legal basis to accept applicants from the following countries:\n\u2022 European: Hungary, Iceland, Liechtenstein, Kosovo, Belarus, Russia, and Serbia.\n\u2022 Latin America: Cuba and Nicaragua\n\u2022 Most Asian countries and Africa.\nWe expand and shorten the list of exemptions regularly.\nWe do not provide visa assistance, and our cooperation model does not include the benefits typically offered with direct hire.",
+          "url": "https://remotive.com/remote-jobs/devops/senior-devops-engineer-2090002",
+          "company_name": "Lemon.io",
+          "score": 50.95,
+          "overlap": 3,
+          "matched_skills": [
+            "react",
+            "sql",
+            "python"
+          ],
+          "evidence": "Matched: react, sql, python",
+          "priority": 3
+        },
+        {
+          "id": 2088711,
+          "title": "Senior Full-stack React Developer",
+          "description": "Are you a talented Senior Developer looking for a remote job that lets you show your skills and get decent compensation? Look no further than Lemon.io \u2014 the marketplace that connects you with hand-picked startups in the US and Europe.\nWhat we offer:\n\u2022 The rate depends on your seniority level, skills and experience. We've already paid out over $11M to our engineers.\n\u2022 No more hunting for clients or negotiating rates \u2014 let us handle the business side of things so you can focus on what you do best.\n\u2022 We'll manually find the best project for you according to your skills and preferences.\n\u2022 Choose a schedule that works best for you. It\u2019s possible to communicate async or minimally overlap within team working hours.\n\u2022 We respect your seniority so you can expect no micromanagement or screen trackers.\n\u2022 Communicate directly with the clients. Most of them have technical backgrounds. Sounds good, yeah?\n\u2022 We will support you from the time you submit the application throughout all cooperation stages.\n\u2022 Most of our projects involve working in a fast-paced startup environment. We hope you like it as much as we do.\n\u2022 Through our community, we will connect you with the best developers from more than 71 countries.\nWe have several open positions for Full-Stack React.js Developers - please see the details below. We also have some backend positions; the full list is included below as well.\nRequirements for the Senior React & Python Position:\n\u2022 4+ years of software development experience\nCommercial experience:\n\u2022 React.js 3+ years and Python 3+ years OR React.js 2+ years and Python 5+ years OR React.js 5+ years and Python 2+ years\n\u2022 Experience with AWS, GCP, or Azure is required\nRequirements for the Senior Python Position:\n\u2022 5+ years of software development experience\n\u2022 5+ years of commercial experience with Python\n\u2022 3+ years of commercial experience with Flask\nRequirements for the Senior Golang & React Position:\n\u2022 4+ years of software development experience\n\u2022 React.js 3+ years and Golang 3+ years OR React.js 2+ years and Golang 5+ years OR React.js 5+ years and Golang 2+ years\nRequirements for the Senior Golang Position:\n\u2022 5+ years of software development experience\n\u2022 5+ years of commercial experience with Golang\nOther requirements:\n\u2022 Strong technical skills: as a Senior Developer, you are expected to be able to create projects from scratch and have a deep understanding of application architecture.\n\u2022 Clear and effective communication in English \u2014 advanced ability to discuss business tasks, justify decisions, and communicate issues. Good self-presentation is also essential for upcoming client calls.\n\u2022 Strong self-organizational skills \u2014 ability to work full-time remotely with no supervision.\n\u2022 Reliability \u2014 we want to trust you and expect that you won\u2019t let us and the client down.\n\u2022 Adaptability and Flexibility \u2014 the ability to onboard the project promptly after accepting it and start delivering results quickly.\nSounds good for you? Apply now and join the Lemon.io community!\nNOT YOUR TECH STACK?\nWe have multiple projects available for Senior Developers. If you have 4+ years of commercial software development experience and are proficient in any of the following areas:\u00a0React & Node, React & Ruby, PHP & Angular, PHP & Vue, Vue & Node.js, React & .NET, Android & iOS, Angular & .NET, Angular & Node.js, Vue & .NET, Python & Vue, MLOps, React & Java, Data Science, Blockchain (Web3/Solidity/Solana), Symfony & React, Symfony & Vue, Symfony & Angular, Symfony & JavaScript & Next.js & TypeScript, Data Analysis, React & PHP, Data Engineering, AI Engineering, Data Annotation, DevOps, Svelte & Python, Svelte & Node, Svelte & TypeScript, Rust, Shopify & JavaScript, Vue & Nuxt, Python & Node, Angular & TypeScript, Ruby & Ruby on Rails, React Native & Ruby, React Native & Python, PHP & Laravel, .NET & C#, Java & Spring, Unreal Engine & C++, Python & LLM, Unity, Machine Learning Engineering\u00a0\u2014 we\u2019d be happy to connect and match you with a suitable project.\nIf your experience matches our requirements, be ready for the next steps:\n\u2022 VideoAsk \u2014 watch a short video about our startup, up to 10 minutes\n\u2022 Complete your profile on our website\n\u2022 Screening call\n\u2022 Technical interview\n\u2022 Feedback\n\u2022 Magic Box (we are looking for the best project for you).\nWe do not provide visa assistance, and our cooperation model does not include the benefits typically offered with direct hire.\nP.S. We work with developers from 71+ countries in different regions: Europe, LATAM, the U.S (if you are an owner of W-9 ben form), Canada, Asia (Japan, Singapore, South Korea, Philippines, Indonesia), Oceania (Australia, New Zealand, Papua New Guinea), and the the UK. However, we have some exceptions.\nAt the moment, we don\u2019t have a legal basis to accept applicants from the following countries:\n\u2022 European: Hungary, Iceland, Liechtenstein, Kosovo, Belarus, Russia, and Serbia.\n\u2022 Latin America: Cuba and Nicaragua\n\u2022 Most Asian countries and Africa.\nWe expand and shorten the list of exemptions regularly.\nDo you represent a company with engineers who match the description and want to collaborate with us through staff augmentation? Then register here.",
+          "url": "https://remotive.com/remote-jobs/software-development/senior-full-stack-react-developer-2088711",
+          "company_name": "Lemon.io",
+          "score": 42.8,
+          "overlap": 2,
+          "matched_skills": [
+            "react",
+            "python"
+          ],
+          "evidence": "Matched: react, python",
+          "priority": 2
+        }
+      ],
+      "resume_score": 53,
+      "links": [
+        "https://example.com",
+        "https://www.linkedin.com/in/johndoe",
+        "https://linkedin.com/in/johndoe"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "Senior DevOps Engineer",
+            "score": 50.95,
+            "reason": "John's experience with Python, React, and SQL provides a strong technical foundation often required in DevOps environments, especially for scripting and tooling.",
+            "evidence": "matched_skills: python, react, sql",
+            "gap": "missing_skills: adaptability, angular, architecture, aws, azure, c, communication, data analysis"
+          },
+          {
+            "title": "Senior Full-stack React Developer",
+            "score": 42.8,
+            "reason": "John's direct experience with React and Python makes him well-suited for full-stack roles requiring proficiency in both frontend and backend development.",
+            "evidence": "matched_skills: react, python",
+            "gap": "missing_skills: adaptability, angular, architecture, aws, azure, c, communication, data analysis"
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "architecture",
+            "priority": "HIGH",
+            "why": "Senior roles demand strong system design and architecture skills to build scalable, maintainable, and robust applications.",
+            "project_type": "new",
+            "project_idea": "Design a scalable microservices architecture.",
+            "implementation": "Outline a microservices architecture for an e-commerce platform, detailing service boundaries, API contracts, and data flow in a design document.",
+            "project": "",
+            "evidence": ""
+          },
+          {
+            "skill": "aws",
+            "priority": "HIGH",
+            "why": "Cloud platforms like AWS are critical for deploying, managing, and scaling modern applications, a key skill for senior engineering roles.",
+            "project_type": "new",
+            "project_idea": "Deploy a web application using AWS services.",
+            "implementation": "Host a basic FastAPI application on AWS Elastic Beanstalk, integrating with an RDS database and S3 for static assets.",
+            "project": "",
+            "evidence": ""
+          },
+          {
+            "skill": "data analysis",
+            "priority": "MEDIUM",
+            "why": "Analyzing data is crucial for understanding application performance, user behavior, and informing feature improvements in senior development roles.",
+            "project_type": "existing",
+            "project": "resume matching tool",
+            "project_idea": "Add analytics dashboard to resume matching tool.",
+            "implementation": "Enhance the 'resume matching tool' by implementing a backend module to collect and analyze match rates and keyword frequency, displaying trends on a new frontend dashboard.",
+            "evidence": ""
+          },
+          {
+            "skill": "angular",
+            "priority": "MEDIUM",
+            "why": "Demonstrating proficiency in another major frontend framework like Angular shows versatility and broadens full-stack capabilities beyond React.",
+            "project_type": "new",
+            "project_idea": "Create a simple CRUD application using Angular.",
+            "implementation": "Develop a basic task management frontend with Angular, consuming a mock REST API or a simple Python backend.",
+            "project": "",
+            "evidence": ""
+          },
+          {
+            "skill": "azure",
+            "priority": "LOW",
+            "why": "Exposure to multiple cloud providers like Azure is valuable for organizations operating in multi-cloud environments or considering alternative platforms.",
+            "project_type": "new",
+            "project_idea": "Deploy a serverless function on Azure.",
+            "implementation": "Implement a simple Python Azure Function that performs a basic data transformation, triggered by an HTTP request or a timer.",
+            "project": "",
+            "evidence": ""
+          }
+        ],
+        "project_improvements": [
+          {
+            "project": "resume matching tool",
+            "current_issue": "The project description lacks measurable impact or performance indicators.",
+            "improvement": "Quantify the efficiency or accuracy of the matching algorithm.",
+            "impact": "State 'Improved match accuracy by X% through algorithm refinement' or 'Processed Y resumes per minute with Z% accuracy' to showcase concrete value."
+          },
+          {
+            "project": "job search tools",
+            "current_issue": "There is no indication of usage, scalability, or the project's scope.",
+            "improvement": "Mention how many jobs were processed or if it was deployed for real users.",
+            "impact": "Add details like 'Enabled users to search across X job boards, processing Y job listings daily' or 'Supported Z concurrent users searching for jobs.'"
+          },
+          {
+            "project": "resume matching and job search tools",
+            "current_issue": "The description is high-level and doesn't explain technical depth or challenges overcome.",
+            "improvement": "Detail a specific technical challenge overcome during development.",
+            "impact": "Describe how you 'Resolved data parsing complexities for diverse resume formats, ensuring 99% data extraction reliability' or optimized performance under load."
+          }
+        ],
+        "cv_fixes": [
+          {
+            "section": "Software Engineer Experience",
+            "fix": "Add quantifiable results to project descriptions.",
+            "why": "Demonstrates impact and value, crucial for senior roles to show tangible contributions.",
+            "how": "For 'resume matching tool', add metrics like 'Achieved 90% matching accuracy' or 'Reduced manual review time by 20% by automating processes.'"
+          },
+          {
+            "section": "Software Engineer role",
+            "fix": "Expand on responsibilities and impact beyond just listing technologies.",
+            "why": "Senior roles require detailed understanding of duties, leadership, and collaboration, not just tools used.",
+            "how": "Detail specific responsibilities such as 'Led the development of...' or 'Collaborated with X teams to deliver Y solution, impacting Z users'."
+          },
+          {
+            "section": "Skills Summary",
+            "fix": "Create a dedicated 'Skills' section or elaborate on listed skills with experience level.",
+            "why": "Clearly highlights technical proficiencies, making it easier for recruiters to identify relevant skills quickly and understand depth.",
+            "how": "List core technical skills like 'Python (FastAPI, 5+ yrs), React (3+ yrs), SQL (PostgreSQL, MySQL), Git, Basic AWS, Docker' to provide a clear overview."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Quantify impact of existing projects.",
+            "section": "Experience section (resume matching and job search tools)",
+            "why": "To highlight the measurable value delivered in previous roles, which is critical for senior positions.",
+            "how": "Revise bullet points for 'resume matching' and 'job search tools' to include numbers (e.g., 'Improved matching accuracy by 15%', 'Supported 500 daily users')."
+          },
+          {
+            "action": "Create a small AWS deployment project.",
+            "section": "Personal Projects / GitHub",
+            "why": "To address a critical missing skill for Senior DevOps roles and demonstrate practical cloud experience.",
+            "how": "Deploy a simple FastAPI application to AWS Elastic Beanstalk, documenting the setup process in a GitHub README."
+          },
+          {
+            "action": "Research and outline a system architecture.",
+            "section": "Personal Learning / Portfolio",
+            "why": "To develop and showcase design thinking and architectural planning skills, essential for senior-level responsibilities.",
+            "how": "Choose an interesting problem (e.g., a scalable e-commerce backend), and create a high-level architecture diagram and a brief design document for it."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "high",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
+  },
+  {
+    "id": "2026-05-02T17-27-27.706501__SaadCV.pdf",
+    "cv_name": "SaadCV.pdf",
+    "timestamp": "2026-05-02T17:27:27.706510",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2089958,
+          "title": "AI Engineer",
+          "description": "We are seeking a versatile and highly skilled AI Engineer to join our fast-growing Full-Stack AI Solutions company. This role blends the expertise of building cutting-edge AI/ML models with the practical know-how of automation and agentic system integrations. You will design, develop, deploy, and optimize intelligent solutions that leverage the power of generative AI, automation platforms, and agent-based systems to enhance client operations, streamline workflows, and deliver measurable results.\nThis is a unique opportunity to work across a diverse range of technologies\u2014from fine-tuning transformer models to building real-world AI-powered automation stacks. If you\u2019re passionate about pushing the boundaries of AI while creating real value through systems thinking and practical implementation, this role is for you.\nKey Responsibilities\nAI/ML Development:\n\u2022 Design, build, and deploy machine learning and generative AI models for custom use cases.\n\u2022 Fine-tune and optimize large language models (e.g., GPT, BERT) using frameworks like Hugging Face Transformers.\n\u2022 Conduct ongoing research to stay ahead of advancements in AI/ML, including LLMs, generative AI, and transformer-based architectures.\n\u2022 Develop data pipelines for preprocessing, feature engineering, and model training.\n\u2022 Test, validate, and monitor model performance in real-world scenarios; iterate for reliability and accuracy.\n\u2022 Collaborate with cross-functional teams to embed AI into products, platforms, and services.\n\u2022 Mentor junior engineers and contribute to technical leadership.\nAutomation & Agentic Systems:\n\u2022 Design, implement, and maintain automation workflows using tools such as:\n\u2022 LangChain, LangGraph, LangSmith, LangFuse n8n, ElevenLabs, and CMS integrations.\n\u2022 Engineer system-to-system integrations using APIs to enable intelligent process automation.\n\u2022 Apply prompt and context engineering techniques to enhance the performance of conversational AI tools.\n\u2022 Implement prompt management and QA processes for agents and assistants.\n\u2022 Explore and deploy Microsoft Copilot Studio, PowerApps, and PowerAutomate solutions (preferred but not required).\n\u2022 Continuously evaluate emerging AI and automation tools and assess their applicability in client use cases.\n\u2022 Collaborate with clients and internal teams to scope, deliver, and maintain agentic and automation solutions aligned with business goals.\nQualifications\nRequired\n\u2022 2+ years of hands-on experience in AI/ML development, including training and deploying models in production.\n\u2022 Strong programming skills in Python, with proficiency in frameworks such as TensorFlow, PyTorch, Scikit-learn, and Hugging Face Transformers.\n\u2022 Experience working with AI tools like Langchain, OpenAI, or Stable Diffusion.\n\u2022 Practical experience with automation platforms and AI agent builders (as listed above).\n\u2022 Deep understanding of machine learning algorithms, neural networks, and NLP concepts.\n\u2022 Proficiency in using REST APIs for tool and platform integrations.\n\u2022 Familiarity with cloud-based AI/ML platforms.\n\u2022 Strong analytical skills and the ability to translate business problems into technical AI/automation solutions.\nPreferred\n\u2022 Experience working with Agentic AI frameworks, voice automation, and prompt tuning systems.\n\u2022 Exposure to MLOps best practices, including model versioning, CI/CD, and monitoring.\n\u2022 Knowledge of reinforcement learning, GANs, or edge AI deployments.\n\u2022 Familiarity with distributed computing frameworks such as Spark or Ray.\n\u2022 Background in AI agency workflows and client-facing solution delivery.\nWork Environment & Benefits\n\u2022 Competitive salary and performance-based incentives.\n\u2022 Flexible work environment: Remote-first.\n\u2022 Collaborative, innovation-driven culture with a commitment to personal and professional growth.\n\u2022 Opportunity to work at the forefront of AI innovation across industries and verticals.",
+          "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-engineer-2089958",
+          "company_name": "Dry Ground AI",
+          "score": 61.51,
+          "overlap": 4,
+          "matched_skills": [
+            "cloud",
+            "machine learning",
+            "pytorch",
+            "python"
+          ],
+          "evidence": "Matched: cloud, machine learning, pytorch",
+          "priority": 4
+        },
+        {
+          "id": 2088710,
+          "title": "Online Data Analyst United States",
+          "description": "Are you a detail-oriented individual with a passion for research and a good understanding of national and local geography? This freelance opportunity allows you to work at your own pace and from the comfort of your own home.\nA Day in the Life of an Online Data Analyst:\n\u2022 In this role, you will be working on a project aimed at enhancing the content and quality of digital maps that are used by millions of people worldwide\n\u2022 Completing research and evaluation tasks in a web-based environment such as verifying and comparing data, and determining the relevance and accuracy of information.\nJoin us today and be part of a dynamic and innovative team that is making a difference in the world!\nTELUS Digital AI Community\nOur global AI Community is a vibrant network of 1 million+ contributors from diverse backgrounds who help our customers collect, enhance, train, translate, and localize content to build better AI models. Become part of our growing community and make an impact supporting the machine learning models of some of the world\u2019s largest brands. \nQualification path\nNo previous professional experience is required to apply to this role, however, working on this project will require you to pass the basic requirements and go through a standard assessment process. This is a part-time long-term project and your work will be subject to our standard quality assurance checks during the term of this agreement.\u00a0\nBasic Requirements\n\u2022 Full Professional Proficiency in English language\n\u2022 Being a resident in United States for the last 2 consecutive years and having familiarity with current and historical business, media, sport, news, social media, and cultural affairs in United States\n\u2022 Ability to follow guidelines and conduct online research using search engines, online maps, and website information\n\u2022 Flexibility to work across a diverse set of task types, including maps, news, audio tasks, and relevance\n\u2022 Daily access to a broadband internet connection, computer, and relevant software\nAssessment\nIn order to be hired into the program, you\u2019ll take an open book qualification exam that will determine your suitability for the position and complete ID verification. Our team will provide you with guidelines and learning materials before your qualification exam. You will be required to complete the exam in a specific timeframe but at your convenience.\nEqual Opportunity\nAll qualified applicants will receive consideration for a contractual relationship without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status. At TELUS Digital AI, we are proud to offer equal opportunities and are committed to creating a diverse and inclusive community. All aspects of selection are based on applicants\u2019 qualifications, merits, competence, and performance without regard to any characteristic related to diversity.",
+          "url": "https://remotive.com/remote-jobs/all-others/online-data-analyst-united-states-2088710",
+          "company_name": "TELUS Digital",
+          "score": 37.72,
+          "overlap": 1,
+          "matched_skills": [
+            "machine learning"
+          ],
+          "evidence": "Matched: machine learning",
+          "priority": 1
+        },
+        {
+          "id": 2088704,
+          "title": "Online Data Analyst (United States/Spanish speakers)",
+          "description": "Are you a detail-oriented individual with a passion for research and a good understanding of national and local geography? This freelance opportunity allows you to work at your own pace and from the comfort of your own home.\nA Day in the Life of an Online Data Analyst:\n\u2022 In this role, you will be working on a project aimed at enhancing the content and quality of digital maps that are used by millions of people worldwide\n\u2022 Completing research and evaluation tasks in a web-based environment such as verifying and comparing data, and determining the relevance and accuracy of information.\nJoin us today and be part of a dynamic and innovative team that is making a difference in the world!\nTELUS Digital AI Community\nOur global AI Community is a vibrant network of 1 million+ contributors from diverse backgrounds who help our customers collect, enhance, train, translate, and localize content to build better AI models. Become part of our growing community and make an impact supporting the machine learning models of some of the world\u2019s largest brands.\nQualification path\nNo previous professional experience is required to apply to this role, however, working on this project will require you to pass the basic requirements and go through a standard assessment process. This is a part-time long-term project and your work will be subject to our standard quality assurance checks during the term of this agreement.\u00a0\nBasic Requirements\n\u2022 Full Professional Proficiency in Spanish language\n\u2022 Being a resident in United States for the last 2 consecutive years and having familiarity with current and historical business, media, sport, news, social media, and cultural affairs in United States\n\u2022 Ability to follow guidelines and conduct online research using search engines, online maps, and website information\n\u2022 Flexibility to work across a diverse set of task types, including maps, news, audio tasks, and relevance\n\u2022 Daily access to a broadband internet connection, computer, and relevant software\nAssessment\nIn order to be hired into the program, you\u2019ll take an open book qualification exam that will determine your suitability for the position and complete ID verification. Our team will provide you with guidelines and learning materials before your qualification exam. You will be required to complete the exam in a specific timeframe but at your convenience.\nEqual Opportunity\nAll qualified applicants will receive consideration for a contractual relationship without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status. At TELUS Digital AI, we are proud to offer equal opportunities and are committed to creating a diverse and inclusive community. All aspects of selection are based on applicants\u2019 qualifications, merits, competence, and performance without regard to any characteristic related to diversity.",
+          "url": "https://remotive.com/remote-jobs/all-others/online-data-analyst-united-states-spanish-speakers-2088704",
+          "company_name": "TELUS Digital",
+          "score": 37.72,
+          "overlap": 1,
+          "matched_skills": [
+            "machine learning"
+          ],
+          "evidence": "Matched: machine learning",
+          "priority": 1
+        }
+      ],
+      "resume_score": 94,
+      "links": [
+        "mailto:saadasif78656@gmail.com",
+        "https://www.linkedin.com/in/saad-asif-636b87352/",
+        "https://github.com/Saad-61",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/463edcb59bc99fcf3c70370c0ddaab405ba3bd14",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/23cc7d4d88ac4807f7df6419af9a932b1b4de4f5",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/7dc403e0f2920a98c18145f75f7693cf8c7ea642"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "AI Engineer",
+            "score": 61.51,
+            "reason": "The candidate's experience with deep learning, computer vision, and machine learning projects aligns well with the technical requirements of an AI Engineer role.",
+            "evidence": "Matched skills include 'cloud', 'machine learning', 'pytorch', and 'python'. Projects like VisionBench-CelebA showcase deep learning and computer vision proficiency.",
+            "gap": "Missing skills include 'leadership', 'monitoring', 'nlp', 'openai', 'qa', 'research', 'rest', and 'tensorflow'."
+          },
+          {
+            "title": "Online Data Analyst United States",
+            "score": 37.72,
+            "reason": "The candidate demonstrates foundational machine learning and data handling skills relevant to data analysis tasks.",
+            "evidence": "Matched skill 'machine learning' is present, showcased in projects like BookYourShoot's matching system and ScoutVCT's analytics platform.",
+            "gap": "Missing skills include 'go', 'quality assurance', and 'research'."
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "research",
+            "priority": "HIGH",
+            "why": "Crucial for understanding, evaluating, and innovating in AI/ML model development and data analysis, which is vital for both roles.",
+            "project_type": "existing",
+            "project": "VisionBench-CelebA",
+            "project_idea": "",
+            "implementation": "Expand the project description to explicitly detail the research methodology, experimental design, and comparative analysis of models and metrics performed.",
+            "evidence": ""
+          },
+          {
+            "skill": "nlp",
+            "priority": "HIGH",
+            "why": "Essential for developing natural language interfaces and processing textual data, especially relevant for AI Engineer roles and improving user interaction.",
+            "project_type": "existing",
+            "project": "ScoutVCT",
+            "project_idea": "",
+            "implementation": "Elaborate on the specific NLP techniques or libraries used in ScoutVCT's natural-language interface to convert user queries into structured database operations.",
+            "evidence": ""
+          },
+          {
+            "skill": "tensorflow",
+            "priority": "MEDIUM",
+            "why": "Demonstrates versatility in deep learning frameworks beyond PyTorch, broadening appeal and showing adaptability to different tech stacks.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "Image Classification with TensorFlow",
+            "implementation": "Build a small image classification project using TensorFlow Keras, perhaps re-implementing a component of VisionBench-CelebA, to demonstrate proficiency.",
+            "evidence": ""
+          },
+          {
+            "skill": "rest",
+            "priority": "MEDIUM",
+            "why": "Important for designing well-structured, efficient, and scalable APIs, a key aspect for full-stack AI applications like those built with FastAPI and Express.",
+            "project_type": "existing",
+            "project": "BookYourShoot",
+            "project_idea": "",
+            "implementation": "Highlight the RESTful API design principles and architecture employed for features like role-based dashboards, chat, and payment processing in BookYourShoot.",
+            "evidence": ""
+          },
+          {
+            "skill": "qa",
+            "priority": "LOW",
+            "why": "Ensures the reliability, accuracy, and performance of AI models and data analysis pipelines, which is critical for robust systems.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "Automated Testing for an ML API",
+            "implementation": "Develop a simple FastAPI endpoint that serves an ML model and write automated unit and integration tests to ensure model inference accuracy and API robustness.",
+            "evidence": ""
+          }
+        ],
+        "project_improvements": [
+          {
+            "project": "BookYourShoot",
+            "current_issue": "Lack of quantifiable impact for the matching system.",
+            "improvement": "Measure the effectiveness of the optimization-based matching system.",
+            "impact": "Implement A/B testing or user feedback metrics to quantify improvements in booking conversion rates or photographer recommendation relevance."
+          },
+          {
+            "project": "VisionBench-CelebA",
+            "current_issue": "Limited scope in attribute classification and generalization.",
+            "improvement": "Expand the deep multi-label facial attribute classification.",
+            "impact": "Implement data augmentation and train on a larger, more diverse dataset to improve generalization and accuracy across more facial attributes."
+          },
+          {
+            "project": "ScoutVCT",
+            "current_issue": "The natural-language interface's sophistication is not fully articulated.",
+            "improvement": "Enhance the natural-language interface's capabilities.",
+            "impact": "Integrate a more sophisticated NLP model (e.g., fine-tune a pre-trained LLM) to handle complex, multi-intent user queries for deeper analytics."
+          }
+        ],
+        "cv_fixes": [
+          {
+            "section": "PERSONAL PROJECTS",
+            "fix": "Add quantifiable metrics to project descriptions.",
+            "why": "Quantifiable achievements demonstrate impact and scale, making accomplishments more compelling to employers.",
+            "how": "For 'BookYourShoot', state metrics like 'achieved X% accuracy in photographer recommendations' or 'processed Y unique bookings'."
+          },
+          {
+            "section": "EXPERIENCE & VOLUNTEER WORK",
+            "fix": "Elaborate on specific responsibilities and achievements in volunteer roles.",
+            "why": "This highlights transferable skills like event management, coordination, and teamwork, even in non-technical roles.",
+            "how": "For 'Volunteer \u2013 FAST eGaming Society', specify 'Organized X gaming tournaments with Y participants' or 'Streamlined event registration for Z attendees'."
+          },
+          {
+            "section": "CERTIFICATIONS",
+            "fix": "Rename certification entries to include specific course titles.",
+            "why": "Clearly communicates the specialized knowledge gained from each course, providing immediate context to the reader.",
+            "how": "Replace generic 'statement of accomplishment' with actual course names like 'Deep Learning with PyTorch' or 'Machine Learning Fundamentals'."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Quantify project impact in your CV.",
+            "section": "PERSONAL PROJECTS",
+            "why": "Demonstrating measurable results provides concrete evidence of your skills and contributions, making your profile more impressive.",
+            "how": "Update your CV to include at least one quantifiable achievement (e.g., performance metric, user count, efficiency gain) for each personal project listed."
+          },
+          {
+            "action": "Start a small project exploring TensorFlow.",
+            "section": "Skill Development",
+            "why": "This directly addresses a missing skill, demonstrating versatility and broadening your appeal to roles that use different deep learning frameworks.",
+            "how": "Complete a TensorFlow tutorial or build a simple image classification model, committing the code to a new public GitHub repository this week."
+          },
+          {
+            "action": "Research current AI Engineer job descriptions.",
+            "section": "Job Search Strategy",
+            "why": "Understanding precise market demands will help you tailor your CV and future skill development efforts to specific roles, improving match rates.",
+            "how": "Identify 3-5 target AI Engineer roles and compile a list of their top 3 most frequently requested technical skills beyond your current primary stack."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "high",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
+  },
+  {
+    "id": "2026-05-02T17-43-09.278560__Saad_Resume.pdf",
+    "cv_name": "Saad_Resume.pdf",
+    "timestamp": "2026-05-02T17:43:09.278569",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2089958,
+          "title": "AI Engineer",
+          "description": "We are seeking a versatile and highly skilled AI Engineer to join our fast-growing Full-Stack AI Solutions company. This role blends the expertise of building cutting-edge AI/ML models with the practical know-how of automation and agentic system integrations. You will design, develop, deploy, and optimize intelligent solutions that leverage the power of generative AI, automation platforms, and agent-based systems to enhance client operations, streamline workflows, and deliver measurable results.\nThis is a unique opportunity to work across a diverse range of technologies\u2014from fine-tuning transformer models to building real-world AI-powered automation stacks. If you\u2019re passionate about pushing the boundaries of AI while creating real value through systems thinking and practical implementation, this role is for you.\nKey Responsibilities\nAI/ML Development:\n\u2022 Design, build, and deploy machine learning and generative AI models for custom use cases.\n\u2022 Fine-tune and optimize large language models (e.g., GPT, BERT) using frameworks like Hugging Face Transformers.\n\u2022 Conduct ongoing research to stay ahead of advancements in AI/ML, including LLMs, generative AI, and transformer-based architectures.\n\u2022 Develop data pipelines for preprocessing, feature engineering, and model training.\n\u2022 Test, validate, and monitor model performance in real-world scenarios; iterate for reliability and accuracy.\n\u2022 Collaborate with cross-functional teams to embed AI into products, platforms, and services.\n\u2022 Mentor junior engineers and contribute to technical leadership.\nAutomation & Agentic Systems:\n\u2022 Design, implement, and maintain automation workflows using tools such as:\n\u2022 LangChain, LangGraph, LangSmith, LangFuse n8n, ElevenLabs, and CMS integrations.\n\u2022 Engineer system-to-system integrations using APIs to enable intelligent process automation.\n\u2022 Apply prompt and context engineering techniques to enhance the performance of conversational AI tools.\n\u2022 Implement prompt management and QA processes for agents and assistants.\n\u2022 Explore and deploy Microsoft Copilot Studio, PowerApps, and PowerAutomate solutions (preferred but not required).\n\u2022 Continuously evaluate emerging AI and automation tools and assess their applicability in client use cases.\n\u2022 Collaborate with clients and internal teams to scope, deliver, and maintain agentic and automation solutions aligned with business goals.\nQualifications\nRequired\n\u2022 2+ years of hands-on experience in AI/ML development, including training and deploying models in production.\n\u2022 Strong programming skills in Python, with proficiency in frameworks such as TensorFlow, PyTorch, Scikit-learn, and Hugging Face Transformers.\n\u2022 Experience working with AI tools like Langchain, OpenAI, or Stable Diffusion.\n\u2022 Practical experience with automation platforms and AI agent builders (as listed above).\n\u2022 Deep understanding of machine learning algorithms, neural networks, and NLP concepts.\n\u2022 Proficiency in using REST APIs for tool and platform integrations.\n\u2022 Familiarity with cloud-based AI/ML platforms.\n\u2022 Strong analytical skills and the ability to translate business problems into technical AI/automation solutions.\nPreferred\n\u2022 Experience working with Agentic AI frameworks, voice automation, and prompt tuning systems.\n\u2022 Exposure to MLOps best practices, including model versioning, CI/CD, and monitoring.\n\u2022 Knowledge of reinforcement learning, GANs, or edge AI deployments.\n\u2022 Familiarity with distributed computing frameworks such as Spark or Ray.\n\u2022 Background in AI agency workflows and client-facing solution delivery.\nWork Environment & Benefits\n\u2022 Competitive salary and performance-based incentives.\n\u2022 Flexible work environment: Remote-first.\n\u2022 Collaborative, innovation-driven culture with a commitment to personal and professional growth.\n\u2022 Opportunity to work at the forefront of AI innovation across industries and verticals.",
+          "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-engineer-2089958",
+          "company_name": "Dry Ground AI",
+          "score": 44.19,
+          "overlap": 2,
+          "matched_skills": [
+            "python",
+            "cloud"
+          ],
+          "evidence": "Matched: python, cloud",
+          "priority": 2
+        }
+      ],
+      "resume_score": 97,
+      "links": [
+        "mailto:saadasif78656@gmail.com",
+        "https://www.linkedin.com/in/saad-asif-636b87352/",
+        "https://github.com/Saad-61",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/463edcb59bc99fcf3c70370c0ddaab405ba3bd14",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/23cc7d4d88ac4807f7df6419af9a932b1b4de4f5",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/7dc403e0f2920a98c18145f75f7693cf8c7ea642"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "AI Engineer",
+            "score": 44.19,
+            "reason": "The candidate demonstrates strong programming skills in Python and experience building AI-powered features in projects like BookYourShoot and ScoutVCT.",
+            "evidence": "python, cloud",
+            "gap": "Key areas for development include leadership, deeper machine learning expertise, monitoring, NLP depth, familiarity with frameworks like PyTorch, and research methodologies."
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "machine learning",
+            "priority": "HIGH",
+            "why": "Fundamental for developing robust AI models and intelligent features in an engineering role.",
+            "project_type": "existing",
+            "project": "BookYourShoot",
+            "project_idea": "Enhance AI pipeline with custom ML models",
+            "implementation": "Enhance the AI pipeline by implementing a custom image classification model (e.g., using a pre-trained ResNet) to improve photo categorization beyond face recognition.",
+            "evidence": "BookYourShoot (AI pipeline for automatic photo organization)"
+          },
+          {
+            "skill": "nlp",
+            "priority": "HIGH",
+            "why": "Crucial for building intelligent conversational agents and understanding human language in applications like natural-language interfaces.",
+            "project_type": "existing",
+            "project": "ScoutVCT",
+            "project_idea": "Expand natural-language interface capabilities",
+            "implementation": "Extend the natural-language interface to parse more complex statistical queries using an NLP library like SpaCy, allowing users to ask nuanced questions about player performance.",
+            "evidence": "ScoutVCT (Developed a natural-language interface)"
+          },
+          {
+            "skill": "pytorch",
+            "priority": "MEDIUM",
+            "why": "A leading framework for deep learning, vital for creating and implementing advanced AI models.",
+            "project_type": "new",
+            "project": "PyTorch Image Classifier API",
+            "project_idea": "PyTorch-based image classification service",
+            "implementation": "Build a FastAPI service that uses a pre-trained PyTorch model (e.g., from torchvision) to classify uploaded images and return predictions.",
+            "evidence": "Python, FastAPI"
+          },
+          {
+            "skill": "research",
+            "priority": "MEDIUM",
+            "why": "Enables staying current with AI advancements and exploring novel solutions to technical challenges.",
+            "project_type": "new",
+            "project": "AI Paper Summarizer",
+            "project_idea": "Automated AI research paper summarization tool",
+            "implementation": "Develop a Python script that automates fetching new AI papers from a source like arXiv, extracts key insights using the Gemini API, and presents a concise summary.",
+            "evidence": "Python, Google Gemini API"
+          },
+          {
+            "skill": "monitoring",
+            "priority": "LOW",
+            "why": "Critical for ensuring the reliability, performance, and health of deployed AI systems and applications.",
+            "project_type": "new",
+            "project": "API Health Monitor",
+            "project_idea": "Simple API monitoring tool",
+            "implementation": "Create a simple Node.js application that periodically pings your project APIs (e.g., BookYourShoot's FastAPI backend) and logs response times and status codes to a dashboard.",
+            "evidence": "Node.js, Express, Postman"
+          }
+        ],
+        "project_improvements": [
+          {
+            "project": "BookYourShoot (Final Year Project)",
+            "current_issue": "The optimization-based matching system lacks a feedback loop for continuous improvement or comparison against alternatives.",
+            "improvement": "Implement A/B testing capabilities for the photographer matching system to compare different recommendation strategies.",
+            "impact": "This would allow for quantitative evaluation of matching algorithm performance, leading to measurable improvements in user engagement or booking conversion rates."
+          },
+          {
+            "project": "ScoutVCT \u2013 AI-Powered Esports Scouting Dashboard",
+            "current_issue": "The natural-language interface might struggle with ambiguous queries or provide limited feedback for unrecognized commands.",
+            "improvement": "Enhance the natural-language interface with explicit error handling and contextual suggestions for user queries.",
+            "impact": "Improve user experience by guiding users to form better queries and reducing frustration from failed or misunderstood requests."
+          },
+          {
+            "project": "Esports League Manager \u2013 Full-Stack Tournament Platform",
+            "current_issue": "The system has automated standings but may not reflect real-time game results as they happen.",
+            "improvement": "Implement WebSocket integration to push real-time score updates and match status changes to connected users.",
+            "impact": "Provide users with immediate, live information about ongoing tournaments, enhancing engagement and making the platform more dynamic."
+          }
+        ],
+        "cv_fixes": [
+          {
+            "section": "PROFESSIONAL SUMMARY",
+            "fix": "Quantify achievements where possible to demonstrate impact.",
+            "why": "Vague statements like 'Experienced in developing end-to-end applications' can be strengthened with numbers or scale.",
+            "how": "For example, change to 'Experienced in developing and deploying X end-to-end applications, supporting Y users/features...'"
+          },
+          {
+            "section": "TECHNICAL SKILLS",
+            "fix": "Specify proficiency levels or project usage for listed languages.",
+            "why": "Indicating expertise or where languages were primarily used adds valuable context for recruiters.",
+            "how": "For example, list 'Python (AI/Backend, Advanced)' or 'JavaScript (Frontend, used in React.js projects)'."
+          },
+          {
+            "section": "PERSONAL PROJECTS",
+            "fix": "Add specific metrics or user impact to project descriptions.",
+            "why": "This demonstrates the scale and success of your projects rather than just the features implemented.",
+            "how": "For 'BookYourShoot', add a line like 'Improved photographer matching efficiency by X%' or 'Supported Y concurrent users annually'."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Create a concise portfolio website.",
+            "section": "Overall Presentation",
+            "why": "Consolidates projects, skills, and links into a single, professional point of reference, making it easier for recruiters to assess your profile.",
+            "how": "Build a simple one-page site using React.js and TailwindCSS to showcase your personal projects with live demos or detailed descriptions, linking to GitHub repositories."
+          },
+          {
+            "action": "Complete an advanced Machine Learning or Deep Learning course.",
+            "section": "Certifications / Technical Skills",
+            "why": "Directly addresses the 'machine learning' and 'pytorch' gaps identified for AI Engineer roles, deepening your expertise in core AI concepts and tools.",
+            "how": "Enroll in a Coursera or edX specialization on Deep Learning with PyTorch or TensorFlow, completing a capstone project that applies a complex model to a real-world dataset."
+          },
+          {
+            "action": "Contribute to an open-source project.",
+            "section": "Experience / Technical Skills",
+            "why": "Demonstrates practical collaboration skills, code quality, and exposure to larger codebases, which are valuable for team environments.",
+            "how": "Find an open-source project related to Python, JavaScript, or AI tools (e.g., a FastAPI extension, a React component library, or an ML utility) and submit a pull request addressing a bug fix or a minor feature."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "high",
+          "project_improvements": "high",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
+  },
+  {
+    "id": "2026-05-02T18-00-26.248496__Saad_Resume.pdf",
+    "cv_name": "Saad_Resume.pdf",
+    "timestamp": "2026-05-02T18:00:26.248505",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2089958,
+          "title": "AI Engineer",
+          "description": "We are seeking a versatile and highly skilled AI Engineer to join our fast-growing Full-Stack AI Solutions company. This role blends the expertise of building cutting-edge AI/ML models with the practical know-how of automation and agentic system integrations. You will design, develop, deploy, and optimize intelligent solutions that leverage the power of generative AI, automation platforms, and agent-based systems to enhance client operations, streamline workflows, and deliver measurable results.\nThis is a unique opportunity to work across a diverse range of technologies\u2014from fine-tuning transformer models to building real-world AI-powered automation stacks. If you\u2019re passionate about pushing the boundaries of AI while creating real value through systems thinking and practical implementation, this role is for you.\nKey Responsibilities\nAI/ML Development:\n\u2022 Design, build, and deploy machine learning and generative AI models for custom use cases.\n\u2022 Fine-tune and optimize large language models (e.g., GPT, BERT) using frameworks like Hugging Face Transformers.\n\u2022 Conduct ongoing research to stay ahead of advancements in AI/ML, including LLMs, generative AI, and transformer-based architectures.\n\u2022 Develop data pipelines for preprocessing, feature engineering, and model training.\n\u2022 Test, validate, and monitor model performance in real-world scenarios; iterate for reliability and accuracy.\n\u2022 Collaborate with cross-functional teams to embed AI into products, platforms, and services.\n\u2022 Mentor junior engineers and contribute to technical leadership.\nAutomation & Agentic Systems:\n\u2022 Design, implement, and maintain automation workflows using tools such as:\n\u2022 LangChain, LangGraph, LangSmith, LangFuse n8n, ElevenLabs, and CMS integrations.\n\u2022 Engineer system-to-system integrations using APIs to enable intelligent process automation.\n\u2022 Apply prompt and context engineering techniques to enhance the performance of conversational AI tools.\n\u2022 Implement prompt management and QA processes for agents and assistants.\n\u2022 Explore and deploy Microsoft Copilot Studio, PowerApps, and PowerAutomate solutions (preferred but not required).\n\u2022 Continuously evaluate emerging AI and automation tools and assess their applicability in client use cases.\n\u2022 Collaborate with clients and internal teams to scope, deliver, and maintain agentic and automation solutions aligned with business goals.\nQualifications\nRequired\n\u2022 2+ years of hands-on experience in AI/ML development, including training and deploying models in production.\n\u2022 Strong programming skills in Python, with proficiency in frameworks such as TensorFlow, PyTorch, Scikit-learn, and Hugging Face Transformers.\n\u2022 Experience working with AI tools like Langchain, OpenAI, or Stable Diffusion.\n\u2022 Practical experience with automation platforms and AI agent builders (as listed above).\n\u2022 Deep understanding of machine learning algorithms, neural networks, and NLP concepts.\n\u2022 Proficiency in using REST APIs for tool and platform integrations.\n\u2022 Familiarity with cloud-based AI/ML platforms.\n\u2022 Strong analytical skills and the ability to translate business problems into technical AI/automation solutions.\nPreferred\n\u2022 Experience working with Agentic AI frameworks, voice automation, and prompt tuning systems.\n\u2022 Exposure to MLOps best practices, including model versioning, CI/CD, and monitoring.\n\u2022 Knowledge of reinforcement learning, GANs, or edge AI deployments.\n\u2022 Familiarity with distributed computing frameworks such as Spark or Ray.\n\u2022 Background in AI agency workflows and client-facing solution delivery.\nWork Environment & Benefits\n\u2022 Competitive salary and performance-based incentives.\n\u2022 Flexible work environment: Remote-first.\n\u2022 Collaborative, innovation-driven culture with a commitment to personal and professional growth.\n\u2022 Opportunity to work at the forefront of AI innovation across industries and verticals.",
+          "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-engineer-2089958",
+          "company_name": "Dry Ground AI",
+          "score": 44.19,
+          "overlap": 2,
+          "matched_skills": [
+            "cloud",
+            "python"
+          ],
+          "evidence": "Matched: cloud, python",
+          "priority": 2
+        }
+      ],
+      "resume_score": 97,
+      "links": [
+        "mailto:saadasif78656@gmail.com",
+        "https://www.linkedin.com/in/saad-asif-636b87352/",
+        "https://github.com/Saad-61",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/463edcb59bc99fcf3c70370c0ddaab405ba3bd14",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/23cc7d4d88ac4807f7df6419af9a932b1b4de4f5",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/7dc403e0f2920a98c18145f75f7693cf8c7ea642"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "AI Engineer",
+            "score": 44.19,
+            "reason": "Saad demonstrates a foundational understanding of AI principles through implementing an AI pipeline for photo organization and an AI chatbot in 'BookYourShoot', and a natural-language interface in 'ScoutVCT'. His proficiency in Python and cloud technologies further aligns with the role's technical requirements.",
+            "evidence": "Matched skills: \"cloud\", \"python\". Projects: \"BookYourShoot\", \"ScoutVCT\".",
+            "gap": "The CV does not yet show experience with leadership, machine learning, monitoring, nlp, openai, pytorch, qa, or research."
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "machine learning",
+            "priority": "HIGH",
+            "why": "This is a core skill for any AI Engineer, essential for understanding, developing, and optimizing predictive models.",
+            "project_type": "existing",
+            "project": "BookYourShoot",
+            "project_idea": "",
+            "implementation": "Refine the AI pipeline for automatic photo organization in 'BookYourShoot' by explicitly identifying and implementing a specific supervised learning model (e.g., for image classification) using scikit-learn or a similar library, clearly stating the model used and its performance metrics.",
+            "evidence": ""
+          },
+          {
+            "skill": "nlp",
+            "priority": "HIGH",
+            "why": "Relevant to Saad's existing projects involving chatbots and natural language interfaces, demonstrating deeper expertise in text processing.",
+            "project_type": "existing",
+            "project": "ScoutVCT / BookYourShoot",
+            "project_idea": "",
+            "implementation": "Enhance the natural-language interface in 'ScoutVCT' or the AI chatbot in 'BookYourShoot' by integrating an advanced NLP library like spaCy or NLTK to perform tasks such as named entity recognition or intent classification, showcasing advanced text understanding.",
+            "evidence": ""
+          },
+          {
+            "skill": "pytorch",
+            "priority": "MEDIUM",
+            "why": "A leading deep learning framework, demonstrating proficiency in it is crucial for implementing advanced neural network architectures common in AI engineering.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "Image Style Transfer Mini-App",
+            "implementation": "Build a small web application using FastAPI and PyTorch that allows users to upload an image and apply a different artistic style to it, showcasing familiarity with deep learning frameworks.",
+            "evidence": ""
+          },
+          {
+            "skill": "research",
+            "priority": "MEDIUM",
+            "why": "AI engineering often involves staying current with new techniques, evaluating models, and contributing to knowledge in the field.",
+            "project_type": "new",
+            "project": "",
+            "project_idea": "AI Model Comparison Study",
+            "implementation": "Conduct a small research project comparing the performance of two different face recognition or clustering algorithms for 'BookYourShoot', documenting methodology and findings in a short report on GitHub.",
+            "evidence": ""
+          },
+          {
+            "skill": "monitoring",
+            "priority": "LOW",
+            "why": "Essential for maintaining the reliability, performance, and health of deployed AI models and systems in production environments.",
+            "project_type": "existing",
+            "project": "BookYourShoot",
+            "project_idea": "",
+            "implementation": "Integrate basic logging and performance metrics collection into the FastAPI backend of 'BookYourShoot' using tools like Prometheus and Grafana (or a simple custom logging system) to track API response times and AI pipeline execution success.",
+            "evidence": ""
+          }
+        ],
+        "project_improvements": [
+          {
+            "project": "BookYourShoot",
+            "current_issue": "The impact and specifics of the AI pipeline for photo organization and highlight reel generation are not explicitly quantified.",
+            "improvement": "Implement clear performance metrics for the AI pipeline.",
+            "impact": "Track accuracy for face recognition and clustering, and efficiency of highlight reel generation (e.g., 'reduced processing time by 30%'), demonstrating tangible improvements and model effectiveness."
+          },
+          {
+            "project": "ScoutVCT",
+            "current_issue": "The project describes a natural-language interface but lacks detail on advanced data visualization for analytics.",
+            "improvement": "Integrate interactive data visualization for player and team performance trends.",
+            "impact": "Allow users to visualize performance trends over time with interactive charts and graphs (e.g., using Chart.js or D3.js), making insights more accessible and engaging."
+          },
+          {
+            "project": "Esports League Manager",
+            "current_issue": "The project mentions RESTful APIs and real-time updates but doesn't detail testing or robust error handling.",
+            "improvement": "Develop a comprehensive testing suite for API endpoints and core functionalities.",
+            "impact": "Ensure system reliability and data consistency by adding unit and integration tests for authentication, team registration, and tournament updates, using frameworks like Jest or Mocha."
+          }
+        ],
+        "cv_fixes": [
+          {
+            "section": "PERSONAL PROJECTS",
+            "fix": "Quantify achievements and impact where possible.",
+            "why": "Specific numbers provide concrete evidence of your contributions and the scale/success of your projects, making them more compelling.",
+            "how": "For example, instead of 'Designed an optimization-based matching system', add metrics like 'reduced matching time by X%' or 'achieved Y% recommendation accuracy'."
+          },
+          {
+            "section": "TECHNICAL SKILLS",
+            "fix": "Structure skills into more granular categories beyond general 'Languages' or 'Frameworks'.",
+            "why": "Improves readability and allows recruiters to quickly scan for specific technologies relevant to their open positions.",
+            "how": "Add categories like 'Frontend Libraries', 'Backend Frameworks', 'Databases', 'Cloud & AI Services', 'Version Control', and 'Tools' to organize your skills."
+          },
+          {
+            "section": "PROFESSIONAL SUMMARY",
+            "fix": "Focus the summary more specifically on AI/ML or full-stack development with an AI bent.",
+            "why": "Tailoring your summary to specific job types, like AI Engineer, immediately highlights your most relevant qualifications.",
+            "how": "Emphasize your experience in 'integrating intelligent features' and 'developing AI pipelines' more prominently, linking it to your goal of building 'scalable AI-powered software systems'."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Complete an advanced deep learning tutorial with PyTorch or TensorFlow.",
+            "section": "TECHNICAL SKILLS / PERSONAL PROJECTS",
+            "why": "Directly addresses a key missing skill ('pytorch', 'machine learning') for AI Engineer roles and demonstrates practical application of modern ML frameworks.",
+            "how": "Build a small project (e.g., a simple image classifier or a generative model) using PyTorch, deploy the code on GitHub, and write a brief README explaining your process and findings."
+          },
+          {
+            "action": "Measure and document performance metrics for your 'BookYourShoot' AI pipeline.",
+            "section": "PERSONAL PROJECTS",
+            "why": "Quantifying the impact of your AI work makes your projects significantly stronger and more appealing to employers looking for results-driven engineers.",
+            "how": "Define specific metrics (e.g., accuracy, precision, recall for face recognition; processing speed for highlight reel generation), run experiments, and update your project description on your CV and GitHub with these measurable outcomes."
+          },
+          {
+            "action": "Research and implement a basic monitoring setup for one of your backend services.",
+            "section": "PERSONAL PROJECTS",
+            "why": "Demonstrates understanding of production-ready systems and addresses the 'monitoring' skill gap, crucial for deployed AI applications.",
+            "how": "Choose either 'BookYourShoot' or 'Esports League Manager', integrate basic logging for API requests/responses, and explore using a simple tool like Sentry or a custom logging system to track errors and performance, documenting the process."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "high",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
+  },
+  {
+    "id": "2026-05-02T18-05-16.150869__SaadCV.pdf",
+    "cv_name": "SaadCV.pdf",
+    "timestamp": "2026-05-02T18:05:16.150880",
+    "results": {
+      "matched_jobs": [
+        {
+          "id": 2089958,
+          "title": "AI Engineer",
+          "description": "We are seeking a versatile and highly skilled AI Engineer to join our fast-growing Full-Stack AI Solutions company. This role blends the expertise of building cutting-edge AI/ML models with the practical know-how of automation and agentic system integrations. You will design, develop, deploy, and optimize intelligent solutions that leverage the power of generative AI, automation platforms, and agent-based systems to enhance client operations, streamline workflows, and deliver measurable results.\nThis is a unique opportunity to work across a diverse range of technologies\u2014from fine-tuning transformer models to building real-world AI-powered automation stacks. If you\u2019re passionate about pushing the boundaries of AI while creating real value through systems thinking and practical implementation, this role is for you.\nKey Responsibilities\nAI/ML Development:\n\u2022 Design, build, and deploy machine learning and generative AI models for custom use cases.\n\u2022 Fine-tune and optimize large language models (e.g., GPT, BERT) using frameworks like Hugging Face Transformers.\n\u2022 Conduct ongoing research to stay ahead of advancements in AI/ML, including LLMs, generative AI, and transformer-based architectures.\n\u2022 Develop data pipelines for preprocessing, feature engineering, and model training.\n\u2022 Test, validate, and monitor model performance in real-world scenarios; iterate for reliability and accuracy.\n\u2022 Collaborate with cross-functional teams to embed AI into products, platforms, and services.\n\u2022 Mentor junior engineers and contribute to technical leadership.\nAutomation & Agentic Systems:\n\u2022 Design, implement, and maintain automation workflows using tools such as:\n\u2022 LangChain, LangGraph, LangSmith, LangFuse n8n, ElevenLabs, and CMS integrations.\n\u2022 Engineer system-to-system integrations using APIs to enable intelligent process automation.\n\u2022 Apply prompt and context engineering techniques to enhance the performance of conversational AI tools.\n\u2022 Implement prompt management and QA processes for agents and assistants.\n\u2022 Explore and deploy Microsoft Copilot Studio, PowerApps, and PowerAutomate solutions (preferred but not required).\n\u2022 Continuously evaluate emerging AI and automation tools and assess their applicability in client use cases.\n\u2022 Collaborate with clients and internal teams to scope, deliver, and maintain agentic and automation solutions aligned with business goals.\nQualifications\nRequired\n\u2022 2+ years of hands-on experience in AI/ML development, including training and deploying models in production.\n\u2022 Strong programming skills in Python, with proficiency in frameworks such as TensorFlow, PyTorch, Scikit-learn, and Hugging Face Transformers.\n\u2022 Experience working with AI tools like Langchain, OpenAI, or Stable Diffusion.\n\u2022 Practical experience with automation platforms and AI agent builders (as listed above).\n\u2022 Deep understanding of machine learning algorithms, neural networks, and NLP concepts.\n\u2022 Proficiency in using REST APIs for tool and platform integrations.\n\u2022 Familiarity with cloud-based AI/ML platforms.\n\u2022 Strong analytical skills and the ability to translate business problems into technical AI/automation solutions.\nPreferred\n\u2022 Experience working with Agentic AI frameworks, voice automation, and prompt tuning systems.\n\u2022 Exposure to MLOps best practices, including model versioning, CI/CD, and monitoring.\n\u2022 Knowledge of reinforcement learning, GANs, or edge AI deployments.\n\u2022 Familiarity with distributed computing frameworks such as Spark or Ray.\n\u2022 Background in AI agency workflows and client-facing solution delivery.\nWork Environment & Benefits\n\u2022 Competitive salary and performance-based incentives.\n\u2022 Flexible work environment: Remote-first.\n\u2022 Collaborative, innovation-driven culture with a commitment to personal and professional growth.\n\u2022 Opportunity to work at the forefront of AI innovation across industries and verticals.",
+          "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-engineer-2089958",
+          "company_name": "Dry Ground AI",
+          "score": 61.51,
+          "overlap": 4,
+          "matched_skills": [
+            "cloud",
+            "machine learning",
+            "python",
+            "pytorch"
+          ],
+          "evidence": "Matched: cloud, machine learning, python",
+          "priority": 4
+        },
+        {
+          "id": 2088710,
+          "title": "Online Data Analyst United States",
+          "description": "Are you a detail-oriented individual with a passion for research and a good understanding of national and local geography? This freelance opportunity allows you to work at your own pace and from the comfort of your own home.\nA Day in the Life of an Online Data Analyst:\n\u2022 In this role, you will be working on a project aimed at enhancing the content and quality of digital maps that are used by millions of people worldwide\n\u2022 Completing research and evaluation tasks in a web-based environment such as verifying and comparing data, and determining the relevance and accuracy of information.\nJoin us today and be part of a dynamic and innovative team that is making a difference in the world!\nTELUS Digital AI Community\nOur global AI Community is a vibrant network of 1 million+ contributors from diverse backgrounds who help our customers collect, enhance, train, translate, and localize content to build better AI models. Become part of our growing community and make an impact supporting the machine learning models of some of the world\u2019s largest brands. \nQualification path\nNo previous professional experience is required to apply to this role, however, working on this project will require you to pass the basic requirements and go through a standard assessment process. This is a part-time long-term project and your work will be subject to our standard quality assurance checks during the term of this agreement.\u00a0\nBasic Requirements\n\u2022 Full Professional Proficiency in English language\n\u2022 Being a resident in United States for the last 2 consecutive years and having familiarity with current and historical business, media, sport, news, social media, and cultural affairs in United States\n\u2022 Ability to follow guidelines and conduct online research using search engines, online maps, and website information\n\u2022 Flexibility to work across a diverse set of task types, including maps, news, audio tasks, and relevance\n\u2022 Daily access to a broadband internet connection, computer, and relevant software\nAssessment\nIn order to be hired into the program, you\u2019ll take an open book qualification exam that will determine your suitability for the position and complete ID verification. Our team will provide you with guidelines and learning materials before your qualification exam. You will be required to complete the exam in a specific timeframe but at your convenience.\nEqual Opportunity\nAll qualified applicants will receive consideration for a contractual relationship without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status. At TELUS Digital AI, we are proud to offer equal opportunities and are committed to creating a diverse and inclusive community. All aspects of selection are based on applicants\u2019 qualifications, merits, competence, and performance without regard to any characteristic related to diversity.",
+          "url": "https://remotive.com/remote-jobs/all-others/online-data-analyst-united-states-2088710",
+          "company_name": "TELUS Digital",
+          "score": 37.72,
+          "overlap": 1,
+          "matched_skills": [
+            "machine learning"
+          ],
+          "evidence": "Matched: machine learning",
+          "priority": 1
+        },
+        {
+          "id": 2088704,
+          "title": "Online Data Analyst (United States/Spanish speakers)",
+          "description": "Are you a detail-oriented individual with a passion for research and a good understanding of national and local geography? This freelance opportunity allows you to work at your own pace and from the comfort of your own home.\nA Day in the Life of an Online Data Analyst:\n\u2022 In this role, you will be working on a project aimed at enhancing the content and quality of digital maps that are used by millions of people worldwide\n\u2022 Completing research and evaluation tasks in a web-based environment such as verifying and comparing data, and determining the relevance and accuracy of information.\nJoin us today and be part of a dynamic and innovative team that is making a difference in the world!\nTELUS Digital AI Community\nOur global AI Community is a vibrant network of 1 million+ contributors from diverse backgrounds who help our customers collect, enhance, train, translate, and localize content to build better AI models. Become part of our growing community and make an impact supporting the machine learning models of some of the world\u2019s largest brands.\nQualification path\nNo previous professional experience is required to apply to this role, however, working on this project will require you to pass the basic requirements and go through a standard assessment process. This is a part-time long-term project and your work will be subject to our standard quality assurance checks during the term of this agreement.\u00a0\nBasic Requirements\n\u2022 Full Professional Proficiency in Spanish language\n\u2022 Being a resident in United States for the last 2 consecutive years and having familiarity with current and historical business, media, sport, news, social media, and cultural affairs in United States\n\u2022 Ability to follow guidelines and conduct online research using search engines, online maps, and website information\n\u2022 Flexibility to work across a diverse set of task types, including maps, news, audio tasks, and relevance\n\u2022 Daily access to a broadband internet connection, computer, and relevant software\nAssessment\nIn order to be hired into the program, you\u2019ll take an open book qualification exam that will determine your suitability for the position and complete ID verification. Our team will provide you with guidelines and learning materials before your qualification exam. You will be required to complete the exam in a specific timeframe but at your convenience.\nEqual Opportunity\nAll qualified applicants will receive consideration for a contractual relationship without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status. At TELUS Digital AI, we are proud to offer equal opportunities and are committed to creating a diverse and inclusive community. All aspects of selection are based on applicants\u2019 qualifications, merits, competence, and performance without regard to any characteristic related to diversity.",
+          "url": "https://remotive.com/remote-jobs/all-others/online-data-analyst-united-states-spanish-speakers-2088704",
+          "company_name": "TELUS Digital",
+          "score": 37.72,
+          "overlap": 1,
+          "matched_skills": [
+            "machine learning"
+          ],
+          "evidence": "Matched: machine learning",
+          "priority": 1
+        }
+      ],
+      "resume_score": 94,
+      "links": [
+        "mailto:saadasif78656@gmail.com",
+        "https://www.linkedin.com/in/saad-asif-636b87352/",
+        "https://github.com/Saad-61",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/463edcb59bc99fcf3c70370c0ddaab405ba3bd14",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/23cc7d4d88ac4807f7df6419af9a932b1b4de4f5",
+        "https://www.datacamp.com/completed/statement-of-accomplishment/course/7dc403e0f2920a98c18145f75f7693cf8c7ea642"
+      ],
+      "analysis": {
+        "job_matches": [
+          {
+            "title": "AI Engineer",
+            "score": 61.51,
+            "reason": "The candidate demonstrates strong experience in machine learning and computer vision through projects like VisionBench-CelebA, which involved deep learning pipelines using PyTorch. Their cloud skills are evident in the BookYourShoot project utilizing Supabase.",
+            "evidence": "Matched skills: cloud, machine learning, python, pytorch. Evidence from projects: VisionBench-CelebA, BookYourShoot.",
+            "gap": "The candidate is missing skills in leadership, monitoring, NLP, OpenAI, QA, research, REST, and TensorFlow."
+          },
+          {
+            "title": "Online Data Analyst United States",
+            "score": 37.72,
+            "reason": "The candidate has experience with machine learning, as shown in their projects involving data analysis and model development. Their SQL and Python skills are also relevant for data analysis tasks.",
+            "evidence": "Matched skills: machine learning. Evidence from projects: ScoutVCT, VisionBench-CelebA.",
+            "gap": "The candidate is missing skills in Go, quality assurance, and research."
+          }
+        ],
+        "missing_skills": [
+          {
+            "skill": "openai",
+            "priority": "HIGH",
+            "why": "Essential for roles involving advanced AI capabilities, particularly in natural language processing and generative AI, which are increasingly common in AI Engineer positions.",
+            "project_type": "new",
+            "project": "Chatbot Enhancement",
+            "project_idea": "Develop an AI chatbot using OpenAI's API.",
+            "implementation": "Integrate OpenAI's GPT models into an existing project or build a new one to handle complex user queries, generate content, or provide advanced assistance.",
+            "evidence": ""
+          },
+          {
+            "skill": "nlp",
+            "priority": "MEDIUM",
+            "why": "Natural Language Processing is a core component of many AI applications, including text analysis, chatbots, and sentiment analysis, making it valuable for AI Engineer roles.",
+            "project_type": "existing",
+            "project": "BookYourShoot",
+            "project_idea": "Enhance the AI chatbot in BookYourShoot with NLP capabilities.",
+            "implementation": "Incorporate NLP techniques to better understand user intent and provide more nuanced responses within the BookYourShoot project.",
+            "evidence": ""
+          },
+          {
+            "skill": "tensorflow",
+            "priority": "MEDIUM",
+            "why": "While PyTorch is used, TensorFlow is another dominant deep learning framework, and familiarity with both expands AI model development capabilities.",
+            "project_type": "new",
+            "project": "Transfer Learning with TensorFlow",
+            "project_idea": "Replicate a deep learning model using TensorFlow.",
+            "implementation": "Build a convolutional neural network for image classification or object detection using TensorFlow and compare its performance and training characteristics with the PyTorch implementation.",
+            "evidence": ""
+          },
+          {
+            "skill": "research",
+            "priority": "MEDIUM",
+            "why": "Crucial for advancing AI technologies, understanding new algorithms, and staying updated with the latest developments in machine learning and computer vision.",
+            "project_type": "new",
+            "project": "AI Algorithm Survey",
+            "project_idea": "Conduct a survey of recent AI research papers.",
+            "implementation": "Select a specific area within AI (e.g., computer vision advancements, new LLM architectures) and summarize key findings, methodologies, and potential applications from recent research publications.",
+            "evidence": ""
+          },
+          {
+            "skill": "rest",
+            "priority": "LOW",
+            "why": "RESTful APIs are fundamental for web services and integrating different software components, which is common in full-stack AI development.",
+            "project_type": "existing",
+            "project": "BookYourShoot",
+            "project_idea": "Refactor FastAPI endpoints to be more RESTful.",
+            "implementation": "Review and potentially refactor the API endpoints in the BookYourShoot project to strictly adhere to REST principles, focusing on resource-based URLs and standard HTTP methods.",
+            "evidence": ""
+          }
+        ],
+        "project_improvements": [
+          {
+            "project": "BookYourShoot",
+            "current_issue": "The AI chatbot's capabilities are not explicitly detailed beyond 'assist users with booking, discovery, and content suggestions'.",
+            "improvement": "Expand the AI chatbot's functionality to include proactive recommendations or personalized content generation based on user profiles and past interactions.",
+            "impact": "Enhances user engagement and provides a more personalized and intelligent user experience."
+          },
+          {
+            "project": "VisionBench-CelebA",
+            "current_issue": "The project mentions evaluating enhancement, denoising quality, and edge-preservation metrics, but the results and trade-offs are not quantified.",
+            "improvement": "Quantify the comparison of restoration trade-offs by presenting specific metric scores (e.g., PSNR, SSIM) for different preprocessing techniques.",
+            "impact": "Provides concrete data to support the evaluation of image restoration techniques, making the findings more impactful and objective."
+          },
+          {
+            "project": "ScoutVCT",
+            "current_issue": "The natural-language interface converts user queries into structured database operations, but the complexity or range of queries it handles is not specified.",
+            "improvement": "Implement a mechanism to log and analyze user queries, identifying common patterns or limitations in the natural-language interface's understanding.",
+            "impact": "Provides data-driven insights for future improvements and highlights the system's current capabilities and weaknesses."
+          }
+        ],
+        "cv_fixes": [
+          {
+            "section": "Skills",
+            "fix": "Change 'JavaScript.' to 'JavaScript' to maintain consistent punctuation.",
+            "why": "Ensures a uniform and clean presentation of skills.",
+            "how": "Remove the trailing period from the JavaScript entry in the Languages section."
+          },
+          {
+            "section": "Technical Skills",
+            "fix": "Clarify 'Google Gemini API' by mentioning its role in a project or context.",
+            "why": "Provides immediate context for the tool and its application.",
+            "how": "Consider adding a brief note like 'used for chatbot development' if applicable, or ensure it's clearly linked in a project description."
+          },
+          {
+            "section": "Personal Projects",
+            "fix": "Add specific quantifiable metrics for the 'fast and explainable results' of the optimization-based matching system in BookYourShoot.",
+            "why": "Quantifiable results add credibility and demonstrate impact.",
+            "how": "Include details such as 'recommendations generated within X milliseconds' or 'achieved X% accuracy in relevant matches'."
+          }
+        ],
+        "top_actions": [
+          {
+            "action": "Integrate OpenAI API into a personal project.",
+            "section": "Personal Projects",
+            "why": "Addresses the HIGH priority missing skill of 'openai' and demonstrates practical application of advanced AI.",
+            "how": "Choose either BookYourShoot or ScoutVCT to add a new AI-powered feature using OpenAI's GPT models, documenting the process and outcome."
+          },
+          {
+            "action": "Create a GitHub repository for a new small project focused on TensorFlow.",
+            "section": "Technical Skills",
+            "why": "Addresses the MEDIUM priority missing skill 'tensorflow' and provides a tangible artifact for potential employers.",
+            "how": "Build a basic image classifier using TensorFlow and host the code on GitHub, with a clear README detailing the project's objective and implementation."
+          },
+          {
+            "action": "Draft a concise summary of recent advancements in computer vision research.",
+            "section": "Professional Summary",
+            "why": "Addresses the MEDIUM priority missing skill 'research' and can be used to update the professional summary or as a basis for a blog post/portfolio piece.",
+            "how": "Compile a 1-page document summarizing 2-3 key breakthroughs in computer vision from the last year, citing sources."
+          }
+        ],
+        "confidence": {
+          "job_matches": "high",
+          "missing_skills": "low",
+          "project_improvements": "high",
+          "cv_fixes": "high",
+          "top_actions": "high"
+        }
+      }
+    }
   }
 ]

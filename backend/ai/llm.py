@@ -3,7 +3,7 @@ import json
 import re
 from pathlib import Path
 
-import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 import requests
 
@@ -14,7 +14,7 @@ def _load_env() -> None:
     load_dotenv(backend_dir.parent / ".env", override=False)
 
 
-_models: dict[str, genai.GenerativeModel] = {}
+_client = None
 
 
 def _log_llm_event(request_source: str, message: str) -> None:
@@ -86,12 +86,18 @@ def _candidate_model_names() -> list[str]:
 
     available_with_generate = set()
 
-    for model in genai.list_models():
-        methods = set(getattr(model, "supported_generation_methods", []) or [])
-        if "generateContent" in methods:
-            name = (getattr(model, "name", "") or "").split("/", 1)[-1]
-            if name:
-                available_with_generate.add(name)
+    try:
+        global _client
+        if _client is None:
+            _configure_genai()
+        for model in _client.models.list():
+            actions = set(getattr(model, "supported_actions", []) or [])
+            if "generateContent" in actions:
+                name = (getattr(model, "name", "") or "").split("/", 1)[-1]
+                if name:
+                    available_with_generate.add(name)
+    except Exception as e:
+        print(f"[LLM] Warning: Could not list genai models: {e}")
 
     candidates = [
         candidate for candidate in configured_candidates if candidate in available_with_generate
@@ -122,6 +128,10 @@ def _provider_order() -> list[str]:
 
 
 def _configure_genai() -> None:
+    global _client
+    if _client is not None:
+        return
+
     _load_env()
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
 
@@ -130,14 +140,7 @@ def _configure_genai() -> None:
             "Missing GEMINI_API_KEY/GOOGLE_API_KEY in .env or environment"
         )
 
-    genai.configure(api_key=api_key)
-
-
-def _get_model(model_name: str) -> genai.GenerativeModel:
-    if model_name not in _models:
-        print(f"[LLM] Using model: {model_name}")
-        _models[model_name] = genai.GenerativeModel(model_name)
-    return _models[model_name]
+    _client = genai.Client(api_key=api_key)
 
 
 def _is_fallback_worthy_error(exc: Exception) -> bool:
@@ -223,7 +226,10 @@ def generate_response(prompt: str, request_source: str = "unknown"):
             for model_name in candidates:
                 try:
                     _log_llm_event(request_source, f"Trying gemini model {model_name}")
-                    response = _get_model(model_name).generate_content(prompt)
+                    response = _client.models.generate_content(
+                        model=model_name,
+                        contents=prompt,
+                    )
 
                     text = getattr(response, "text", "") or ""
 

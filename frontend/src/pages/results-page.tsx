@@ -1,4 +1,4 @@
-import { ExternalLink, RotateCcw, WandSparkles } from "lucide-react";
+import { ExternalLink, RotateCcw } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { QuickRewriteCard } from "../components/quick-rewrite-card";
@@ -195,10 +195,17 @@ export default function ResultsPage() {
             <div className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Quick rewrites</CardTitle>
-                  <CardDescription>
-                    Instant CV-only changes you can generate and paste directly into your resume.
-                  </CardDescription>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <CardTitle>Quick rewrites</CardTitle>
+                      <CardDescription>
+                        Instant CV-only changes you can generate and paste directly into your resume.
+                      </CardDescription>
+                    </div>
+                    <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("improve")}>
+                      Open quick fixes
+                    </Button>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {overviewRewrites.length ? (
@@ -221,14 +228,6 @@ export default function ResultsPage() {
                           </div>
                         </div>
                       ))}
-                      <Button
-                        type="button"
-                        variant="outline"
-                        onClick={() => setActiveTab("improve")}
-                      >
-                        <WandSparkles className="h-4 w-4" />
-                        Open improve tab
-                      </Button>
                     </>
                   ) : (
                     <div className="text-sm text-slate-600">No instant rewrites returned.</div>
@@ -238,10 +237,17 @@ export default function ResultsPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Top actions</CardTitle>
-                  <CardDescription>
-                    The highest-value next steps that require more than a quick resume edit.
-                  </CardDescription>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <CardTitle>Top actions</CardTitle>
+                      <CardDescription>
+                        The highest-value next steps that require more than a quick resume edit.
+                      </CardDescription>
+                    </div>
+                    <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("actions")}>
+                      Open actions
+                    </Button>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {overviewActions.length ? (
@@ -283,11 +289,18 @@ export default function ResultsPage() {
             <div className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Best matches</CardTitle>
-                  <CardDescription>
-                    Top roles based on your CV and job data. Match score is a fit signal
-                    inside this app, not a hiring probability.
-                  </CardDescription>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <CardTitle>Best matches</CardTitle>
+                      <CardDescription>
+                        Top roles based on your CV and job data. Match score is a fit signal
+                        inside this app, not a hiring probability.
+                      </CardDescription>
+                    </div>
+                    <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("jobs")}>
+                      Open jobs
+                    </Button>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {overviewJobs.length ? (
@@ -332,8 +345,15 @@ export default function ResultsPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Top missing skills</CardTitle>
-                  <CardDescription>Highest-impact gaps to close next.</CardDescription>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <CardTitle>Top missing skills</CardTitle>
+                      <CardDescription>Highest-impact gaps to close next.</CardDescription>
+                    </div>
+                    <Button type="button" variant="outline" size="sm" onClick={() => setActiveTab("skills")}>
+                      Open skills
+                    </Button>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {overviewSkills.length ? (
@@ -456,7 +476,11 @@ export default function ResultsPage() {
                             </div>
                           ) : null}
                         </div>
-                        {jobsView === "matched" ? <ScorePill score={job.score ?? 0} /> : null}
+                        {jobsView === "matched" ? (
+                          <div className="shrink-0">
+                            <ScorePill score={job.score ?? 0} />
+                          </div>
+                        ) : null}
                       </div>
 
                       {jm?.reason ? (
@@ -626,10 +650,7 @@ export default function ResultsPage() {
                 <div className="space-y-4 rounded-xl border border-indigo-100 bg-indigo-50/60 p-4">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                      <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
-                        <WandSparkles className="h-4 w-4 text-indigo-600" />
-                        Quick rewrites available
-                      </div>
+                      <div className="text-sm font-semibold text-slate-900">Quick rewrites available</div>
                       <p className="mt-1 text-sm text-slate-600">
                         These can be turned into copy-ready text or LaTeX snippets instantly.
                       </p>

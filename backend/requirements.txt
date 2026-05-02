@@ -7,4 +7,4 @@ python-docx
 sentence-transformers
 faiss-cpu
 python-dotenv
-google-generativeai
+google-genai

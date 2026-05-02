@@ -5,6 +5,7 @@ from models.schemas import GenerateFixRequest
 from models.history import save_analysis_result
 from services.cv_parser import extract_text_from_file, extract_links_from_file
 from utils.file_handler import save_file
+from utils.skill_extractor import extract_skills
 from ai.analyzer import analyze_cv
 
 router = APIRouter(prefix="/cv", tags=["CV"])
@@ -51,8 +52,11 @@ async def analyze(file: UploadFile = File(...)):
     links = list(dict.fromkeys([*(rag_result.get("links", [])), *file_links]))
     resume_score = rag_result.get("resume_score", 0)
 
+    # Extract skills once here and pass them through — avoids double extraction
+    cv_skills = extract_skills(text)
+
     try:
-        analysis = analyze_cv(text, jobs, links)
+        analysis = analyze_cv(text, jobs, links, cv_skills=cv_skills)
     except RuntimeError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
